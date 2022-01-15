@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "161870066462",
+    "firebase_url": "https://babygames-b2767-default-rtdb.firebaseio.com",
+    "project_id": "babygames-b2767",
+    "storage_bucket": "babygames-b2767.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:161870066462:android:239c1fa724bae655604f0f",
+        "android_client_info": {
+          "package_name": "com.hekayatBaby.babytoys"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "161870066462-epi36g908i6flgrqsde1p8t4qfnk0qhl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTkOrjzCFLFFibvTLRcjbIhUJZdoMhBKg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "161870066462-epi36g908i6flgrqsde1p8t4qfnk0qhl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

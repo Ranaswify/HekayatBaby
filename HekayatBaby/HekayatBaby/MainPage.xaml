@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<MasterDetailPage xmlns="http://xamarin.com/schemas/2014/forms"
+                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+                  xmlns:controls="clr-namespace:HekayatBaby.Controls" 
+                  xmlns:local1="clr-namespace:HekayatBaby.Views"
+                  x:Class="HekayatBaby.MainPage"
+                  xmlns:resources="clr-namespace:HekayatBaby.Resources"
+                  MasterBehavior="Popover">
+
+    <MasterDetailPage.Master>
+        <controls:CustomFoOverrideBackButtonInContentPage Title="Menu">
+            <Grid>
+                <Grid BackgroundColor="White" Padding="15" Grid.Row="0">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="auto" />
+                        <RowDefinition Height="*" />
+                    </Grid.RowDefinitions>
+                   
+                    <StackLayout Grid.Row="1">
+                        <StackLayout Orientation="Horizontal" Margin="0,0,0,10">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                            </StackLayout.GestureRecognizers>
+                            <Image Source="linguistics" HeightRequest="30" WidthRequest="30"/>
+                            <Label Text="{x:Static resources:LanguageResource.Language}" FontSize="Medium" FontAttributes="Bold"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" Margin="0,0,0,10">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Logout_Tapped"/>
+                            </StackLayout.GestureRecognizers>
+                            <Image Source="logout" HeightRequest="30" WidthRequest="30"/>
+                            <Label Text="{x:Static resources:LanguageResource.Logout}" FontSize="Medium" FontAttributes="Bold"/>
+                        </StackLayout>
+
+                        <Label Text="{x:Static resources:LanguageResource.ContactUs}" FontSize="Medium" Margin="0,0,0,10" FontAttributes="Bold"/>
+
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnWhatsAppClicked"/>
+                            </StackLayout.GestureRecognizers>
+                            <Image Source="whatsapp" Margin="0,5,5,0" HeightRequest="30" WidthRequest="30"/>
+                            <Label Text="+201069896902" VerticalTextAlignment="Center"/>
+                        </StackLayout>
+
+
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnFacebookPageClicked"/>
+                            </StackLayout.GestureRecognizers>
+                            <Image Source="facebook" Margin="0,5,5,0" HeightRequest="30" WidthRequest="30"/>
+                            <Label Text="Facebook Page" VerticalTextAlignment="Center"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="OnFacebookGroupClicked"/>
+                            </StackLayout.GestureRecognizers>
+                            <Image Source="facebook" Margin="0,5,5,0" HeightRequest="30" WidthRequest="30"/>
+                            <Label Text="Facebook Group" VerticalTextAlignment="Center"/>
+                        </StackLayout>
+                        
+                        <!--<StackLayout HorizontalOptions="CenterAndExpand">
+                            <Label Text="{x:Static resources:LanguageResource.ContactUs}" FontSize="Medium" Margin="0,0,0,10" FontAttributes="Bold"/>
+
+                            <Frame CornerRadius="10" Padding="2">
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                    <Image Source="whatsapp" Margin="0,5,5,0" HeightRequest="30" WidthRequest="30">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="OnWhatsAppClicked"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+
+                                    <Image Source="facebook" Margin="0,5,5,0" HeightRequest="30" WidthRequest="30">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="OnFacebookClicked"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>-->
+                       
+                    </StackLayout>
+                </Grid>
+                <!--Activity Indicator-->
+                <Grid x:Name="GridIndicator" IsVisible="False"
+              Grid.Row="0"      
+              BackgroundColor="#66666666">
+                    <ActivityIndicator x:Name="Indicator" IsRunning="False"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center" 
+                                    Color="Blue"/>
+                </Grid>
+            </Grid>
+        </controls:CustomFoOverrideBackButtonInContentPage>
+    </MasterDetailPage.Master>
+    <MasterDetailPage.Detail>
+        <controls:CustomNavigationPage>
+            <x:Arguments>
+                <local1:HomePage/>
+            </x:Arguments>
+        </controls:CustomNavigationPage>
+    </MasterDetailPage.Detail>
+
+
+</MasterDetailPage>

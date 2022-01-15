@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewModels="clr-namespace:HekayatBaby.ViewModels"
+             x:Class="HekayatBaby.Views.HomePage" Title="About The Kids">
+
+    <ContentPage.BindingContext>
+        <viewModels:HomeViewModel/>
+    </ContentPage.BindingContext>
+
+    <!--<NavigationPage.TitleView>
+        <Label Text="About the kids" FontSize="Medium" FontAttributes="Bold"/>
+    </NavigationPage.TitleView>-->
+    <ContentPage.Content>
+
+        <ScrollView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="0">
+            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"  Margin="0,0,0, -7">
+                <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                    <StackLayout Margin="0,0,0,-7">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding GetNewArrivalToysCommand}"/>
+                        </StackLayout.GestureRecognizers>
+                        <Image Source="newA"  Aspect="Fill"/>
+
+                    </StackLayout>
+
+                    
+                    <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding GetBestSellerToysCommand}"/>
+                        </StackLayout.GestureRecognizers>
+                        <Image Source="bestS" Aspect="Fill"/>
+
+
+                    </StackLayout>
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>

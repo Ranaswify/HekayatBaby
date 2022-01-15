@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewModels="clr-namespace:HekayatBaby.ViewModels"
+             x:Class="HekayatBaby.Views.SignUpPage" 
+             BackgroundColor="#f7d0e8" NavigationPage.HasBackButton="False">
+
+    <ContentPage.BindingContext>
+        <viewModels:SignUpViewModel/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <Grid>
+            <Grid>
+                <ScrollView Grid.Row="0">
+                    <StackLayout Padding="15,0" Margin="0,0,0,10">
+
+                        <Image Source="mylogo" HeightRequest="250" WidthRequest="30" Aspect="AspectFit"/>
+                        <Label Text="Sign up" HorizontalOptions="CenterAndExpand" TextColor="#e6306a" FontAttributes="Bold" FontSize="Large"/>
+                        <!--<Label Text="Sign up" HorizontalOptions="CenterAndExpand" TextColor="Black" FontAttributes="Bold" FontSize="Large"/>-->
+
+                        <Frame Padding="0" Margin="5">
+                            <Entry  x:Name="UserName" Text="{Binding username}" Placeholder="Username" ReturnType="Next"/>
+                        </Frame>
+
+                        <Frame Padding="0" Margin="5">
+                            <Entry x:Name="PasswordEntry" Text="{Binding password}" Placeholder="Password" IsPassword="True" ReturnType="Next"/>
+
+                        </Frame>
+
+                        <Frame Padding="0" Margin="5">
+                            <Entry x:Name="phoneNo" Text="{Binding phoneNo}" Placeholder="Phone number" Keyboard="Telephone" ReturnType="Done"/>
+
+                        </Frame>
+
+                        <Button Text="Continue" TextColor="White" Margin="5" BackgroundColor="#e6306a" CornerRadius="30" WidthRequest="150" Command="{Binding OnSignUpCommand}" />
+
+                        <Label Text="Or" HorizontalOptions="CenterAndExpand"/>
+
+                        <StackLayout>
+
+                            <Button Text="Continue with Facebook"
+                            CornerRadius="30"
+                        ImageSource="ic_fb"
+                        Command="{Binding OnLoginWithFacebookCommand}"
+                        HeightRequest="45"
+                        TextColor="White"
+                        BackgroundColor="#4768AD"
+                            WidthRequest="150"/>
+                        </StackLayout>
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
+
+            <Grid IsVisible="{Binding IsLoading}"
+              Grid.Row="0"      
+              BackgroundColor="#66666666">
+                <ActivityIndicator IsRunning="{Binding IsLoading}"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center" 
+                                    Color="Blue"/>
+            </Grid>
+
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

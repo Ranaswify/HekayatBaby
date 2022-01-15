@@ -1,0 +1,196 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:viewModels="clr-namespace:HekayatBaby.ViewModels"
+             x:Class="HekayatBaby.Views.CartsPage"
+             BackgroundColor="#f7d0e8" Title="My Carts">
+
+    <ContentPage.BindingContext>
+        <viewModels:CartsViewModel/>
+    </ContentPage.BindingContext>
+    
+    <Grid>
+        <ScrollView Margin="5">
+
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+
+
+                <StackLayout x:Name="ordersForTeam" Grid.Row="0" BindableLayout.ItemsSource="{Binding AllSaved,Mode=TwoWay}">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <ContentView>
+                                <StackLayout>
+                                    <Frame Padding="5"  Margin="10, 5" WidthRequest="200" CornerRadius="10" BackgroundColor="#cff4ff" BorderColor="Gray">
+                                        <StackLayout Orientation="Vertical">
+
+                                            <StackLayout Orientation="Horizontal">
+                                                <Image Source="{Binding myItem.imageUrl}" Aspect="AspectFill" HeightRequest="90" WidthRequest="90"/>
+                                                <StackLayout>
+                                                    <Label Text="{Binding myItem.name}" FontSize="Medium"
+                                                   FontAttributes="Bold"
+                                                   TextColor="#e6306a"/>
+                                                    <Label Text="{Binding myItem.category}" 
+                                                   FontAttributes="Bold"/>
+                                                </StackLayout>
+                                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" >
+                                                    <Label Text="{Binding myItem.coast}" FontSize="Medium"
+                                                   FontAttributes="Bold"
+                                                   TextColor="#e6306a"/>
+                                                    <Label Text="LE" FontSize="Medium"
+                                                   FontAttributes="Bold"
+                                                   TextColor="#e6306a"/>
+                                                </StackLayout>
+
+                                            </StackLayout>
+                                            <BoxView HeightRequest="1" Color="Gray"/>
+
+                                            <StackLayout Orientation="Horizontal">
+                                                <StackLayout Orientation="Horizontal">
+                                                    <Label Text="&#xf067;"  TextColor="#e6306a" FontSize="Small"  VerticalTextAlignment="Center" FontFamily="{StaticResource FontAwesome}">
+                                                        <Label.GestureRecognizers>
+                                                            <TapGestureRecognizer Command="{Binding Path=BindingContext.PlusCommand, Source={x:Reference ordersForTeam}}"
+                                                                                  CommandParameter="{Binding .}"/>
+                                                        </Label.GestureRecognizers>
+                                                    </Label>
+                                                    <Label Text="{Binding Count}" FontSize="Large" TextColor="#e6306a" FontAttributes="Bold"/>
+                                                    <Label Text="&#xf068;"  TextColor="#e6306a" FontSize="Small"  VerticalTextAlignment="Center" FontFamily="{StaticResource FontAwesome}">
+                                                        <Label.GestureRecognizers>
+                                                            <TapGestureRecognizer Command="{Binding Path=BindingContext.MinusCommand, Source={x:Reference ordersForTeam}}"
+                                                                                  CommandParameter="{Binding .}"/>
+                                                        </Label.GestureRecognizers>
+                                                    </Label>
+                                                </StackLayout>
+                                                <Label Text="&#xf2ed;" HorizontalOptions="EndAndExpand" TextColor="#e6306a" FontSize="Large"  VerticalTextAlignment="Center" FontFamily="{StaticResource FontAwesome}">
+                                                    <Label.GestureRecognizers>
+                                                        <TapGestureRecognizer Command="{Binding Path=BindingContext.RemoveItemCommand, Source={x:Reference ordersForTeam}}"
+                                                                                  CommandParameter="{Binding .}"/>
+                                                    </Label.GestureRecognizers>
+                                                </Label>
+
+                                            </StackLayout>
+
+
+                                        </StackLayout>
+                                    </Frame>
+
+                                </StackLayout>
+
+                            </ContentView>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                    <BindableLayout.EmptyView>
+                        <ContentView>
+                            <StackLayout>
+                                <Label Text="No items" FontSize="25"
+                                                   HorizontalOptions="CenterAndExpand"
+                                                   VerticalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                        </ContentView>
+                    </BindableLayout.EmptyView>
+                </StackLayout>
+
+                <!--<CollectionView x:Name="ordersForTeam" Grid.Row="0" HeightRequest="700" ItemsSource="{Binding AllSaved,Mode=TwoWay}" SelectionMode="None">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate>
+                            <ContentView>
+                                <StackLayout>
+                                    <Frame Padding="5"  Margin="10, 5" WidthRequest="200" CornerRadius="10" BackgroundColor="#cff4ff" BorderColor="Gray">
+                                        <StackLayout Orientation="Vertical">
+
+                                            <StackLayout Orientation="Horizontal">
+                                                <Image Source="{Binding myItem.imageUrl}" Aspect="AspectFill" HeightRequest="90" WidthRequest="90"/>
+                                                <StackLayout>
+                                                    <Label Text="{Binding myItem.name}" FontSize="Medium"
+                                                   FontAttributes="Bold"
+                                                   TextColor="#e6306a"/>
+                                                    <Label Text="{Binding myItem.category}" 
+                                                   FontAttributes="Bold"/>
+                                                </StackLayout>
+                                                <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" >
+                                                    <Label Text="{Binding myItem.coast}" FontSize="Medium"
+                                                   FontAttributes="Bold"
+                                                   TextColor="#e6306a"/>
+                                                    <Label Text="LE" FontSize="Medium"
+                                                   FontAttributes="Bold"
+                                                   TextColor="#e6306a"/>
+                                                </StackLayout>
+
+                                            </StackLayout>
+                                            <BoxView HeightRequest="1" Color="Gray"/>
+
+                                            <StackLayout Orientation="Horizontal">
+                                                <StackLayout Orientation="Horizontal">
+                                                    <Label Text="&#xf067;"  TextColor="#e6306a" FontSize="Small"  VerticalTextAlignment="Center" FontFamily="{StaticResource FontAwesome}">
+                                                        <Label.GestureRecognizers>
+                                                            <TapGestureRecognizer Command="{Binding Path=BindingContext.PlusCommand, Source={x:Reference ordersForTeam}}"
+                                                                                  CommandParameter="{Binding .}"/>
+                                                        </Label.GestureRecognizers>
+                                                    </Label>
+                                                    <Label Text="{Binding Count}" FontSize="Large" TextColor="#e6306a" FontAttributes="Bold"/>
+                                                    <Label Text="&#xf068;"  TextColor="#e6306a" FontSize="Small"  VerticalTextAlignment="Center" FontFamily="{StaticResource FontAwesome}">
+                                                        <Label.GestureRecognizers>
+                                                            <TapGestureRecognizer Command="{Binding Path=BindingContext.MinusCommand, Source={x:Reference ordersForTeam}}"
+                                                                                  CommandParameter="{Binding .}"/>
+                                                        </Label.GestureRecognizers>
+                                                    </Label>
+                                                </StackLayout>
+                                                <Label Text="&#xf2ed;" HorizontalOptions="EndAndExpand" TextColor="#e6306a" FontSize="Large"  VerticalTextAlignment="Center" FontFamily="{StaticResource FontAwesome}">
+                                                    <Label.GestureRecognizers>
+                                                        <TapGestureRecognizer Command="{Binding Path=BindingContext.RemoveItemCommand, Source={x:Reference ordersForTeam}}"
+                                                                                  CommandParameter="{Binding .}"/>
+                                                    </Label.GestureRecognizers>
+                                                </Label>
+
+                                            </StackLayout>
+
+
+                                        </StackLayout>
+                                    </Frame>
+
+                                </StackLayout>
+                            </ContentView>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                    <CollectionView.EmptyView>
+                        <ContentView>
+                            <StackLayout>
+                                <Label Text="No items" FontSize="25"
+                                                   HorizontalOptions="CenterAndExpand"
+                                                   VerticalOptions="CenterAndExpand"/>
+                            </StackLayout>
+                        </ContentView>
+                    </CollectionView.EmptyView>
+                </CollectionView>-->
+
+                <StackLayout Grid.Row="1" VerticalOptions="EndAndExpand">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Total" FontSize="Large" FontAttributes="Bold"/>
+                        <Label Text="{Binding TotalAmount}" HorizontalOptions="EndAndExpand" FontSize="Large" FontAttributes="Bold"/>
+                    </StackLayout>
+                    <Button Text="Payment" HorizontalOptions="CenterAndExpand" 
+                            BackgroundColor="#e6306a" 
+                            BorderWidth="3" TextColor="White"
+                            WidthRequest="200" CornerRadius="20" Command="{Binding GoToPaymentCommand}"/>
+
+                </StackLayout>
+                    
+                </Grid>
+            
+        </ScrollView>
+
+        <Grid IsVisible="{Binding IsLoading}"
+              Grid.Row="0"      
+              BackgroundColor="#66666666">
+            <ActivityIndicator IsRunning="{Binding IsLoading}"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center" 
+                                    Color="Blue"/>
+        </Grid>
+    </Grid>
+
+</ContentPage>

@@ -1,0 +1,83 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<controls:CustomFoOverrideBackButtonInContentPage  xmlns:controls="clr-namespace:HekayatBaby.Controls" 
+                                                   xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HekayatBaby.Views.LoginPage" xmlns:viewModels="clr-namespace:HekayatBaby.ViewModels"
+             BackgroundColor="#f7d0e8" NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.BindingContext>
+        <viewModels:LoginViewModel/>
+    </ContentPage.BindingContext>
+
+    <controls:CustomFoOverrideBackButtonInContentPage.Content>
+        <Grid>
+            <Grid>
+                <ScrollView Grid.Row="0">
+                    <StackLayout Padding="15,15">
+                        <StackLayout>
+
+                            <Image Source="mylogo" HeightRequest="250" WidthRequest="30" Aspect="AspectFit"/>
+                            <Label Text="Login" HorizontalOptions="CenterAndExpand" TextColor="#e6306a" FontAttributes="Bold" FontSize="Large"/>
+                            <Frame Padding="0" Margin="5">
+                                <Entry  x:Name="UserName" BackgroundColor="Transparent" Text="{Binding UserNameText}" Placeholder="Username" ReturnType="Next"/>
+
+                            </Frame>
+                            <Frame Padding="0" Margin="5">
+                                <StackLayout Orientation="Horizontal">
+                                    <Entry x:Name="PasswordEntry" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" Text="{Binding PasswordEntryText}" Placeholder="Password" IsPassword="{Binding IsShowPassword}" ReturnType="Done"/>
+                                    <Label Text="&#xf06e;" HorizontalOptions="End" Margin="0,0,2,0" TextColor="Black" FontSize="Medium"  VerticalTextAlignment="Center" FontFamily="{StaticResource FontAwesome}">
+                                        <Label.GestureRecognizers>
+                                            <TapGestureRecognizer Command="{Binding ShowPasswordCommand}"/>
+                                        </Label.GestureRecognizers>
+                                    </Label>
+
+                                </StackLayout>
+
+                            </Frame>
+
+                            <Button x:Name="LoginBtn" Text="Login" TextColor="White" Margin="5" BackgroundColor="#e6306a" CornerRadius="30" WidthRequest="150" Command="{Binding OnLoginCommand}" />
+
+                        </StackLayout>
+
+                        <Label Text="Or" HorizontalOptions="CenterAndExpand"/>
+
+                        <StackLayout >
+
+                            <Button Text="Login with Facebook"
+                            CornerRadius="30"
+                        ImageSource="ic_fb"
+                        Command="{Binding OnLoginWithFacebookCommand}"
+                        HeightRequest="45"
+                        TextColor="White"
+                        BackgroundColor="#4768AD"
+                        WidthRequest="150"/>
+                        </StackLayout>
+
+
+
+                        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="EndAndExpand" Orientation="Horizontal" Margin="0,20,0,0">
+                            <Label Text="Don't have account?" FontSize="Medium"/>
+                            <Label Text="Sign Up" FontSize="Medium" TextColor="#e6306a">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                        </StackLayout>
+
+                    </StackLayout>
+
+                </ScrollView>
+
+            </Grid>
+
+            <Grid IsVisible="{Binding IsLoading}"
+              Grid.Row="0"      
+              BackgroundColor="#66666666">
+                <ActivityIndicator IsRunning="{Binding IsLoading}"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center" 
+                                    Color="Blue"/>
+            </Grid>
+        </Grid>
+    </controls:CustomFoOverrideBackButtonInContentPage.Content>
+</controls:CustomFoOverrideBackButtonInContentPage>

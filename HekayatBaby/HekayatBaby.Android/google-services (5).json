@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "563170435318",
+    "project_id": "aboutthekids-788ac",
+    "storage_bucket": "aboutthekids-788ac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:563170435318:android:f1e59cb34c2dbde4c98cd7",
+        "android_client_info": {
+          "package_name": "com.aboutTheKids.aboutTheKids"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "563170435318-7e8nmjtco8kce34fb21n6pugj7j4n2mt.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZiMNegcUYFUMntytdPqWMbFxZcOdtfAc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "563170435318-7e8nmjtco8kce34fb21n6pugj7j4n2mt.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

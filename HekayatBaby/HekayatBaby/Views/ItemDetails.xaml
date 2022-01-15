@@ -1,0 +1,78 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewModels="clr-namespace:HekayatBaby.ViewModels" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             x:Class="HekayatBaby.Views.ItemDetails"
+             BackgroundColor="#f7d0e8">
+
+    <NavigationPage.TitleView>
+        <Label Text="Details" FontSize="Medium" TextColor="#e6306a"/>
+    </NavigationPage.TitleView>
+    
+    <ContentPage.BindingContext>
+        <viewModels:ItemDetailsViewModel/>
+    </ContentPage.BindingContext>
+    
+    <ContentPage.Content>
+        <ScrollView Margin="0">
+            <StackLayout>
+
+                <Grid Margin="10" ColumnSpacing="20">
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="300"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="auto"/>
+                    </Grid.ColumnDefinitions>
+                    <CollectionView ItemsSource="{Binding AllOrders}">
+                        <CollectionView.ItemsLayout>
+                            <GridItemsLayout Orientation="Horizontal"/>
+                        </CollectionView.ItemsLayout>
+                        <CollectionView.ItemTemplate>
+                            <DataTemplate>
+                                <Grid Padding="5" Grid.Row="0" Grid.Column="0" Margin="15">
+                                    <!--<Image Source="{Binding .}"/>-->
+                                    <Frame Padding="0" Margin="10" CornerRadius="10" WidthRequest="300" BackgroundColor="White">
+                                        <ffimageloading:CachedImage
+                                                    Source="{Binding .}" HorizontalOptions="FillAndExpand"/>
+                                    </Frame>
+
+                                </Grid>
+                            </DataTemplate>
+                        </CollectionView.ItemTemplate>
+                    </CollectionView>
+                </Grid>
+
+                <StackLayout Orientation="Horizontal" Margin="10">
+                    <!--<StackLayout Orientation="Horizontal">
+                        <Label Text="&#xf067;"  TextColor="#e6306a" FontSize="Small"  VerticalTextAlignment="Center" FontFamily="{StaticResource FontAwesome}">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding PluCommand}"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                        <Label Text="{Binding Count}" FontSize="Large" TextColor="#e6306a" FontAttributes="Bold"/>
+                        <Label Text="&#xf068;"  TextColor="#e6306a" FontSize="Small"  VerticalTextAlignment="Center" FontFamily="{StaticResource FontAwesome}">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding MinusCommand}"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>-->
+                    <Label Text="{Binding Order.name}" FontSize="Large" TextColor="#e6306a" FontAttributes="Bold"/>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                        <Label Text="{Binding Coast}" FontSize="Large" TextColor="#e6306a" FontAttributes="Bold"/>
+                        <Label Text="LE" FontSize="Large" TextColor="#e6306a" FontAttributes="Bold"/>
+
+                    </StackLayout>
+                </StackLayout>
+                <StackLayout Margin="10">
+                    <Label Text="{Binding Description}" FontSize="Medium" TextColor="Black" Margin="0,0,0,5"/>
+                </StackLayout>
+                <Button Text="Add to cart" BackgroundColor="#e6306a" Command="{Binding GoToPaymentCommand}" BorderWidth="3"
+                        BorderColor="#e6306a" TextColor="White" Margin="0,0,0,10" WidthRequest="200" 
+                        VerticalOptions="EndAndExpand" CornerRadius="20" HorizontalOptions="CenterAndExpand"/>
+
+            </StackLayout>
+
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>

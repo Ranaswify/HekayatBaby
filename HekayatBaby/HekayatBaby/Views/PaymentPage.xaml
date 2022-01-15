@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewModels="clr-namespace:HekayatBaby.ViewModels" 
+             x:Class="HekayatBaby.Views.PaymentPage"
+             BackgroundColor="#f7d0e8">
+
+    <ContentPage.BindingContext>
+        <viewModels:PaymentViewModel/>
+    </ContentPage.BindingContext>
+
+    <NavigationPage.TitleView>
+        <Label Text="Payment Informations" FontSize="Medium" TextColor="#e6306a"/>
+    </NavigationPage.TitleView>
+    <ContentPage.Content>
+        <ScrollView Margin="5">
+            <StackLayout>
+                <Frame Padding="0" BackgroundColor="Transparent" BorderColor="Black" CornerRadius="10">
+                    <StackLayout Margin="10" HorizontalOptions="CenterAndExpand">
+                        <Label Text="Total Amount" FontSize="Large"/>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="{Binding MyItemsToPay.TotalAmount}" FontSize="Large" TextColor="Black" FontAttributes="Bold"/>
+                            <Label Text="LE" FontSize="Large" TextColor="Black" FontAttributes="Bold"/>
+
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+
+                <StackLayout Spacing="5">
+                    <!--<Label Margin="10">
+                        <Label.FormattedText>
+                            <FormattedString>
+                                <Span Text="Full Name"/>
+                                <Span Text="*" TextColor="Red"/>
+                            </FormattedString>
+                        </Label.FormattedText>
+                    </Label>-->
+                    <Frame CornerRadius="5" Padding="1" Margin="5" BorderColor="Black" BackgroundColor="Transparent">
+                        <Entry Placeholder="Full Name" Text="{Binding FullName}" BackgroundColor="Transparent"/>
+                    </Frame>
+                    <Frame CornerRadius="5" Padding="1" BorderColor="Black" Margin="5" BackgroundColor="Transparent">
+                        <Entry BackgroundColor="Transparent" Text="{Binding PhoneNo}" Placeholder="Phone Number" Keyboard="Telephone"/>
+                    </Frame>
+                    <Frame CornerRadius="5" Padding="1" BorderColor="Black" Margin="5" BackgroundColor="Transparent">
+                        <Entry Placeholder="Address" Text="{Binding Address}" BackgroundColor="Transparent"/>
+                    </Frame>
+                    <Frame CornerRadius="5" Padding="1" BorderColor="Black" Margin="5" BackgroundColor="Transparent">
+                        <Editor Placeholder="Note" Text="{Binding Notes}" BackgroundColor="Transparent"/>
+                    </Frame>
+                    <Frame CornerRadius="5" Padding="1" BorderColor="Black" Margin="5" BackgroundColor="Transparent">
+                        <Entry Placeholder="Promo code" BackgroundColor="Transparent"/>
+                    </Frame>
+                    <Button Text="Submit" BackgroundColor="#f7d0e8" BorderWidth="2" BorderColor="#e6306a" TextColor="#e6306a" 
+                            Margin="10" WidthRequest="200" VerticalOptions="EndAndExpand" 
+                            CornerRadius="20" HorizontalOptions="CenterAndExpand"
+                            Command="{Binding ConfirmPaymentCommand}"/>
+
+                </StackLayout>
+            </StackLayout>
+           
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

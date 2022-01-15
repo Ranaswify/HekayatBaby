@@ -1,0 +1,57 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HekayatBaby.Views.CategoryView">
+  <ContentView.Content>
+        <Grid IsVisible="{Binding IsSorting}" 
+                    BackgroundColor="White">
+            <!--<Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>-->
+
+            <StackLayout>
+                <StackLayout Grid.Row="0" Margin="10" Orientation="Horizontal">
+                    <Label Text="&#xf00d;" TextColor="#e6306a" FontSize="Medium" VerticalTextAlignment="Center" 
+                               BackgroundColor="TransParent" FontFamily="{StaticResource FontAwesome}">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Command="{Binding CloseSortCommand}"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                    <Label Text="Sort By" FontAttributes="Bold" FontSize="Large" HorizontalOptions="CenterAndExpand"/>
+                </StackLayout>
+                <ScrollView>
+                    <Frame Grid.Row="1">
+                        <StackLayout>
+                            <Label Text="Price (Low To High)" FontAttributes="Bold" TextColor="Black" Margin="10">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding FilterLowToHighCommand}"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <Label Text="Price (High To Low)" FontAttributes="Bold" TextColor="Black" Margin="10">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding FilterHighToLowCommand}"/>
+                                </Label.GestureRecognizers>
+                            </Label>
+                            <CollectionView ItemsSource="{Binding Categores}" VerticalOptions="Fill" Margin="0" SelectionMode="Single"
+                              SelectedItem="{Binding SelectedFilter}" SelectionChangedCommand="{Binding SelectedFilterCommand}">
+                                <CollectionView.ItemTemplate>
+                                    <DataTemplate>
+                                        <ContentView>
+                                            <Label Text="{Binding .}" FontAttributes="Bold" TextColor="Black" Margin="10"/>
+                                        </ContentView>
+                                    </DataTemplate>
+                                </CollectionView.ItemTemplate>
+                            </CollectionView>
+
+                        </StackLayout>
+
+                    </Frame>
+
+                </ScrollView>
+            </StackLayout>
+           
+          
+      </Grid>
+  </ContentView.Content>
+</ContentView>
