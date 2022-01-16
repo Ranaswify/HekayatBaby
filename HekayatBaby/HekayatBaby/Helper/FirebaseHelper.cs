@@ -31,16 +31,17 @@ namespace HekayatBaby.Helper
               }).ToList();
         }
 
-        public async Task AddPerson(string name, string phoneNo, string password)
+        public async Task<FirebaseObject<Users>> AddPerson(string name, string phoneNo, string password)
         {
             try
             {
-                await firebase.Child("Users").PostAsync(
+               var response = await firebase.Child("Users").PostAsync(
               new Users() { Username = name, PhoneNo = phoneNo, Password = password, UserId = "US" + phoneNo + name });
+                return response;
             }
             catch (Exception ex)
             {
-
+                return null;
             }
         }
 

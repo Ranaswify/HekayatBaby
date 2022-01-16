@@ -24,7 +24,16 @@
                         </Frame>
 
                         <Frame Padding="0" Margin="5">
-                            <Entry x:Name="PasswordEntry" Text="{Binding password}" Placeholder="Password" IsPassword="True" ReturnType="Next"/>
+                            <StackLayout Orientation="Horizontal">
+                                <Entry x:Name="PasswordEntry" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" Text="{Binding password}" Placeholder="Password" IsPassword="{Binding IsShowPassword}" ReturnType="Done"/>
+                                <Label Text="&#xf06e;" HorizontalOptions="End" Margin="0,0,2,0" TextColor="Black" FontSize="Medium"  VerticalTextAlignment="Center" FontFamily="{StaticResource FontAwesome}">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Command="{Binding ShowPasswordCommand}"/>
+                                    </Label.GestureRecognizers>
+                                </Label>
+
+                            </StackLayout>
+                            <!--<Entry x:Name="PasswordEntry" Text="{Binding password}" Placeholder="Password" IsPassword="True" ReturnType="Next"/>-->
 
                         </Frame>
 

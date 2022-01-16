@@ -52,6 +52,19 @@ namespace HekayatBaby.ViewModels
                 return totalAmount;
             }
         }
+        bool isEmpty;
+        public bool IsEmpty
+        {
+            set
+            {
+                isEmpty = value;
+                OnPropertyChanged();
+            }
+            get
+            {
+                return isEmpty;
+            }
+        }
         public CartsViewModel()
         {
             AllSaved = new ObservableCollection<SavedItems>();
@@ -100,12 +113,14 @@ namespace HekayatBaby.ViewModels
 
         private async Task GoToPayment()
         {
+            IsLoading = true;
             ItemsToPay itemsToPay = new ItemsToPay()
             {
                 TotalAmount = TotalAmount,
                 ItemToPay = AllSaved
             };
             await Application.Current.MainPage.Navigation.PushAsync(new PaymentPage(itemsToPay));
+            IsLoading = false;
         }
 
         private async void RemoveItem(SavedItems i)
@@ -134,6 +149,10 @@ namespace HekayatBaby.ViewModels
                 AllSaved = await firebaseHelper.GetAllSavedItems();
                 var i = AllSaved.Where(a => a.userId == Preferences.Get("UserId", ""));
                 AllSaved = new ObservableCollection<SavedItems>(i);
+                if (AllSaved.Count > 0)
+                {
+                    IsEmpty = true;
+                }
                 //TotalAmount = AllSaved.Aggregate((a, x) => a.+x);
                 SubTotalAmount();
 

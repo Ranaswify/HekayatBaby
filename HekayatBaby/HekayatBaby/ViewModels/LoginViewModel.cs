@@ -62,7 +62,7 @@ namespace HekayatBaby.ViewModels
             get { return showPasswordIcon; }
         }
 
-        bool isShowPassword;
+        bool isShowPassword = true;
         public bool IsShowPassword
 
         {
@@ -85,10 +85,7 @@ namespace HekayatBaby.ViewModels
         private void ShowPassword()
         {
             IsShowPassword =! IsShowPassword;
-            if (IsShowPassword)
-            {
-                
-            }
+           
         }
 
         public ICommand OnLoginCommand { get; set; }

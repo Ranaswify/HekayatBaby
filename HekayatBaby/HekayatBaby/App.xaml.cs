@@ -28,17 +28,17 @@ namespace HekayatBaby
         public App()
         {
             InitializeComponent();
-            if (Preferences.Get("UserId", "") != null)
-            {
-                //MainPage = new CustomNavigationPage(new HomePage());
-                MainPage = new CustomNavigationPage(new MainPage());
+            //if (Preferences.Get("UserId", "") != null)
+            //{
+            //    //MainPage = new CustomNavigationPage(new HomePage());
+            //    MainPage = new CustomNavigationPage(new MainPage());
 
-            }
-            else
-            {
-                MainPage = new CustomNavigationPage(new LoginPage());
-            }
-            // MainPage = new CustomNavigationPage(new LoginPage());
+            //}
+            //else
+            //{
+            //    MainPage = new CustomNavigationPage(new LoginPage());
+            //}
+             MainPage = new CustomNavigationPage(new LoginPage());
         }
 
         protected override void OnStart()

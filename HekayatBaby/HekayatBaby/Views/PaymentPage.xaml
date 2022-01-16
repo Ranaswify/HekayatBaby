@@ -12,10 +12,14 @@
     <NavigationPage.TitleView>
         <Label Text="Payment Informations" FontSize="Medium" TextColor="#e6306a"/>
     </NavigationPage.TitleView>
-    <ContentPage.Content>
+    <Grid>
         <ScrollView Margin="5">
-            <StackLayout>
-                <Frame Padding="0" BackgroundColor="Transparent" BorderColor="Black" CornerRadius="10">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="auto"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Frame Grid.Row="0" Padding="0" BackgroundColor="Transparent" BorderColor="Black" CornerRadius="10">
                     <StackLayout Margin="10" HorizontalOptions="CenterAndExpand">
                         <Label Text="Total Amount" FontSize="Large"/>
                         <StackLayout Orientation="Horizontal">
@@ -26,7 +30,7 @@
                     </StackLayout>
                 </Frame>
 
-                <StackLayout Spacing="5">
+                <StackLayout Grid.Row="1" Spacing="5">
                     <!--<Label Margin="10">
                         <Label.FormattedText>
                             <FormattedString>
@@ -48,7 +52,7 @@
                         <Editor Placeholder="Note" Text="{Binding Notes}" BackgroundColor="Transparent"/>
                     </Frame>
                     <Frame CornerRadius="5" Padding="1" BorderColor="Black" Margin="5" BackgroundColor="Transparent">
-                        <Entry Placeholder="Promo code" BackgroundColor="Transparent"/>
+                        <Entry Placeholder="Promo code" Text="{Binding PromoCode}" BackgroundColor="Transparent"/>
                     </Frame>
                     <Button Text="Submit" BackgroundColor="#f7d0e8" BorderWidth="2" BorderColor="#e6306a" TextColor="#e6306a" 
                             Margin="10" WidthRequest="200" VerticalOptions="EndAndExpand" 
@@ -56,9 +60,16 @@
                             Command="{Binding ConfirmPaymentCommand}"/>
 
                 </StackLayout>
-            </StackLayout>
+            </Grid>
            
         </ScrollView>
-
-    </ContentPage.Content>
+        <Grid IsVisible="{Binding IsLoading}"
+              Grid.Row="0"      
+              BackgroundColor="#66666666">
+            <ActivityIndicator IsRunning="{Binding IsLoading}"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center" 
+                                    Color="Blue"/>
+        </Grid>
+    </Grid>
 </ContentPage>

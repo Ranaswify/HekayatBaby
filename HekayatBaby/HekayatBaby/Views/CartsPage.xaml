@@ -85,8 +85,10 @@
                     </BindableLayout.ItemTemplate>
                     <BindableLayout.EmptyView>
                         <ContentView>
-                            <StackLayout>
-                                <Label Text="No items" FontSize="25"
+                            <StackLayout VerticalOptions="CenterAndExpand">
+                                <Image Source="carts" HeightRequest="50" WidthRequest="50"/>
+
+                                <Label Text="Your cart is empty" FontSize="Medium"
                                                    HorizontalOptions="CenterAndExpand"
                                                    VerticalOptions="CenterAndExpand"/>
                             </StackLayout>
@@ -167,7 +169,7 @@
                     </CollectionView.EmptyView>
                 </CollectionView>-->
 
-                <StackLayout Grid.Row="1" VerticalOptions="EndAndExpand">
+                <StackLayout Grid.Row="1" VerticalOptions="EndAndExpand" IsVisible="{Binding IsEmpty}">
                     <StackLayout Orientation="Horizontal">
                         <Label Text="Total" FontSize="Large" FontAttributes="Bold"/>
                         <Label Text="{Binding TotalAmount}" HorizontalOptions="EndAndExpand" FontSize="Large" FontAttributes="Bold"/>

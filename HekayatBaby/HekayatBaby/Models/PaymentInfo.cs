@@ -11,6 +11,8 @@ namespace HekayatBaby.Models
         public string PhoneNo { get; set; }
         public string Address { get; set; }
         public string Note { get; set; }
+        public string PromoCode { get; set; }
+        public double PaidAmount { get; set; }
         public ItemsToPay MyItemsToPay { get; set; }
 
     }

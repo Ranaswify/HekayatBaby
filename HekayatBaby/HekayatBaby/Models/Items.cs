@@ -18,6 +18,12 @@ namespace HekayatBaby.Models
         public string category { get; set; }
         public string imageUrl { get; set; }
     }
+    public class ItemsToSend
+    {
+        public string name { get; set; }
+        public int Count { get; set; }
+    }
+
     public class SavedItems : INotifyPropertyChanged
     {
         public event PropertyChangedEventHandler PropertyChanged;
@@ -42,7 +48,10 @@ namespace HekayatBaby.Models
         public double TotalSellingPrice
         {
             get
-            { return _totalSellingPrice; }
+            {
+                _totalSellingPrice = myItem.coast;
+                return _totalSellingPrice; 
+            }
             set
             {
                 _totalSellingPrice = value;

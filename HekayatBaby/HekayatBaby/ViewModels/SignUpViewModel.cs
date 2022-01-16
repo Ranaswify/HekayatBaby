@@ -15,14 +15,32 @@ namespace HekayatBaby.ViewModels
         public string username { get; set; }
         public string password { get; set; }
         public string phoneNo { get; set; }
+        bool isShowPassword = true;
+        public bool IsShowPassword
+
+        {
+            set
+            {
+                if (isShowPassword == value)
+                    return;
+                isShowPassword = value;
+                OnPropertyChanged();
+            }
+            get { return isShowPassword; }
+        }
 
         public ICommand OnSignUpCommand { get; set; }
+        public ICommand ShowPasswordCommand { get; set; }
 
         public SignUpViewModel()
         {
             OnSignUpCommand = new Command(async () => await OnSignUp());
+            ShowPasswordCommand = new Command(ShowPassword);
         }
-
+        private void ShowPassword()
+        {
+            IsShowPassword = !IsShowPassword;
+        }
         async Task OnSignUp()
         {
 
@@ -32,9 +50,16 @@ namespace HekayatBaby.ViewModels
             {
                 if (!string.IsNullOrEmpty(username) && !string.IsNullOrEmpty(password) && !string.IsNullOrEmpty(phoneNo))
                 {
-                    await firebaseHelper.AddPerson(username, phoneNo, password);
-                    await Application.Current.MainPage.Navigation.PushAsync(new MainPage());
-                    IsLoading = false;
+                   var r = await firebaseHelper.AddPerson(username, phoneNo, password);
+                    if (r != null)
+                    {
+                        await Application.Current.MainPage.Navigation.PushAsync(new MainPage());
+                        IsLoading = false;
+                    }
+                    else
+                    {
+                        await Application.Current.MainPage.DisplayAlert("", "Try again later", "Ok");
+                    }
                 }
                 else
                 {
