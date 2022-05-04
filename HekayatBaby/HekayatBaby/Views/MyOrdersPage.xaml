@@ -1,0 +1,148 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HekayatBaby.Views.MyOrdersPage"
+             BackgroundColor="#f7d0e8"
+             xmlns:resources="clr-namespace:HekayatBaby.Resources"
+             xmlns:viewModels="clr-namespace:HekayatBaby.ViewModels"
+             Title="My Orders">
+    
+    <ContentPage.BindingContext>
+        <viewModels:MyOrdersViewModel/>
+    </ContentPage.BindingContext>
+    
+    <Grid>
+        <ScrollView>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
+                </Grid.RowDefinitions>
+
+
+                <StackLayout x:Name="orders" Grid.Row="0" BindableLayout.ItemsSource="{Binding AllSaved,Mode=TwoWay}">
+                    <BindableLayout.ItemTemplate>
+                        <DataTemplate>
+                            <ContentView>
+                                <Grid RowDefinitions="auto,auto" BackgroundColor="LightGray" Margin="10">
+                                    <Frame Grid.Row="0" Padding="0"  HeightRequest="100" WidthRequest="100" >
+                                        <CollectionView  ItemsSource="{Binding MyItemsToPay.ItemToPay}">
+                                            <CollectionView.ItemsLayout>
+                                                <GridItemsLayout Orientation="Horizontal"/>
+                                            </CollectionView.ItemsLayout>
+                                            <CollectionView.ItemTemplate>
+                                                <DataTemplate>
+                                                    <Frame Padding="0" Margin="5" HeightRequest="100" >
+                                                        <StackLayout >
+                                                            <Image HorizontalOptions="CenterAndExpand" HeightRequest="100" WidthRequest="100" 
+                                                                   Source="{Binding myItem.imageUrl}" Aspect="Fill"/>
+                                                            <Label Text="{Binding myItem.name}" HorizontalOptions="CenterAndExpand" 
+                                                                   FontSize="Medium" TextColor="Black"/>
+                                                        </StackLayout>
+                                                    </Frame>
+                                                </DataTemplate>
+                                            </CollectionView.ItemTemplate>
+                                        </CollectionView>
+                                    </Frame>
+
+
+                                    <Grid  Grid.Row="1" Padding="0"  VerticalOptions="CenterAndExpand" Margin="5" RowSpacing="0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="*"/>
+                                            <RowDefinition Height="auto"/>
+                                        </Grid.RowDefinitions>
+
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="*"/>
+                                            <ColumnDefinition Width="auto"/>
+                                            <ColumnDefinition Width="*"/>
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label Text="Date" Grid.Row="0" Grid.Column="0" TextColor="Black" FontSize="Large"/>
+                                        <Label Text="{Binding CreatedTime,StringFormat='{0:dd/MM/yyyy}'}" TextColor="Black" FontSize="Large" Grid.Row="0" Grid.Column="2"/>
+
+                                        <Label Text="Total amount" Grid.Row="1" Grid.Column="0" TextColor="Black" FontSize="Large"/>
+                                        <Label Text="{Binding PaidAmount}" TextColor="Black" FontSize="Large" Grid.Row="1" Grid.Column="2"/>
+
+                                        <Label Text="Status" Grid.Row="2" Grid.Column="0" TextColor="Black" FontSize="Large"/>
+                                        <Label Text="{Binding OrderStatus}" LineBreakMode="WordWrap" TextColor="Black" FontSize="Large" Grid.Row="2" Grid.Column="2"/>
+
+
+                                        <Button IsVisible="{Binding IsProccess}" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" TextColor="#e6306a"
+                                                Text="Cancel Order" WidthRequest="50" HeightRequest="50" CornerRadius="15" BackgroundColor="Transparent"
+                                                Command="{Binding BindingContext.CancelOrderCommand, Source={x:Reference orders}}"
+                                                CommandParameter="{Binding .}"/>
+
+
+                                        <Grid Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="3" ColumnDefinitions="*,auto,auto"
+                                                     IsVisible="{Binding IsDelivered}" BackgroundColor="White" Padding="5">
+                                            <Label Grid.Column="0" Text="Did this order delivered to you?"
+                                                   TextColor="Black" FontSize="Medium" FontAttributes="Bold" VerticalTextAlignment="Center"/>
+                                            <Button Grid.Column="1" Text="Yes" WidthRequest="50" Command="{Binding BindingContext.CheckedCommand, Source={x:Reference orders}}" CommandParameter="{Binding .}"/>
+                                            <Button Grid.Column="2" Text="No" WidthRequest="50"  Command="{Binding BindingContext.NotCheckedCommand, Source={x:Reference orders}}"/>
+                                        </Grid>
+                                    </Grid>
+                                </Grid>
+
+                            </ContentView>
+                        </DataTemplate>
+                    </BindableLayout.ItemTemplate>
+                    <BindableLayout.EmptyView>
+                        <StackLayout VerticalOptions="CenterAndExpand">
+                            <Image Source="shoppingbag" HeightRequest="80" WidthRequest="80" Margin="0,10"/>
+
+                            <Label Text="Your orders is empty" FontSize="Large"
+                                                   HorizontalOptions="CenterAndExpand"
+                                                   VerticalOptions="CenterAndExpand"/>
+                        </StackLayout>
+                    </BindableLayout.EmptyView>
+                </StackLayout>
+
+            </Grid>
+
+        </ScrollView>
+
+        <Grid IsVisible="{Binding IsChecked}"
+              Grid.Row="0" 
+              BackgroundColor="#66666666">
+            <Image Source="checked"
+                   VerticalOptions="Center"
+                               HorizontalOptions="Center" HeightRequest="200" WidthRequest="200"/>
+
+
+        </Grid>
+
+        <Grid IsVisible="{Binding IsNotChecked}"
+              Grid.Row="0" 
+              BackgroundColor="#66666666">
+            <Grid RowDefinitions="*,*,*,*" BackgroundColor="White" Padding="10" HorizontalOptions="Center" VerticalOptions="Center">
+                <Label Grid.Row="0" Text="Please contact us" HorizontalOptions="Center" TextColor="Black" FontSize="Large"/>
+                <StackLayout Grid.Row="1" Orientation="Horizontal">
+                    <Label Text="whatsapp: " TextColor="Black" FontSize="Large"/>
+                    <Label Text="+201069896902" TextColor="Black" FontSize="Large"/>
+
+                </StackLayout>
+                <StackLayout Grid.Row="2" Orientation="Horizontal" HorizontalOptions="EndAndExpand">
+                    <Label Text="Email: " TextColor="Black" FontSize="Large"/>
+                    <Label Text="AboutTheKids7@gmail.com" TextColor="Black" FontSize="Large"/>
+
+                </StackLayout>
+                <Button Grid.Row="3" Text="Ok" Command="{Binding CloseGridCommand}"/>
+            </Grid>
+
+        </Grid>
+
+        <Grid IsVisible="{Binding IsLoading}"
+              Grid.Row="0"      
+              BackgroundColor="#66666666">
+            <ActivityIndicator IsRunning="{Binding IsLoading}"
+                               VerticalOptions="Center"
+                               HorizontalOptions="Center" 
+                                    Color="Blue"/>
+        </Grid>
+    </Grid>
+
+</ContentPage>

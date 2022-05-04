@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              xmlns:viewModels="clr-namespace:HekayatBaby.ViewModels"
              x:Class="HekayatBaby.Views.SignUpPage" 
-             BackgroundColor="#f7d0e8" NavigationPage.HasBackButton="False">
+             BackgroundColor="#f7d0e8"
+             NavigationPage.HasBackButton="False"
+             xmlns:resources="clr-namespace:HekayatBaby.Resources" xmlns:controls="clr-namespace:HekayatBaby.Controls">
 
     <ContentPage.BindingContext>
         <viewModels:SignUpViewModel/>
@@ -16,16 +18,19 @@
                     <StackLayout Padding="15,0" Margin="0,0,0,10">
 
                         <Image Source="mylogo" HeightRequest="250" WidthRequest="30" Aspect="AspectFit"/>
-                        <Label Text="Sign up" HorizontalOptions="CenterAndExpand" TextColor="#e6306a" FontAttributes="Bold" FontSize="Large"/>
-                        <!--<Label Text="Sign up" HorizontalOptions="CenterAndExpand" TextColor="Black" FontAttributes="Bold" FontSize="Large"/>-->
+                        <Label Text="{x:Static resources:LanguageResource.SignUp}" HorizontalOptions="CenterAndExpand" TextColor="#e6306a" 
+                               FontAttributes="Bold" FontSize="Large"/>
 
                         <Frame Padding="0" Margin="5">
-                            <Entry  x:Name="UserName" Text="{Binding username}" Placeholder="Username" ReturnType="Next"/>
+                            <controls:CustomEntry  x:Name="UserName" Text="{Binding username}" 
+                                    Placeholder="{x:Static resources:LanguageResource.Username}" ReturnType="Next"/>
                         </Frame>
 
                         <Frame Padding="0" Margin="5">
                             <StackLayout Orientation="Horizontal">
-                                <Entry x:Name="PasswordEntry" HorizontalOptions="FillAndExpand" BackgroundColor="Transparent" Text="{Binding password}" Placeholder="Password" IsPassword="{Binding IsShowPassword}" ReturnType="Done"/>
+                                <controls:CustomEntry x:Name="PasswordEntry" HorizontalOptions="FillAndExpand" 
+                                       BackgroundColor="Transparent" Text="{Binding password}" Placeholder="{x:Static resources:LanguageResource.Password}" 
+                                       IsPassword="{Binding IsShowPassword}" ReturnType="Done"/>
                                 <Label Text="&#xf06e;" HorizontalOptions="End" Margin="0,0,2,0" TextColor="Black" FontSize="Medium"  VerticalTextAlignment="Center" FontFamily="{StaticResource FontAwesome}">
                                     <Label.GestureRecognizers>
                                         <TapGestureRecognizer Command="{Binding ShowPasswordCommand}"/>
@@ -38,19 +43,20 @@
                         </Frame>
 
                         <Frame Padding="0" Margin="5">
-                            <Entry x:Name="phoneNo" Text="{Binding phoneNo}" Placeholder="Phone number" Keyboard="Telephone" ReturnType="Done"/>
+                            <controls:CustomEntry x:Name="phoneNo" Text="{Binding phoneNo}" Placeholder="{x:Static resources:LanguageResource.PhoneNo}" Keyboard="Telephone" ReturnType="Done"/>
 
                         </Frame>
 
-                        <Button Text="Continue" TextColor="White" Margin="5" BackgroundColor="#e6306a" CornerRadius="30" WidthRequest="150" Command="{Binding OnSignUpCommand}" />
+                        <Button Text="{x:Static resources:LanguageResource.SignUp}" TextColor="White" Margin="5" 
+                                BackgroundColor="#e6306a" WidthRequest="150" Command="{Binding OnSignUpCommand}" />
 
-                        <Label Text="Or" HorizontalOptions="CenterAndExpand"/>
+                        <Label Text="{x:Static resources:LanguageResource.Or}" TextColor="Black" HorizontalOptions="CenterAndExpand"/>
 
                         <StackLayout>
 
-                            <Button Text="Continue with Facebook"
-                            CornerRadius="30"
+                            <Button Text="{x:Static resources:LanguageResource.LoginFB}"
                         ImageSource="ic_fb"
+                                    Margin="5"
                         Command="{Binding OnLoginWithFacebookCommand}"
                         HeightRequest="45"
                         TextColor="White"

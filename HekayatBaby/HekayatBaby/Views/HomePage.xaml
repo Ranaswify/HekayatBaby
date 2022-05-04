@@ -1,8 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:viewModels="clr-namespace:HekayatBaby.ViewModels"
-             x:Class="HekayatBaby.Views.HomePage" Title="About The Kids">
+             xmlns:viewModels="clr-namespace:HekayatBaby.ViewModels" 
+             x:Class="HekayatBaby.Views.HomePage" 
+             Title="About The Kids"
+             BackgroundColor="LightGray">
 
     <ContentPage.BindingContext>
         <viewModels:HomeViewModel/>
@@ -11,32 +13,82 @@
     <!--<NavigationPage.TitleView>
         <Label Text="About the kids" FontSize="Medium" FontAttributes="Bold"/>
     </NavigationPage.TitleView>-->
-    <ContentPage.Content>
 
-        <ScrollView VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Padding="0">
-            <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"  Margin="0,0,0, -7">
-                <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-                    <StackLayout Margin="0,0,0,-7">
-                        <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding GetNewArrivalToysCommand}"/>
-                        </StackLayout.GestureRecognizers>
-                        <Image Source="newA"  Aspect="Fill"/>
+        <Grid HorizontalOptions="FillAndExpand">
+        <Grid  RowDefinitions="50*,50*">
 
-                    </StackLayout>
+            <Grid Grid.Row="0" BackgroundColor="Black">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GetNewArrivalToysCommand}"/>
+                </Grid.GestureRecognizers>
+                <Image Source="newArrival"  Aspect="Fill"/>
 
-                    
+            </Grid>
+            <Grid Grid.Row="1" BackgroundColor="Red">
+                <Grid.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding GetBestSellerToysCommand}"/>
+                </Grid.GestureRecognizers>
+                <Image Source="bestSeller" Aspect="Fill"/>
+            </Grid>
+
+        </Grid>
+
+        <!--<ScrollView Grid.Row="0"  VerticalOptions="Center" HorizontalOptions="FillAndExpand" Padding="0">
+                <StackLayout Grid.Row="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand"  Margin="0,0,0, -7">
                     <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
-                        <StackLayout.GestureRecognizers>
-                            <TapGestureRecognizer Command="{Binding GetBestSellerToysCommand}"/>
-                        </StackLayout.GestureRecognizers>
-                        <Image Source="bestS" Aspect="Fill"/>
+                        <StackLayout Margin="0,0,0,-7">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetNewArrivalToysCommand}"/>
+                            </StackLayout.GestureRecognizers>
+                            <Image Source="newArrival"  Aspect="AspectFill"/>
+
+                        </StackLayout>
 
 
+                        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GetBestSellerToysCommand}"/>
+                            </StackLayout.GestureRecognizers>
+                            <Image Source="bestSeller" Aspect="Fill"/>
+
+
+                        </StackLayout>
                     </StackLayout>
-                </StackLayout>
 
-            </StackLayout>
-        </ScrollView>
-        
-    </ContentPage.Content>
+                </StackLayout>
+            </ScrollView>-->
+            <!--<StackLayout  Grid.Row="1" VerticalOptions="EndAndExpand" BackgroundColor="#e6306a">
+                <BoxView WidthRequest="100" HeightRequest="1" VerticalOptions="EndAndExpand" Color="#e6306a" HorizontalOptions="FillAndExpand" />
+
+                <Grid HorizontalOptions="CenterAndExpand" Margin="0,0,0,10">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Grid.Column="2" >
+                        <Label Text="&#xf015;"  TextColor="LightGray" FontSize="Medium"  VerticalTextAlignment="Start" BackgroundColor="TransParent" FontFamily="{StaticResource FontAwesome}">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GoToHomeCommand}"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+
+                    <StackLayout  Grid.Column="4">
+                        <Label Text="&#xf07a;"  TextColor="LightGray" FontSize="Medium" VerticalTextAlignment="Start" BackgroundColor="TransParent" FontFamily="{StaticResource FontAwesome}">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GoToCartsCommand}"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+
+                </Grid>
+            </StackLayout>-->
+        </Grid>
+       
+
 </ContentPage>

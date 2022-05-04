@@ -60,7 +60,17 @@ namespace HekayatBaby.ViewModels
                 return coast;
             }
         }
-
+        bool isImageVisible;
+        public bool IsImageVisible
+        {
+            set
+            {
+                isImageVisible = value;
+                OnPropertyChanged();
+            }
+            get => isImageVisible;
+        }
+        
         Items order;
         public Items Order
         {
@@ -77,7 +87,8 @@ namespace HekayatBaby.ViewModels
         public ICommand PluCommand { get; set; }
         public ICommand MinusCommand { get; set; }
         public ICommand GoToPaymentCommand { get; set; }
-
+        public ICommand TapImageCommand { get; set; }
+        public ICommand CloseImageCommand { get; set; }
         double count = 1;
         public double Count
         {
@@ -92,6 +103,20 @@ namespace HekayatBaby.ViewModels
             }
         }
 
+        string selectedImage;
+        public string SelectedImage
+        {
+            set
+            {
+                selectedImage = value;
+                OnPropertyChanged();
+            }
+            get
+            {
+                return selectedImage;
+            }
+        }
+
         public ItemDetailsViewModel(Items selectedItem)
         {
             this.selectedItem = selectedItem;
@@ -99,10 +124,22 @@ namespace HekayatBaby.ViewModels
             //PluCommand = new Command(PlusPressed);
             MinusCommand = new Command(async () => await MinusPressed());
             GoToPaymentCommand = new Command(async () => await GoToPayment());
-          
+            TapImageCommand = new Command<string>(async (x) => await TabImage(x));
+            CloseImageCommand = new Command(CloseImage);
             AllOrders = selectedItem.imgUrls;
             Description = selectedItem.description;
             Coast = selectedItem.coast.ToString();
+        }
+
+        private void CloseImage()
+        {
+            IsImageVisible = false;
+        }
+
+        private async Task TabImage(string obj)
+        {
+            SelectedImage = obj;
+            IsImageVisible = true;
         }
 
         private async Task GoToPayment()

@@ -30,11 +30,11 @@ namespace HekayatBaby
             NavigationPage.SetHasNavigationBar(this, false);
             Detail = new CustomNavigationPage((Page)Activator.CreateInstance(typeof(HomePage)))
             {
-                BarBackgroundColor = Color.FromHex("#f7d0e8"),
-                BarTextColor = Color.FromHex("#e6306a")
+                BarBackgroundColor = Color.FromHex("#e6306a"),
+                BarTextColor = Color.White
             };
             UserName = Preferences.Get("UserName", "");
-
+            user.Text = UserName;
             IsPresented = false;
         }
         private async void OnFacebookPageClicked(object sender, EventArgs e)
@@ -102,6 +102,17 @@ namespace HekayatBaby
             Preferences.Remove("UserId");
             Preferences.Remove("UserName");
             Application.Current.MainPage = new CustomNavigationPage(new LoginPage());
+        }
+
+        private async void Carts_Tapped(object sender, EventArgs e)
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new CartsPage());
+
+        }
+
+        private async void MyOrders_Tapped(object sender, EventArgs e)
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new MyOrdersPage());
         }
     }
 }

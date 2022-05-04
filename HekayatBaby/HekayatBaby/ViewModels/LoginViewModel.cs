@@ -106,6 +106,7 @@ namespace HekayatBaby.ViewModels
                     {
                         Preferences.Set("UserId", i.UserId);
                         Preferences.Set("UserName", i.Username);
+                        Preferences.Set("PhoneNo", i.PhoneNo);
                         await Application.Current.MainPage.Navigation.PushAsync(new MainPage());
                         IsLoading = false;
                     }

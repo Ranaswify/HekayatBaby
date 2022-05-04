@@ -120,8 +120,14 @@
   <data name="Address" xml:space="preserve">
     <value>Address</value>
   </data>
+  <data name="AddToCart" xml:space="preserve">
+    <value>Add to cart</value>
+  </data>
   <data name="AddToCarts" xml:space="preserve">
     <value>Add To Carts</value>
+  </data>
+  <data name="BestSeller" xml:space="preserve">
+    <value>Best Seller</value>
   </data>
   <data name="Cancel" xml:space="preserve">
     <value>Cancel</value>
@@ -135,6 +141,15 @@
   <data name="Details" xml:space="preserve">
     <value>Details</value>
   </data>
+  <data name="Discount" xml:space="preserve">
+    <value>Discount</value>
+  </data>
+  <data name="FacebookGroup" xml:space="preserve">
+    <value>Facebook Group</value>
+  </data>
+  <data name="FacebookPage" xml:space="preserve">
+    <value>Facebook Page</value>
+  </data>
   <data name="FullName" xml:space="preserve">
     <value>Full Name</value>
   </data>
@@ -145,13 +160,34 @@
     <value>Login</value>
   </data>
   <data name="LoginFB" xml:space="preserve">
-    <value>Login with Facebook</value>
+    <value>Continue with Facebook</value>
   </data>
   <data name="Logout" xml:space="preserve">
     <value>Logout</value>
   </data>
+  <data name="MyCarts" xml:space="preserve">
+    <value>My Carts</value>
+  </data>
+  <data name="MyOrders" xml:space="preserve">
+    <value>My Orders</value>
+  </data>
+  <data name="NewArrival" xml:space="preserve">
+    <value>New Arrival</value>
+  </data>
   <data name="Notes" xml:space="preserve">
     <value>Notes</value>
+  </data>
+  <data name="NotHaveAcc" xml:space="preserve">
+    <value>Don't have account?</value>
+  </data>
+  <data name="Or" xml:space="preserve">
+    <value>Or</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Payment" xml:space="preserve">
+    <value>Payment</value>
   </data>
   <data name="PhoneNo" xml:space="preserve">
     <value>Phone Number</value>
@@ -162,13 +198,28 @@
   <data name="Search" xml:space="preserve">
     <value>Search</value>
   </data>
+  <data name="Shipping" xml:space="preserve">
+    <value>Shipping</value>
+  </data>
+  <data name="SignUp" xml:space="preserve">
+    <value>Sign up</value>
+  </data>
   <data name="SortBy" xml:space="preserve">
     <value>Sort by</value>
   </data>
   <data name="Submit" xml:space="preserve">
     <value>Submit</value>
   </data>
+  <data name="SubTotal" xml:space="preserve">
+    <value>Subtotal</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Total</value>
+  </data>
   <data name="TotalAmount" xml:space="preserve">
     <value>Total Amount</value>
+  </data>
+  <data name="Username" xml:space="preserve">
+    <value>Username</value>
   </data>
 </root>

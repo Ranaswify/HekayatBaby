@@ -31,6 +31,24 @@ namespace HekayatBaby.Helper
               }).ToList();
         }
 
+        public async Task<ObservableCollection<PromoCode>> GetAllPromo()
+        {
+            try
+            {
+                var group = await CrossCloudFirestore.Current
+                                    .Instance
+                                    .CollectionGroup("PromoCode")
+                                    .GetAsync();
+                var yourModels = group.ToObjects<PromoCode>().ToList();
+
+                return new ObservableCollection<PromoCode>(yourModels);
+            }
+            catch (Exception ex)
+            {
+                return new ObservableCollection<PromoCode>();
+            }
+        }
+
         public async Task<FirebaseObject<Users>> AddPerson(string name, string phoneNo, string password)
         {
             try
@@ -53,6 +71,7 @@ namespace HekayatBaby.Helper
               .OnceAsync<Users>();
             return allPersons.Where(a => a.Password == phoneNo && a.Username==username).FirstOrDefault();
         }
+
 
         public async Task<ObservableCollection<Items>> GetAllItems(string dbName)
         {
@@ -89,5 +108,41 @@ namespace HekayatBaby.Helper
             }
            
         }
+
+        public async Task<ObservableCollection<PaymentInfo>> GetMyOrders()
+        {
+            try
+            {
+                var group = await CrossCloudFirestore.Current
+                                    .Instance
+                                    .CollectionGroup("Payment")
+                                    .GetAsync();
+                var yourModels = group.ToObjects<PaymentInfo>().ToList();
+                var m = group.Documents.ToList();
+
+                for (int i = 0; i < m.Count; i++)
+                {
+                    yourModels[i].documentID = m[i].Id;
+                }
+
+                return new ObservableCollection<PaymentInfo>(yourModels);
+            }
+            catch (Exception ex)
+            {
+                return new ObservableCollection<PaymentInfo>();
+            }
+
+        }
+
+        public async Task UpdatePerson(PaymentInfo paymentInfo, string yourdocument)
+        {
+            await CrossCloudFirestore.Current
+                         .Instance
+                         .Collection("Payment")
+                         .Document(yourdocument)
+                         .UpdateAsync(paymentInfo);
+        }
+
+
     }
 }

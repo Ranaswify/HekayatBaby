@@ -2214,251 +2214,252 @@ namespace HekayatBaby.Droid
 			global::Plugin.FacebookClient.Resource.Styleable.View_paddingStart = global::HekayatBaby.Droid.Resource.Styleable.View_paddingStart;
 			global::Plugin.FacebookClient.Resource.Styleable.View_theme = global::HekayatBaby.Droid.Resource.Styleable.View_theme;
 			global::Plugin.FacebookClient.Resource.Xml.image_share_filepaths = global::HekayatBaby.Droid.Resource.Xml.image_share_filepaths;
-			global::Plugin.FirebaseAuth.Resource.Attribute.alpha = global::HekayatBaby.Droid.Resource.Attribute.alpha;
-			global::Plugin.FirebaseAuth.Resource.Attribute.buttonSize = global::HekayatBaby.Droid.Resource.Attribute.buttonSize;
-			global::Plugin.FirebaseAuth.Resource.Attribute.circleCrop = global::HekayatBaby.Droid.Resource.Attribute.circleCrop;
-			global::Plugin.FirebaseAuth.Resource.Attribute.colorScheme = global::HekayatBaby.Droid.Resource.Attribute.colorScheme;
-			global::Plugin.FirebaseAuth.Resource.Attribute.font = global::HekayatBaby.Droid.Resource.Attribute.font;
-			global::Plugin.FirebaseAuth.Resource.Attribute.fontProviderAuthority = global::HekayatBaby.Droid.Resource.Attribute.fontProviderAuthority;
-			global::Plugin.FirebaseAuth.Resource.Attribute.fontProviderCerts = global::HekayatBaby.Droid.Resource.Attribute.fontProviderCerts;
-			global::Plugin.FirebaseAuth.Resource.Attribute.fontProviderFetchStrategy = global::HekayatBaby.Droid.Resource.Attribute.fontProviderFetchStrategy;
-			global::Plugin.FirebaseAuth.Resource.Attribute.fontProviderFetchTimeout = global::HekayatBaby.Droid.Resource.Attribute.fontProviderFetchTimeout;
-			global::Plugin.FirebaseAuth.Resource.Attribute.fontProviderPackage = global::HekayatBaby.Droid.Resource.Attribute.fontProviderPackage;
-			global::Plugin.FirebaseAuth.Resource.Attribute.fontProviderQuery = global::HekayatBaby.Droid.Resource.Attribute.fontProviderQuery;
-			global::Plugin.FirebaseAuth.Resource.Attribute.fontStyle = global::HekayatBaby.Droid.Resource.Attribute.fontStyle;
-			global::Plugin.FirebaseAuth.Resource.Attribute.fontVariationSettings = global::HekayatBaby.Droid.Resource.Attribute.fontVariationSettings;
-			global::Plugin.FirebaseAuth.Resource.Attribute.fontWeight = global::HekayatBaby.Droid.Resource.Attribute.fontWeight;
-			global::Plugin.FirebaseAuth.Resource.Attribute.imageAspectRatio = global::HekayatBaby.Droid.Resource.Attribute.imageAspectRatio;
-			global::Plugin.FirebaseAuth.Resource.Attribute.imageAspectRatioAdjust = global::HekayatBaby.Droid.Resource.Attribute.imageAspectRatioAdjust;
-			global::Plugin.FirebaseAuth.Resource.Attribute.scopeUris = global::HekayatBaby.Droid.Resource.Attribute.scopeUris;
-			global::Plugin.FirebaseAuth.Resource.Attribute.ttcIndex = global::HekayatBaby.Droid.Resource.Attribute.ttcIndex;
-			global::Plugin.FirebaseAuth.Resource.Color.common_google_signin_btn_text_dark = global::HekayatBaby.Droid.Resource.Color.common_google_signin_btn_text_dark;
-			global::Plugin.FirebaseAuth.Resource.Color.common_google_signin_btn_text_dark_default = global::HekayatBaby.Droid.Resource.Color.common_google_signin_btn_text_dark_default;
-			global::Plugin.FirebaseAuth.Resource.Color.common_google_signin_btn_text_dark_disabled = global::HekayatBaby.Droid.Resource.Color.common_google_signin_btn_text_dark_disabled;
-			global::Plugin.FirebaseAuth.Resource.Color.common_google_signin_btn_text_dark_focused = global::HekayatBaby.Droid.Resource.Color.common_google_signin_btn_text_dark_focused;
-			global::Plugin.FirebaseAuth.Resource.Color.common_google_signin_btn_text_dark_pressed = global::HekayatBaby.Droid.Resource.Color.common_google_signin_btn_text_dark_pressed;
-			global::Plugin.FirebaseAuth.Resource.Color.common_google_signin_btn_text_light = global::HekayatBaby.Droid.Resource.Color.common_google_signin_btn_text_light;
-			global::Plugin.FirebaseAuth.Resource.Color.common_google_signin_btn_text_light_default = global::HekayatBaby.Droid.Resource.Color.common_google_signin_btn_text_light_default;
-			global::Plugin.FirebaseAuth.Resource.Color.common_google_signin_btn_text_light_disabled = global::HekayatBaby.Droid.Resource.Color.common_google_signin_btn_text_light_disabled;
-			global::Plugin.FirebaseAuth.Resource.Color.common_google_signin_btn_text_light_focused = global::HekayatBaby.Droid.Resource.Color.common_google_signin_btn_text_light_focused;
-			global::Plugin.FirebaseAuth.Resource.Color.common_google_signin_btn_text_light_pressed = global::HekayatBaby.Droid.Resource.Color.common_google_signin_btn_text_light_pressed;
-			global::Plugin.FirebaseAuth.Resource.Color.common_google_signin_btn_tint = global::HekayatBaby.Droid.Resource.Color.common_google_signin_btn_tint;
-			global::Plugin.FirebaseAuth.Resource.Color.notification_action_color_filter = global::HekayatBaby.Droid.Resource.Color.notification_action_color_filter;
-			global::Plugin.FirebaseAuth.Resource.Color.notification_icon_bg_color = global::HekayatBaby.Droid.Resource.Color.notification_icon_bg_color;
-			global::Plugin.FirebaseAuth.Resource.Color.ripple_material_light = global::HekayatBaby.Droid.Resource.Color.ripple_material_light;
-			global::Plugin.FirebaseAuth.Resource.Color.secondary_text_default_material_light = global::HekayatBaby.Droid.Resource.Color.secondary_text_default_material_light;
-			global::Plugin.FirebaseAuth.Resource.Dimension.compat_button_inset_horizontal_material = global::HekayatBaby.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
-			global::Plugin.FirebaseAuth.Resource.Dimension.compat_button_inset_vertical_material = global::HekayatBaby.Droid.Resource.Dimension.compat_button_inset_vertical_material;
-			global::Plugin.FirebaseAuth.Resource.Dimension.compat_button_padding_horizontal_material = global::HekayatBaby.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
-			global::Plugin.FirebaseAuth.Resource.Dimension.compat_button_padding_vertical_material = global::HekayatBaby.Droid.Resource.Dimension.compat_button_padding_vertical_material;
-			global::Plugin.FirebaseAuth.Resource.Dimension.compat_control_corner_material = global::HekayatBaby.Droid.Resource.Dimension.compat_control_corner_material;
-			global::Plugin.FirebaseAuth.Resource.Dimension.compat_notification_large_icon_max_height = global::HekayatBaby.Droid.Resource.Dimension.compat_notification_large_icon_max_height;
-			global::Plugin.FirebaseAuth.Resource.Dimension.compat_notification_large_icon_max_width = global::HekayatBaby.Droid.Resource.Dimension.compat_notification_large_icon_max_width;
-			global::Plugin.FirebaseAuth.Resource.Dimension.notification_action_icon_size = global::HekayatBaby.Droid.Resource.Dimension.notification_action_icon_size;
-			global::Plugin.FirebaseAuth.Resource.Dimension.notification_action_text_size = global::HekayatBaby.Droid.Resource.Dimension.notification_action_text_size;
-			global::Plugin.FirebaseAuth.Resource.Dimension.notification_big_circle_margin = global::HekayatBaby.Droid.Resource.Dimension.notification_big_circle_margin;
-			global::Plugin.FirebaseAuth.Resource.Dimension.notification_content_margin_start = global::HekayatBaby.Droid.Resource.Dimension.notification_content_margin_start;
-			global::Plugin.FirebaseAuth.Resource.Dimension.notification_large_icon_height = global::HekayatBaby.Droid.Resource.Dimension.notification_large_icon_height;
-			global::Plugin.FirebaseAuth.Resource.Dimension.notification_large_icon_width = global::HekayatBaby.Droid.Resource.Dimension.notification_large_icon_width;
-			global::Plugin.FirebaseAuth.Resource.Dimension.notification_main_column_padding_top = global::HekayatBaby.Droid.Resource.Dimension.notification_main_column_padding_top;
-			global::Plugin.FirebaseAuth.Resource.Dimension.notification_media_narrow_margin = global::HekayatBaby.Droid.Resource.Dimension.notification_media_narrow_margin;
-			global::Plugin.FirebaseAuth.Resource.Dimension.notification_right_icon_size = global::HekayatBaby.Droid.Resource.Dimension.notification_right_icon_size;
-			global::Plugin.FirebaseAuth.Resource.Dimension.notification_right_side_padding_top = global::HekayatBaby.Droid.Resource.Dimension.notification_right_side_padding_top;
-			global::Plugin.FirebaseAuth.Resource.Dimension.notification_small_icon_background_padding = global::HekayatBaby.Droid.Resource.Dimension.notification_small_icon_background_padding;
-			global::Plugin.FirebaseAuth.Resource.Dimension.notification_small_icon_size_as_large = global::HekayatBaby.Droid.Resource.Dimension.notification_small_icon_size_as_large;
-			global::Plugin.FirebaseAuth.Resource.Dimension.notification_subtext_size = global::HekayatBaby.Droid.Resource.Dimension.notification_subtext_size;
-			global::Plugin.FirebaseAuth.Resource.Dimension.notification_top_pad = global::HekayatBaby.Droid.Resource.Dimension.notification_top_pad;
-			global::Plugin.FirebaseAuth.Resource.Dimension.notification_top_pad_large_text = global::HekayatBaby.Droid.Resource.Dimension.notification_top_pad_large_text;
-			global::Plugin.FirebaseAuth.Resource.Drawable.common_full_open_on_phone = global::HekayatBaby.Droid.Resource.Drawable.common_full_open_on_phone;
-			global::Plugin.FirebaseAuth.Resource.Drawable.common_google_signin_btn_icon_dark = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_icon_dark;
-			global::Plugin.FirebaseAuth.Resource.Drawable.common_google_signin_btn_icon_dark_focused = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_icon_dark_focused;
-			global::Plugin.FirebaseAuth.Resource.Drawable.common_google_signin_btn_icon_dark_normal = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_icon_dark_normal;
-			global::Plugin.FirebaseAuth.Resource.Drawable.common_google_signin_btn_icon_dark_normal_background = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_icon_dark_normal_background;
-			global::Plugin.FirebaseAuth.Resource.Drawable.common_google_signin_btn_icon_disabled = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_icon_disabled;
-			global::Plugin.FirebaseAuth.Resource.Drawable.common_google_signin_btn_icon_light = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_icon_light;
-			global::Plugin.FirebaseAuth.Resource.Drawable.common_google_signin_btn_icon_light_focused = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_icon_light_focused;
-			global::Plugin.FirebaseAuth.Resource.Drawable.common_google_signin_btn_icon_light_normal = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_icon_light_normal;
-			global::Plugin.FirebaseAuth.Resource.Drawable.common_google_signin_btn_icon_light_normal_background = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_icon_light_normal_background;
-			global::Plugin.FirebaseAuth.Resource.Drawable.common_google_signin_btn_text_dark = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_text_dark;
-			global::Plugin.FirebaseAuth.Resource.Drawable.common_google_signin_btn_text_dark_focused = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_text_dark_focused;
-			global::Plugin.FirebaseAuth.Resource.Drawable.common_google_signin_btn_text_dark_normal = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_text_dark_normal;
-			global::Plugin.FirebaseAuth.Resource.Drawable.common_google_signin_btn_text_dark_normal_background = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_text_dark_normal_background;
-			global::Plugin.FirebaseAuth.Resource.Drawable.common_google_signin_btn_text_disabled = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_text_disabled;
-			global::Plugin.FirebaseAuth.Resource.Drawable.common_google_signin_btn_text_light = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_text_light;
-			global::Plugin.FirebaseAuth.Resource.Drawable.common_google_signin_btn_text_light_focused = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_text_light_focused;
-			global::Plugin.FirebaseAuth.Resource.Drawable.common_google_signin_btn_text_light_normal = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_text_light_normal;
-			global::Plugin.FirebaseAuth.Resource.Drawable.common_google_signin_btn_text_light_normal_background = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_text_light_normal_background;
-			global::Plugin.FirebaseAuth.Resource.Drawable.googleg_disabled_color_18 = global::HekayatBaby.Droid.Resource.Drawable.googleg_disabled_color_18;
-			global::Plugin.FirebaseAuth.Resource.Drawable.googleg_standard_color_18 = global::HekayatBaby.Droid.Resource.Drawable.googleg_standard_color_18;
-			global::Plugin.FirebaseAuth.Resource.Drawable.notification_action_background = global::HekayatBaby.Droid.Resource.Drawable.notification_action_background;
-			global::Plugin.FirebaseAuth.Resource.Drawable.notification_bg = global::HekayatBaby.Droid.Resource.Drawable.notification_bg;
-			global::Plugin.FirebaseAuth.Resource.Drawable.notification_bg_low = global::HekayatBaby.Droid.Resource.Drawable.notification_bg_low;
-			global::Plugin.FirebaseAuth.Resource.Drawable.notification_bg_low_normal = global::HekayatBaby.Droid.Resource.Drawable.notification_bg_low_normal;
-			global::Plugin.FirebaseAuth.Resource.Drawable.notification_bg_low_pressed = global::HekayatBaby.Droid.Resource.Drawable.notification_bg_low_pressed;
-			global::Plugin.FirebaseAuth.Resource.Drawable.notification_bg_normal = global::HekayatBaby.Droid.Resource.Drawable.notification_bg_normal;
-			global::Plugin.FirebaseAuth.Resource.Drawable.notification_bg_normal_pressed = global::HekayatBaby.Droid.Resource.Drawable.notification_bg_normal_pressed;
-			global::Plugin.FirebaseAuth.Resource.Drawable.notification_icon_background = global::HekayatBaby.Droid.Resource.Drawable.notification_icon_background;
-			global::Plugin.FirebaseAuth.Resource.Drawable.notification_template_icon_bg = global::HekayatBaby.Droid.Resource.Drawable.notification_template_icon_bg;
-			global::Plugin.FirebaseAuth.Resource.Drawable.notification_template_icon_low_bg = global::HekayatBaby.Droid.Resource.Drawable.notification_template_icon_low_bg;
-			global::Plugin.FirebaseAuth.Resource.Drawable.notification_tile_bg = global::HekayatBaby.Droid.Resource.Drawable.notification_tile_bg;
-			global::Plugin.FirebaseAuth.Resource.Drawable.notify_panel_notification_icon_bg = global::HekayatBaby.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
-			global::Plugin.FirebaseAuth.Resource.Id.accessibility_action_clickable_span = global::HekayatBaby.Droid.Resource.Id.accessibility_action_clickable_span;
-			global::Plugin.FirebaseAuth.Resource.Id.accessibility_custom_action_0 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_0;
-			global::Plugin.FirebaseAuth.Resource.Id.accessibility_custom_action_1 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_1;
-			global::Plugin.FirebaseAuth.Resource.Id.accessibility_custom_action_10 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_10;
-			global::Plugin.FirebaseAuth.Resource.Id.accessibility_custom_action_11 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_11;
-			global::Plugin.FirebaseAuth.Resource.Id.accessibility_custom_action_12 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_12;
-			global::Plugin.FirebaseAuth.Resource.Id.accessibility_custom_action_13 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_13;
-			global::Plugin.FirebaseAuth.Resource.Id.accessibility_custom_action_14 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_14;
-			global::Plugin.FirebaseAuth.Resource.Id.accessibility_custom_action_15 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_15;
-			global::Plugin.FirebaseAuth.Resource.Id.accessibility_custom_action_16 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_16;
-			global::Plugin.FirebaseAuth.Resource.Id.accessibility_custom_action_17 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_17;
-			global::Plugin.FirebaseAuth.Resource.Id.accessibility_custom_action_18 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_18;
-			global::Plugin.FirebaseAuth.Resource.Id.accessibility_custom_action_19 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_19;
-			global::Plugin.FirebaseAuth.Resource.Id.accessibility_custom_action_2 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_2;
-			global::Plugin.FirebaseAuth.Resource.Id.accessibility_custom_action_20 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_20;
-			global::Plugin.FirebaseAuth.Resource.Id.accessibility_custom_action_21 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_21;
-			global::Plugin.FirebaseAuth.Resource.Id.accessibility_custom_action_22 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_22;
-			global::Plugin.FirebaseAuth.Resource.Id.accessibility_custom_action_23 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_23;
-			global::Plugin.FirebaseAuth.Resource.Id.accessibility_custom_action_24 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_24;
-			global::Plugin.FirebaseAuth.Resource.Id.accessibility_custom_action_25 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_25;
-			global::Plugin.FirebaseAuth.Resource.Id.accessibility_custom_action_26 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_26;
-			global::Plugin.FirebaseAuth.Resource.Id.accessibility_custom_action_27 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_27;
-			global::Plugin.FirebaseAuth.Resource.Id.accessibility_custom_action_28 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_28;
-			global::Plugin.FirebaseAuth.Resource.Id.accessibility_custom_action_29 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_29;
-			global::Plugin.FirebaseAuth.Resource.Id.accessibility_custom_action_3 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_3;
-			global::Plugin.FirebaseAuth.Resource.Id.accessibility_custom_action_30 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_30;
-			global::Plugin.FirebaseAuth.Resource.Id.accessibility_custom_action_31 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_31;
-			global::Plugin.FirebaseAuth.Resource.Id.accessibility_custom_action_4 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_4;
-			global::Plugin.FirebaseAuth.Resource.Id.accessibility_custom_action_5 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_5;
-			global::Plugin.FirebaseAuth.Resource.Id.accessibility_custom_action_6 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_6;
-			global::Plugin.FirebaseAuth.Resource.Id.accessibility_custom_action_7 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_7;
-			global::Plugin.FirebaseAuth.Resource.Id.accessibility_custom_action_8 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_8;
-			global::Plugin.FirebaseAuth.Resource.Id.accessibility_custom_action_9 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_9;
-			global::Plugin.FirebaseAuth.Resource.Id.actions = global::HekayatBaby.Droid.Resource.Id.actions;
-			global::Plugin.FirebaseAuth.Resource.Id.action_container = global::HekayatBaby.Droid.Resource.Id.action_container;
-			global::Plugin.FirebaseAuth.Resource.Id.action_divider = global::HekayatBaby.Droid.Resource.Id.action_divider;
-			global::Plugin.FirebaseAuth.Resource.Id.action_image = global::HekayatBaby.Droid.Resource.Id.action_image;
-			global::Plugin.FirebaseAuth.Resource.Id.action_text = global::HekayatBaby.Droid.Resource.Id.action_text;
-			global::Plugin.FirebaseAuth.Resource.Id.adjust_height = global::HekayatBaby.Droid.Resource.Id.adjust_height;
-			global::Plugin.FirebaseAuth.Resource.Id.adjust_width = global::HekayatBaby.Droid.Resource.Id.adjust_width;
-			global::Plugin.FirebaseAuth.Resource.Id.async = global::HekayatBaby.Droid.Resource.Id.async;
-			global::Plugin.FirebaseAuth.Resource.Id.auto = global::HekayatBaby.Droid.Resource.Id.auto;
-			global::Plugin.FirebaseAuth.Resource.Id.blocking = global::HekayatBaby.Droid.Resource.Id.blocking;
-			global::Plugin.FirebaseAuth.Resource.Id.chronometer = global::HekayatBaby.Droid.Resource.Id.chronometer;
-			global::Plugin.FirebaseAuth.Resource.Id.dark = global::HekayatBaby.Droid.Resource.Id.dark;
-			global::Plugin.FirebaseAuth.Resource.Id.dialog_button = global::HekayatBaby.Droid.Resource.Id.dialog_button;
-			global::Plugin.FirebaseAuth.Resource.Id.forever = global::HekayatBaby.Droid.Resource.Id.forever;
-			global::Plugin.FirebaseAuth.Resource.Id.icon = global::HekayatBaby.Droid.Resource.Id.icon;
-			global::Plugin.FirebaseAuth.Resource.Id.icon_group = global::HekayatBaby.Droid.Resource.Id.icon_group;
-			global::Plugin.FirebaseAuth.Resource.Id.icon_only = global::HekayatBaby.Droid.Resource.Id.icon_only;
-			global::Plugin.FirebaseAuth.Resource.Id.info = global::HekayatBaby.Droid.Resource.Id.info;
-			global::Plugin.FirebaseAuth.Resource.Id.italic = global::HekayatBaby.Droid.Resource.Id.italic;
-			global::Plugin.FirebaseAuth.Resource.Id.light = global::HekayatBaby.Droid.Resource.Id.light;
-			global::Plugin.FirebaseAuth.Resource.Id.line1 = global::HekayatBaby.Droid.Resource.Id.line1;
-			global::Plugin.FirebaseAuth.Resource.Id.line3 = global::HekayatBaby.Droid.Resource.Id.line3;
-			global::Plugin.FirebaseAuth.Resource.Id.none = global::HekayatBaby.Droid.Resource.Id.none;
-			global::Plugin.FirebaseAuth.Resource.Id.normal = global::HekayatBaby.Droid.Resource.Id.normal;
-			global::Plugin.FirebaseAuth.Resource.Id.notification_background = global::HekayatBaby.Droid.Resource.Id.notification_background;
-			global::Plugin.FirebaseAuth.Resource.Id.notification_main_column = global::HekayatBaby.Droid.Resource.Id.notification_main_column;
-			global::Plugin.FirebaseAuth.Resource.Id.notification_main_column_container = global::HekayatBaby.Droid.Resource.Id.notification_main_column_container;
-			global::Plugin.FirebaseAuth.Resource.Id.right_icon = global::HekayatBaby.Droid.Resource.Id.right_icon;
-			global::Plugin.FirebaseAuth.Resource.Id.right_side = global::HekayatBaby.Droid.Resource.Id.right_side;
-			global::Plugin.FirebaseAuth.Resource.Id.standard = global::HekayatBaby.Droid.Resource.Id.standard;
-			global::Plugin.FirebaseAuth.Resource.Id.tag_accessibility_actions = global::HekayatBaby.Droid.Resource.Id.tag_accessibility_actions;
-			global::Plugin.FirebaseAuth.Resource.Id.tag_accessibility_clickable_spans = global::HekayatBaby.Droid.Resource.Id.tag_accessibility_clickable_spans;
-			global::Plugin.FirebaseAuth.Resource.Id.tag_accessibility_heading = global::HekayatBaby.Droid.Resource.Id.tag_accessibility_heading;
-			global::Plugin.FirebaseAuth.Resource.Id.tag_accessibility_pane_title = global::HekayatBaby.Droid.Resource.Id.tag_accessibility_pane_title;
-			global::Plugin.FirebaseAuth.Resource.Id.tag_screen_reader_focusable = global::HekayatBaby.Droid.Resource.Id.tag_screen_reader_focusable;
-			global::Plugin.FirebaseAuth.Resource.Id.tag_transition_group = global::HekayatBaby.Droid.Resource.Id.tag_transition_group;
-			global::Plugin.FirebaseAuth.Resource.Id.tag_unhandled_key_event_manager = global::HekayatBaby.Droid.Resource.Id.tag_unhandled_key_event_manager;
-			global::Plugin.FirebaseAuth.Resource.Id.tag_unhandled_key_listeners = global::HekayatBaby.Droid.Resource.Id.tag_unhandled_key_listeners;
-			global::Plugin.FirebaseAuth.Resource.Id.text = global::HekayatBaby.Droid.Resource.Id.text;
-			global::Plugin.FirebaseAuth.Resource.Id.text2 = global::HekayatBaby.Droid.Resource.Id.text2;
-			global::Plugin.FirebaseAuth.Resource.Id.time = global::HekayatBaby.Droid.Resource.Id.time;
-			global::Plugin.FirebaseAuth.Resource.Id.title = global::HekayatBaby.Droid.Resource.Id.title;
-			global::Plugin.FirebaseAuth.Resource.Id.wide = global::HekayatBaby.Droid.Resource.Id.wide;
-			global::Plugin.FirebaseAuth.Resource.Integer.google_play_services_version = global::HekayatBaby.Droid.Resource.Integer.google_play_services_version;
-			global::Plugin.FirebaseAuth.Resource.Integer.status_bar_notification_info_maxnum = global::HekayatBaby.Droid.Resource.Integer.status_bar_notification_info_maxnum;
-			global::Plugin.FirebaseAuth.Resource.Layout.custom_dialog = global::HekayatBaby.Droid.Resource.Layout.custom_dialog;
-			global::Plugin.FirebaseAuth.Resource.Layout.notification_action = global::HekayatBaby.Droid.Resource.Layout.notification_action;
-			global::Plugin.FirebaseAuth.Resource.Layout.notification_action_tombstone = global::HekayatBaby.Droid.Resource.Layout.notification_action_tombstone;
-			global::Plugin.FirebaseAuth.Resource.Layout.notification_template_custom_big = global::HekayatBaby.Droid.Resource.Layout.notification_template_custom_big;
-			global::Plugin.FirebaseAuth.Resource.Layout.notification_template_icon_group = global::HekayatBaby.Droid.Resource.Layout.notification_template_icon_group;
-			global::Plugin.FirebaseAuth.Resource.Layout.notification_template_part_chronometer = global::HekayatBaby.Droid.Resource.Layout.notification_template_part_chronometer;
-			global::Plugin.FirebaseAuth.Resource.Layout.notification_template_part_time = global::HekayatBaby.Droid.Resource.Layout.notification_template_part_time;
-			global::Plugin.FirebaseAuth.Resource.String.common_google_play_services_enable_button = global::HekayatBaby.Droid.Resource.String.common_google_play_services_enable_button;
-			global::Plugin.FirebaseAuth.Resource.String.common_google_play_services_enable_text = global::HekayatBaby.Droid.Resource.String.common_google_play_services_enable_text;
-			global::Plugin.FirebaseAuth.Resource.String.common_google_play_services_enable_title = global::HekayatBaby.Droid.Resource.String.common_google_play_services_enable_title;
-			global::Plugin.FirebaseAuth.Resource.String.common_google_play_services_install_button = global::HekayatBaby.Droid.Resource.String.common_google_play_services_install_button;
-			global::Plugin.FirebaseAuth.Resource.String.common_google_play_services_install_text = global::HekayatBaby.Droid.Resource.String.common_google_play_services_install_text;
-			global::Plugin.FirebaseAuth.Resource.String.common_google_play_services_install_title = global::HekayatBaby.Droid.Resource.String.common_google_play_services_install_title;
-			global::Plugin.FirebaseAuth.Resource.String.common_google_play_services_notification_channel_name = global::HekayatBaby.Droid.Resource.String.common_google_play_services_notification_channel_name;
-			global::Plugin.FirebaseAuth.Resource.String.common_google_play_services_notification_ticker = global::HekayatBaby.Droid.Resource.String.common_google_play_services_notification_ticker;
-			global::Plugin.FirebaseAuth.Resource.String.common_google_play_services_unknown_issue = global::HekayatBaby.Droid.Resource.String.common_google_play_services_unknown_issue;
-			global::Plugin.FirebaseAuth.Resource.String.common_google_play_services_unsupported_text = global::HekayatBaby.Droid.Resource.String.common_google_play_services_unsupported_text;
-			global::Plugin.FirebaseAuth.Resource.String.common_google_play_services_update_button = global::HekayatBaby.Droid.Resource.String.common_google_play_services_update_button;
-			global::Plugin.FirebaseAuth.Resource.String.common_google_play_services_update_text = global::HekayatBaby.Droid.Resource.String.common_google_play_services_update_text;
-			global::Plugin.FirebaseAuth.Resource.String.common_google_play_services_update_title = global::HekayatBaby.Droid.Resource.String.common_google_play_services_update_title;
-			global::Plugin.FirebaseAuth.Resource.String.common_google_play_services_updating_text = global::HekayatBaby.Droid.Resource.String.common_google_play_services_updating_text;
-			global::Plugin.FirebaseAuth.Resource.String.common_google_play_services_wear_update_text = global::HekayatBaby.Droid.Resource.String.common_google_play_services_wear_update_text;
-			global::Plugin.FirebaseAuth.Resource.String.common_open_on_phone = global::HekayatBaby.Droid.Resource.String.common_open_on_phone;
-			global::Plugin.FirebaseAuth.Resource.String.common_signin_button_text = global::HekayatBaby.Droid.Resource.String.common_signin_button_text;
-			global::Plugin.FirebaseAuth.Resource.String.common_signin_button_text_long = global::HekayatBaby.Droid.Resource.String.common_signin_button_text_long;
-			global::Plugin.FirebaseAuth.Resource.String.status_bar_notification_info_overflow = global::HekayatBaby.Droid.Resource.String.status_bar_notification_info_overflow;
-			global::Plugin.FirebaseAuth.Resource.Style.TextAppearance_Compat_Notification = global::HekayatBaby.Droid.Resource.Style.TextAppearance_Compat_Notification;
-			global::Plugin.FirebaseAuth.Resource.Style.TextAppearance_Compat_Notification_Info = global::HekayatBaby.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
-			global::Plugin.FirebaseAuth.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::HekayatBaby.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
-			global::Plugin.FirebaseAuth.Resource.Style.TextAppearance_Compat_Notification_Time = global::HekayatBaby.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
-			global::Plugin.FirebaseAuth.Resource.Style.TextAppearance_Compat_Notification_Title = global::HekayatBaby.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
-			global::Plugin.FirebaseAuth.Resource.Style.Widget_Compat_NotificationActionContainer = global::HekayatBaby.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
-			global::Plugin.FirebaseAuth.Resource.Style.Widget_Compat_NotificationActionText = global::HekayatBaby.Droid.Resource.Style.Widget_Compat_NotificationActionText;
-			global::Plugin.FirebaseAuth.Resource.Styleable.ColorStateListItem = global::HekayatBaby.Droid.Resource.Styleable.ColorStateListItem;
-			global::Plugin.FirebaseAuth.Resource.Styleable.ColorStateListItem_alpha = global::HekayatBaby.Droid.Resource.Styleable.ColorStateListItem_alpha;
-			global::Plugin.FirebaseAuth.Resource.Styleable.ColorStateListItem_android_alpha = global::HekayatBaby.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
-			global::Plugin.FirebaseAuth.Resource.Styleable.ColorStateListItem_android_color = global::HekayatBaby.Droid.Resource.Styleable.ColorStateListItem_android_color;
-			global::Plugin.FirebaseAuth.Resource.Styleable.FontFamily = global::HekayatBaby.Droid.Resource.Styleable.FontFamily;
-			global::Plugin.FirebaseAuth.Resource.Styleable.FontFamilyFont = global::HekayatBaby.Droid.Resource.Styleable.FontFamilyFont;
-			global::Plugin.FirebaseAuth.Resource.Styleable.FontFamilyFont_android_font = global::HekayatBaby.Droid.Resource.Styleable.FontFamilyFont_android_font;
-			global::Plugin.FirebaseAuth.Resource.Styleable.FontFamilyFont_android_fontStyle = global::HekayatBaby.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
-			global::Plugin.FirebaseAuth.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::HekayatBaby.Droid.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
-			global::Plugin.FirebaseAuth.Resource.Styleable.FontFamilyFont_android_fontWeight = global::HekayatBaby.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
-			global::Plugin.FirebaseAuth.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::HekayatBaby.Droid.Resource.Styleable.FontFamilyFont_android_ttcIndex;
-			global::Plugin.FirebaseAuth.Resource.Styleable.FontFamilyFont_font = global::HekayatBaby.Droid.Resource.Styleable.FontFamilyFont_font;
-			global::Plugin.FirebaseAuth.Resource.Styleable.FontFamilyFont_fontStyle = global::HekayatBaby.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
-			global::Plugin.FirebaseAuth.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::HekayatBaby.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings;
-			global::Plugin.FirebaseAuth.Resource.Styleable.FontFamilyFont_fontWeight = global::HekayatBaby.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
-			global::Plugin.FirebaseAuth.Resource.Styleable.FontFamilyFont_ttcIndex = global::HekayatBaby.Droid.Resource.Styleable.FontFamilyFont_ttcIndex;
-			global::Plugin.FirebaseAuth.Resource.Styleable.FontFamily_fontProviderAuthority = global::HekayatBaby.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
-			global::Plugin.FirebaseAuth.Resource.Styleable.FontFamily_fontProviderCerts = global::HekayatBaby.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
-			global::Plugin.FirebaseAuth.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::HekayatBaby.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
-			global::Plugin.FirebaseAuth.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::HekayatBaby.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
-			global::Plugin.FirebaseAuth.Resource.Styleable.FontFamily_fontProviderPackage = global::HekayatBaby.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
-			global::Plugin.FirebaseAuth.Resource.Styleable.FontFamily_fontProviderQuery = global::HekayatBaby.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
-			global::Plugin.FirebaseAuth.Resource.Styleable.GradientColor = global::HekayatBaby.Droid.Resource.Styleable.GradientColor;
-			global::Plugin.FirebaseAuth.Resource.Styleable.GradientColorItem = global::HekayatBaby.Droid.Resource.Styleable.GradientColorItem;
-			global::Plugin.FirebaseAuth.Resource.Styleable.GradientColorItem_android_color = global::HekayatBaby.Droid.Resource.Styleable.GradientColorItem_android_color;
-			global::Plugin.FirebaseAuth.Resource.Styleable.GradientColorItem_android_offset = global::HekayatBaby.Droid.Resource.Styleable.GradientColorItem_android_offset;
-			global::Plugin.FirebaseAuth.Resource.Styleable.GradientColor_android_centerColor = global::HekayatBaby.Droid.Resource.Styleable.GradientColor_android_centerColor;
-			global::Plugin.FirebaseAuth.Resource.Styleable.GradientColor_android_centerX = global::HekayatBaby.Droid.Resource.Styleable.GradientColor_android_centerX;
-			global::Plugin.FirebaseAuth.Resource.Styleable.GradientColor_android_centerY = global::HekayatBaby.Droid.Resource.Styleable.GradientColor_android_centerY;
-			global::Plugin.FirebaseAuth.Resource.Styleable.GradientColor_android_endColor = global::HekayatBaby.Droid.Resource.Styleable.GradientColor_android_endColor;
-			global::Plugin.FirebaseAuth.Resource.Styleable.GradientColor_android_endX = global::HekayatBaby.Droid.Resource.Styleable.GradientColor_android_endX;
-			global::Plugin.FirebaseAuth.Resource.Styleable.GradientColor_android_endY = global::HekayatBaby.Droid.Resource.Styleable.GradientColor_android_endY;
-			global::Plugin.FirebaseAuth.Resource.Styleable.GradientColor_android_gradientRadius = global::HekayatBaby.Droid.Resource.Styleable.GradientColor_android_gradientRadius;
-			global::Plugin.FirebaseAuth.Resource.Styleable.GradientColor_android_startColor = global::HekayatBaby.Droid.Resource.Styleable.GradientColor_android_startColor;
-			global::Plugin.FirebaseAuth.Resource.Styleable.GradientColor_android_startX = global::HekayatBaby.Droid.Resource.Styleable.GradientColor_android_startX;
-			global::Plugin.FirebaseAuth.Resource.Styleable.GradientColor_android_startY = global::HekayatBaby.Droid.Resource.Styleable.GradientColor_android_startY;
-			global::Plugin.FirebaseAuth.Resource.Styleable.GradientColor_android_tileMode = global::HekayatBaby.Droid.Resource.Styleable.GradientColor_android_tileMode;
-			global::Plugin.FirebaseAuth.Resource.Styleable.GradientColor_android_type = global::HekayatBaby.Droid.Resource.Styleable.GradientColor_android_type;
-			global::Plugin.FirebaseAuth.Resource.Styleable.LoadingImageView = global::HekayatBaby.Droid.Resource.Styleable.LoadingImageView;
-			global::Plugin.FirebaseAuth.Resource.Styleable.LoadingImageView_circleCrop = global::HekayatBaby.Droid.Resource.Styleable.LoadingImageView_circleCrop;
-			global::Plugin.FirebaseAuth.Resource.Styleable.LoadingImageView_imageAspectRatio = global::HekayatBaby.Droid.Resource.Styleable.LoadingImageView_imageAspectRatio;
-			global::Plugin.FirebaseAuth.Resource.Styleable.LoadingImageView_imageAspectRatioAdjust = global::HekayatBaby.Droid.Resource.Styleable.LoadingImageView_imageAspectRatioAdjust;
-			global::Plugin.FirebaseAuth.Resource.Styleable.SignInButton = global::HekayatBaby.Droid.Resource.Styleable.SignInButton;
-			global::Plugin.FirebaseAuth.Resource.Styleable.SignInButton_buttonSize = global::HekayatBaby.Droid.Resource.Styleable.SignInButton_buttonSize;
-			global::Plugin.FirebaseAuth.Resource.Styleable.SignInButton_colorScheme = global::HekayatBaby.Droid.Resource.Styleable.SignInButton_colorScheme;
-			global::Plugin.FirebaseAuth.Resource.Styleable.SignInButton_scopeUris = global::HekayatBaby.Droid.Resource.Styleable.SignInButton_scopeUris;
+			global::Plugin.PushNotification.Resource.Attribute.alpha = global::HekayatBaby.Droid.Resource.Attribute.alpha;
+			global::Plugin.PushNotification.Resource.Attribute.buttonSize = global::HekayatBaby.Droid.Resource.Attribute.buttonSize;
+			global::Plugin.PushNotification.Resource.Attribute.circleCrop = global::HekayatBaby.Droid.Resource.Attribute.circleCrop;
+			global::Plugin.PushNotification.Resource.Attribute.colorScheme = global::HekayatBaby.Droid.Resource.Attribute.colorScheme;
+			global::Plugin.PushNotification.Resource.Attribute.font = global::HekayatBaby.Droid.Resource.Attribute.font;
+			global::Plugin.PushNotification.Resource.Attribute.fontProviderAuthority = global::HekayatBaby.Droid.Resource.Attribute.fontProviderAuthority;
+			global::Plugin.PushNotification.Resource.Attribute.fontProviderCerts = global::HekayatBaby.Droid.Resource.Attribute.fontProviderCerts;
+			global::Plugin.PushNotification.Resource.Attribute.fontProviderFetchStrategy = global::HekayatBaby.Droid.Resource.Attribute.fontProviderFetchStrategy;
+			global::Plugin.PushNotification.Resource.Attribute.fontProviderFetchTimeout = global::HekayatBaby.Droid.Resource.Attribute.fontProviderFetchTimeout;
+			global::Plugin.PushNotification.Resource.Attribute.fontProviderPackage = global::HekayatBaby.Droid.Resource.Attribute.fontProviderPackage;
+			global::Plugin.PushNotification.Resource.Attribute.fontProviderQuery = global::HekayatBaby.Droid.Resource.Attribute.fontProviderQuery;
+			global::Plugin.PushNotification.Resource.Attribute.fontStyle = global::HekayatBaby.Droid.Resource.Attribute.fontStyle;
+			global::Plugin.PushNotification.Resource.Attribute.fontVariationSettings = global::HekayatBaby.Droid.Resource.Attribute.fontVariationSettings;
+			global::Plugin.PushNotification.Resource.Attribute.fontWeight = global::HekayatBaby.Droid.Resource.Attribute.fontWeight;
+			global::Plugin.PushNotification.Resource.Attribute.imageAspectRatio = global::HekayatBaby.Droid.Resource.Attribute.imageAspectRatio;
+			global::Plugin.PushNotification.Resource.Attribute.imageAspectRatioAdjust = global::HekayatBaby.Droid.Resource.Attribute.imageAspectRatioAdjust;
+			global::Plugin.PushNotification.Resource.Attribute.scopeUris = global::HekayatBaby.Droid.Resource.Attribute.scopeUris;
+			global::Plugin.PushNotification.Resource.Attribute.ttcIndex = global::HekayatBaby.Droid.Resource.Attribute.ttcIndex;
+			global::Plugin.PushNotification.Resource.Color.common_google_signin_btn_text_dark = global::HekayatBaby.Droid.Resource.Color.common_google_signin_btn_text_dark;
+			global::Plugin.PushNotification.Resource.Color.common_google_signin_btn_text_dark_default = global::HekayatBaby.Droid.Resource.Color.common_google_signin_btn_text_dark_default;
+			global::Plugin.PushNotification.Resource.Color.common_google_signin_btn_text_dark_disabled = global::HekayatBaby.Droid.Resource.Color.common_google_signin_btn_text_dark_disabled;
+			global::Plugin.PushNotification.Resource.Color.common_google_signin_btn_text_dark_focused = global::HekayatBaby.Droid.Resource.Color.common_google_signin_btn_text_dark_focused;
+			global::Plugin.PushNotification.Resource.Color.common_google_signin_btn_text_dark_pressed = global::HekayatBaby.Droid.Resource.Color.common_google_signin_btn_text_dark_pressed;
+			global::Plugin.PushNotification.Resource.Color.common_google_signin_btn_text_light = global::HekayatBaby.Droid.Resource.Color.common_google_signin_btn_text_light;
+			global::Plugin.PushNotification.Resource.Color.common_google_signin_btn_text_light_default = global::HekayatBaby.Droid.Resource.Color.common_google_signin_btn_text_light_default;
+			global::Plugin.PushNotification.Resource.Color.common_google_signin_btn_text_light_disabled = global::HekayatBaby.Droid.Resource.Color.common_google_signin_btn_text_light_disabled;
+			global::Plugin.PushNotification.Resource.Color.common_google_signin_btn_text_light_focused = global::HekayatBaby.Droid.Resource.Color.common_google_signin_btn_text_light_focused;
+			global::Plugin.PushNotification.Resource.Color.common_google_signin_btn_text_light_pressed = global::HekayatBaby.Droid.Resource.Color.common_google_signin_btn_text_light_pressed;
+			global::Plugin.PushNotification.Resource.Color.common_google_signin_btn_tint = global::HekayatBaby.Droid.Resource.Color.common_google_signin_btn_tint;
+			global::Plugin.PushNotification.Resource.Color.notification_action_color_filter = global::HekayatBaby.Droid.Resource.Color.notification_action_color_filter;
+			global::Plugin.PushNotification.Resource.Color.notification_icon_bg_color = global::HekayatBaby.Droid.Resource.Color.notification_icon_bg_color;
+			global::Plugin.PushNotification.Resource.Color.ripple_material_light = global::HekayatBaby.Droid.Resource.Color.ripple_material_light;
+			global::Plugin.PushNotification.Resource.Color.secondary_text_default_material_light = global::HekayatBaby.Droid.Resource.Color.secondary_text_default_material_light;
+			global::Plugin.PushNotification.Resource.Dimension.compat_button_inset_horizontal_material = global::HekayatBaby.Droid.Resource.Dimension.compat_button_inset_horizontal_material;
+			global::Plugin.PushNotification.Resource.Dimension.compat_button_inset_vertical_material = global::HekayatBaby.Droid.Resource.Dimension.compat_button_inset_vertical_material;
+			global::Plugin.PushNotification.Resource.Dimension.compat_button_padding_horizontal_material = global::HekayatBaby.Droid.Resource.Dimension.compat_button_padding_horizontal_material;
+			global::Plugin.PushNotification.Resource.Dimension.compat_button_padding_vertical_material = global::HekayatBaby.Droid.Resource.Dimension.compat_button_padding_vertical_material;
+			global::Plugin.PushNotification.Resource.Dimension.compat_control_corner_material = global::HekayatBaby.Droid.Resource.Dimension.compat_control_corner_material;
+			global::Plugin.PushNotification.Resource.Dimension.compat_notification_large_icon_max_height = global::HekayatBaby.Droid.Resource.Dimension.compat_notification_large_icon_max_height;
+			global::Plugin.PushNotification.Resource.Dimension.compat_notification_large_icon_max_width = global::HekayatBaby.Droid.Resource.Dimension.compat_notification_large_icon_max_width;
+			global::Plugin.PushNotification.Resource.Dimension.notification_action_icon_size = global::HekayatBaby.Droid.Resource.Dimension.notification_action_icon_size;
+			global::Plugin.PushNotification.Resource.Dimension.notification_action_text_size = global::HekayatBaby.Droid.Resource.Dimension.notification_action_text_size;
+			global::Plugin.PushNotification.Resource.Dimension.notification_big_circle_margin = global::HekayatBaby.Droid.Resource.Dimension.notification_big_circle_margin;
+			global::Plugin.PushNotification.Resource.Dimension.notification_content_margin_start = global::HekayatBaby.Droid.Resource.Dimension.notification_content_margin_start;
+			global::Plugin.PushNotification.Resource.Dimension.notification_large_icon_height = global::HekayatBaby.Droid.Resource.Dimension.notification_large_icon_height;
+			global::Plugin.PushNotification.Resource.Dimension.notification_large_icon_width = global::HekayatBaby.Droid.Resource.Dimension.notification_large_icon_width;
+			global::Plugin.PushNotification.Resource.Dimension.notification_main_column_padding_top = global::HekayatBaby.Droid.Resource.Dimension.notification_main_column_padding_top;
+			global::Plugin.PushNotification.Resource.Dimension.notification_media_narrow_margin = global::HekayatBaby.Droid.Resource.Dimension.notification_media_narrow_margin;
+			global::Plugin.PushNotification.Resource.Dimension.notification_right_icon_size = global::HekayatBaby.Droid.Resource.Dimension.notification_right_icon_size;
+			global::Plugin.PushNotification.Resource.Dimension.notification_right_side_padding_top = global::HekayatBaby.Droid.Resource.Dimension.notification_right_side_padding_top;
+			global::Plugin.PushNotification.Resource.Dimension.notification_small_icon_background_padding = global::HekayatBaby.Droid.Resource.Dimension.notification_small_icon_background_padding;
+			global::Plugin.PushNotification.Resource.Dimension.notification_small_icon_size_as_large = global::HekayatBaby.Droid.Resource.Dimension.notification_small_icon_size_as_large;
+			global::Plugin.PushNotification.Resource.Dimension.notification_subtext_size = global::HekayatBaby.Droid.Resource.Dimension.notification_subtext_size;
+			global::Plugin.PushNotification.Resource.Dimension.notification_top_pad = global::HekayatBaby.Droid.Resource.Dimension.notification_top_pad;
+			global::Plugin.PushNotification.Resource.Dimension.notification_top_pad_large_text = global::HekayatBaby.Droid.Resource.Dimension.notification_top_pad_large_text;
+			global::Plugin.PushNotification.Resource.Drawable.common_full_open_on_phone = global::HekayatBaby.Droid.Resource.Drawable.common_full_open_on_phone;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_icon_dark = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_icon_dark;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_icon_dark_focused = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_icon_dark_focused;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_icon_dark_normal = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_icon_dark_normal;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_icon_dark_normal_background = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_icon_dark_normal_background;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_icon_disabled = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_icon_disabled;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_icon_light = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_icon_light;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_icon_light_focused = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_icon_light_focused;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_icon_light_normal = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_icon_light_normal;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_icon_light_normal_background = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_icon_light_normal_background;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_text_dark = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_text_dark;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_text_dark_focused = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_text_dark_focused;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_text_dark_normal = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_text_dark_normal;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_text_dark_normal_background = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_text_dark_normal_background;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_text_disabled = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_text_disabled;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_text_light = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_text_light;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_text_light_focused = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_text_light_focused;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_text_light_normal = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_text_light_normal;
+			global::Plugin.PushNotification.Resource.Drawable.common_google_signin_btn_text_light_normal_background = global::HekayatBaby.Droid.Resource.Drawable.common_google_signin_btn_text_light_normal_background;
+			global::Plugin.PushNotification.Resource.Drawable.googleg_disabled_color_18 = global::HekayatBaby.Droid.Resource.Drawable.googleg_disabled_color_18;
+			global::Plugin.PushNotification.Resource.Drawable.googleg_standard_color_18 = global::HekayatBaby.Droid.Resource.Drawable.googleg_standard_color_18;
+			global::Plugin.PushNotification.Resource.Drawable.notification_action_background = global::HekayatBaby.Droid.Resource.Drawable.notification_action_background;
+			global::Plugin.PushNotification.Resource.Drawable.notification_bg = global::HekayatBaby.Droid.Resource.Drawable.notification_bg;
+			global::Plugin.PushNotification.Resource.Drawable.notification_bg_low = global::HekayatBaby.Droid.Resource.Drawable.notification_bg_low;
+			global::Plugin.PushNotification.Resource.Drawable.notification_bg_low_normal = global::HekayatBaby.Droid.Resource.Drawable.notification_bg_low_normal;
+			global::Plugin.PushNotification.Resource.Drawable.notification_bg_low_pressed = global::HekayatBaby.Droid.Resource.Drawable.notification_bg_low_pressed;
+			global::Plugin.PushNotification.Resource.Drawable.notification_bg_normal = global::HekayatBaby.Droid.Resource.Drawable.notification_bg_normal;
+			global::Plugin.PushNotification.Resource.Drawable.notification_bg_normal_pressed = global::HekayatBaby.Droid.Resource.Drawable.notification_bg_normal_pressed;
+			global::Plugin.PushNotification.Resource.Drawable.notification_icon_background = global::HekayatBaby.Droid.Resource.Drawable.notification_icon_background;
+			global::Plugin.PushNotification.Resource.Drawable.notification_template_icon_bg = global::HekayatBaby.Droid.Resource.Drawable.notification_template_icon_bg;
+			global::Plugin.PushNotification.Resource.Drawable.notification_template_icon_low_bg = global::HekayatBaby.Droid.Resource.Drawable.notification_template_icon_low_bg;
+			global::Plugin.PushNotification.Resource.Drawable.notification_tile_bg = global::HekayatBaby.Droid.Resource.Drawable.notification_tile_bg;
+			global::Plugin.PushNotification.Resource.Drawable.notify_panel_notification_icon_bg = global::HekayatBaby.Droid.Resource.Drawable.notify_panel_notification_icon_bg;
+			global::Plugin.PushNotification.Resource.Id.accessibility_action_clickable_span = global::HekayatBaby.Droid.Resource.Id.accessibility_action_clickable_span;
+			global::Plugin.PushNotification.Resource.Id.accessibility_custom_action_0 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_0;
+			global::Plugin.PushNotification.Resource.Id.accessibility_custom_action_1 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_1;
+			global::Plugin.PushNotification.Resource.Id.accessibility_custom_action_10 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_10;
+			global::Plugin.PushNotification.Resource.Id.accessibility_custom_action_11 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_11;
+			global::Plugin.PushNotification.Resource.Id.accessibility_custom_action_12 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_12;
+			global::Plugin.PushNotification.Resource.Id.accessibility_custom_action_13 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_13;
+			global::Plugin.PushNotification.Resource.Id.accessibility_custom_action_14 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_14;
+			global::Plugin.PushNotification.Resource.Id.accessibility_custom_action_15 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_15;
+			global::Plugin.PushNotification.Resource.Id.accessibility_custom_action_16 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_16;
+			global::Plugin.PushNotification.Resource.Id.accessibility_custom_action_17 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_17;
+			global::Plugin.PushNotification.Resource.Id.accessibility_custom_action_18 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_18;
+			global::Plugin.PushNotification.Resource.Id.accessibility_custom_action_19 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_19;
+			global::Plugin.PushNotification.Resource.Id.accessibility_custom_action_2 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_2;
+			global::Plugin.PushNotification.Resource.Id.accessibility_custom_action_20 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_20;
+			global::Plugin.PushNotification.Resource.Id.accessibility_custom_action_21 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_21;
+			global::Plugin.PushNotification.Resource.Id.accessibility_custom_action_22 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_22;
+			global::Plugin.PushNotification.Resource.Id.accessibility_custom_action_23 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_23;
+			global::Plugin.PushNotification.Resource.Id.accessibility_custom_action_24 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_24;
+			global::Plugin.PushNotification.Resource.Id.accessibility_custom_action_25 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_25;
+			global::Plugin.PushNotification.Resource.Id.accessibility_custom_action_26 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_26;
+			global::Plugin.PushNotification.Resource.Id.accessibility_custom_action_27 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_27;
+			global::Plugin.PushNotification.Resource.Id.accessibility_custom_action_28 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_28;
+			global::Plugin.PushNotification.Resource.Id.accessibility_custom_action_29 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_29;
+			global::Plugin.PushNotification.Resource.Id.accessibility_custom_action_3 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_3;
+			global::Plugin.PushNotification.Resource.Id.accessibility_custom_action_30 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_30;
+			global::Plugin.PushNotification.Resource.Id.accessibility_custom_action_31 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_31;
+			global::Plugin.PushNotification.Resource.Id.accessibility_custom_action_4 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_4;
+			global::Plugin.PushNotification.Resource.Id.accessibility_custom_action_5 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_5;
+			global::Plugin.PushNotification.Resource.Id.accessibility_custom_action_6 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_6;
+			global::Plugin.PushNotification.Resource.Id.accessibility_custom_action_7 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_7;
+			global::Plugin.PushNotification.Resource.Id.accessibility_custom_action_8 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_8;
+			global::Plugin.PushNotification.Resource.Id.accessibility_custom_action_9 = global::HekayatBaby.Droid.Resource.Id.accessibility_custom_action_9;
+			global::Plugin.PushNotification.Resource.Id.actions = global::HekayatBaby.Droid.Resource.Id.actions;
+			global::Plugin.PushNotification.Resource.Id.action_container = global::HekayatBaby.Droid.Resource.Id.action_container;
+			global::Plugin.PushNotification.Resource.Id.action_divider = global::HekayatBaby.Droid.Resource.Id.action_divider;
+			global::Plugin.PushNotification.Resource.Id.action_image = global::HekayatBaby.Droid.Resource.Id.action_image;
+			global::Plugin.PushNotification.Resource.Id.action_text = global::HekayatBaby.Droid.Resource.Id.action_text;
+			global::Plugin.PushNotification.Resource.Id.adjust_height = global::HekayatBaby.Droid.Resource.Id.adjust_height;
+			global::Plugin.PushNotification.Resource.Id.adjust_width = global::HekayatBaby.Droid.Resource.Id.adjust_width;
+			global::Plugin.PushNotification.Resource.Id.async = global::HekayatBaby.Droid.Resource.Id.async;
+			global::Plugin.PushNotification.Resource.Id.auto = global::HekayatBaby.Droid.Resource.Id.auto;
+			global::Plugin.PushNotification.Resource.Id.blocking = global::HekayatBaby.Droid.Resource.Id.blocking;
+			global::Plugin.PushNotification.Resource.Id.chronometer = global::HekayatBaby.Droid.Resource.Id.chronometer;
+			global::Plugin.PushNotification.Resource.Id.dark = global::HekayatBaby.Droid.Resource.Id.dark;
+			global::Plugin.PushNotification.Resource.Id.dialog_button = global::HekayatBaby.Droid.Resource.Id.dialog_button;
+			global::Plugin.PushNotification.Resource.Id.forever = global::HekayatBaby.Droid.Resource.Id.forever;
+			global::Plugin.PushNotification.Resource.Id.icon = global::HekayatBaby.Droid.Resource.Id.icon;
+			global::Plugin.PushNotification.Resource.Id.icon_group = global::HekayatBaby.Droid.Resource.Id.icon_group;
+			global::Plugin.PushNotification.Resource.Id.icon_only = global::HekayatBaby.Droid.Resource.Id.icon_only;
+			global::Plugin.PushNotification.Resource.Id.info = global::HekayatBaby.Droid.Resource.Id.info;
+			global::Plugin.PushNotification.Resource.Id.italic = global::HekayatBaby.Droid.Resource.Id.italic;
+			global::Plugin.PushNotification.Resource.Id.light = global::HekayatBaby.Droid.Resource.Id.light;
+			global::Plugin.PushNotification.Resource.Id.line1 = global::HekayatBaby.Droid.Resource.Id.line1;
+			global::Plugin.PushNotification.Resource.Id.line3 = global::HekayatBaby.Droid.Resource.Id.line3;
+			global::Plugin.PushNotification.Resource.Id.none = global::HekayatBaby.Droid.Resource.Id.none;
+			global::Plugin.PushNotification.Resource.Id.normal = global::HekayatBaby.Droid.Resource.Id.normal;
+			global::Plugin.PushNotification.Resource.Id.notification_background = global::HekayatBaby.Droid.Resource.Id.notification_background;
+			global::Plugin.PushNotification.Resource.Id.notification_main_column = global::HekayatBaby.Droid.Resource.Id.notification_main_column;
+			global::Plugin.PushNotification.Resource.Id.notification_main_column_container = global::HekayatBaby.Droid.Resource.Id.notification_main_column_container;
+			global::Plugin.PushNotification.Resource.Id.right_icon = global::HekayatBaby.Droid.Resource.Id.right_icon;
+			global::Plugin.PushNotification.Resource.Id.right_side = global::HekayatBaby.Droid.Resource.Id.right_side;
+			global::Plugin.PushNotification.Resource.Id.standard = global::HekayatBaby.Droid.Resource.Id.standard;
+			global::Plugin.PushNotification.Resource.Id.tag_accessibility_actions = global::HekayatBaby.Droid.Resource.Id.tag_accessibility_actions;
+			global::Plugin.PushNotification.Resource.Id.tag_accessibility_clickable_spans = global::HekayatBaby.Droid.Resource.Id.tag_accessibility_clickable_spans;
+			global::Plugin.PushNotification.Resource.Id.tag_accessibility_heading = global::HekayatBaby.Droid.Resource.Id.tag_accessibility_heading;
+			global::Plugin.PushNotification.Resource.Id.tag_accessibility_pane_title = global::HekayatBaby.Droid.Resource.Id.tag_accessibility_pane_title;
+			global::Plugin.PushNotification.Resource.Id.tag_screen_reader_focusable = global::HekayatBaby.Droid.Resource.Id.tag_screen_reader_focusable;
+			global::Plugin.PushNotification.Resource.Id.tag_transition_group = global::HekayatBaby.Droid.Resource.Id.tag_transition_group;
+			global::Plugin.PushNotification.Resource.Id.tag_unhandled_key_event_manager = global::HekayatBaby.Droid.Resource.Id.tag_unhandled_key_event_manager;
+			global::Plugin.PushNotification.Resource.Id.tag_unhandled_key_listeners = global::HekayatBaby.Droid.Resource.Id.tag_unhandled_key_listeners;
+			global::Plugin.PushNotification.Resource.Id.text = global::HekayatBaby.Droid.Resource.Id.text;
+			global::Plugin.PushNotification.Resource.Id.text2 = global::HekayatBaby.Droid.Resource.Id.text2;
+			global::Plugin.PushNotification.Resource.Id.time = global::HekayatBaby.Droid.Resource.Id.time;
+			global::Plugin.PushNotification.Resource.Id.title = global::HekayatBaby.Droid.Resource.Id.title;
+			global::Plugin.PushNotification.Resource.Id.wide = global::HekayatBaby.Droid.Resource.Id.wide;
+			global::Plugin.PushNotification.Resource.Integer.google_play_services_version = global::HekayatBaby.Droid.Resource.Integer.google_play_services_version;
+			global::Plugin.PushNotification.Resource.Integer.status_bar_notification_info_maxnum = global::HekayatBaby.Droid.Resource.Integer.status_bar_notification_info_maxnum;
+			global::Plugin.PushNotification.Resource.Layout.custom_dialog = global::HekayatBaby.Droid.Resource.Layout.custom_dialog;
+			global::Plugin.PushNotification.Resource.Layout.notification_action = global::HekayatBaby.Droid.Resource.Layout.notification_action;
+			global::Plugin.PushNotification.Resource.Layout.notification_action_tombstone = global::HekayatBaby.Droid.Resource.Layout.notification_action_tombstone;
+			global::Plugin.PushNotification.Resource.Layout.notification_template_custom_big = global::HekayatBaby.Droid.Resource.Layout.notification_template_custom_big;
+			global::Plugin.PushNotification.Resource.Layout.notification_template_icon_group = global::HekayatBaby.Droid.Resource.Layout.notification_template_icon_group;
+			global::Plugin.PushNotification.Resource.Layout.notification_template_part_chronometer = global::HekayatBaby.Droid.Resource.Layout.notification_template_part_chronometer;
+			global::Plugin.PushNotification.Resource.Layout.notification_template_part_time = global::HekayatBaby.Droid.Resource.Layout.notification_template_part_time;
+			global::Plugin.PushNotification.Resource.String.common_google_play_services_enable_button = global::HekayatBaby.Droid.Resource.String.common_google_play_services_enable_button;
+			global::Plugin.PushNotification.Resource.String.common_google_play_services_enable_text = global::HekayatBaby.Droid.Resource.String.common_google_play_services_enable_text;
+			global::Plugin.PushNotification.Resource.String.common_google_play_services_enable_title = global::HekayatBaby.Droid.Resource.String.common_google_play_services_enable_title;
+			global::Plugin.PushNotification.Resource.String.common_google_play_services_install_button = global::HekayatBaby.Droid.Resource.String.common_google_play_services_install_button;
+			global::Plugin.PushNotification.Resource.String.common_google_play_services_install_text = global::HekayatBaby.Droid.Resource.String.common_google_play_services_install_text;
+			global::Plugin.PushNotification.Resource.String.common_google_play_services_install_title = global::HekayatBaby.Droid.Resource.String.common_google_play_services_install_title;
+			global::Plugin.PushNotification.Resource.String.common_google_play_services_notification_channel_name = global::HekayatBaby.Droid.Resource.String.common_google_play_services_notification_channel_name;
+			global::Plugin.PushNotification.Resource.String.common_google_play_services_notification_ticker = global::HekayatBaby.Droid.Resource.String.common_google_play_services_notification_ticker;
+			global::Plugin.PushNotification.Resource.String.common_google_play_services_unknown_issue = global::HekayatBaby.Droid.Resource.String.common_google_play_services_unknown_issue;
+			global::Plugin.PushNotification.Resource.String.common_google_play_services_unsupported_text = global::HekayatBaby.Droid.Resource.String.common_google_play_services_unsupported_text;
+			global::Plugin.PushNotification.Resource.String.common_google_play_services_update_button = global::HekayatBaby.Droid.Resource.String.common_google_play_services_update_button;
+			global::Plugin.PushNotification.Resource.String.common_google_play_services_update_text = global::HekayatBaby.Droid.Resource.String.common_google_play_services_update_text;
+			global::Plugin.PushNotification.Resource.String.common_google_play_services_update_title = global::HekayatBaby.Droid.Resource.String.common_google_play_services_update_title;
+			global::Plugin.PushNotification.Resource.String.common_google_play_services_updating_text = global::HekayatBaby.Droid.Resource.String.common_google_play_services_updating_text;
+			global::Plugin.PushNotification.Resource.String.common_google_play_services_wear_update_text = global::HekayatBaby.Droid.Resource.String.common_google_play_services_wear_update_text;
+			global::Plugin.PushNotification.Resource.String.common_open_on_phone = global::HekayatBaby.Droid.Resource.String.common_open_on_phone;
+			global::Plugin.PushNotification.Resource.String.common_signin_button_text = global::HekayatBaby.Droid.Resource.String.common_signin_button_text;
+			global::Plugin.PushNotification.Resource.String.common_signin_button_text_long = global::HekayatBaby.Droid.Resource.String.common_signin_button_text_long;
+			global::Plugin.PushNotification.Resource.String.fcm_fallback_notification_channel_label = global::HekayatBaby.Droid.Resource.String.fcm_fallback_notification_channel_label;
+			global::Plugin.PushNotification.Resource.String.status_bar_notification_info_overflow = global::HekayatBaby.Droid.Resource.String.status_bar_notification_info_overflow;
+			global::Plugin.PushNotification.Resource.Style.TextAppearance_Compat_Notification = global::HekayatBaby.Droid.Resource.Style.TextAppearance_Compat_Notification;
+			global::Plugin.PushNotification.Resource.Style.TextAppearance_Compat_Notification_Info = global::HekayatBaby.Droid.Resource.Style.TextAppearance_Compat_Notification_Info;
+			global::Plugin.PushNotification.Resource.Style.TextAppearance_Compat_Notification_Line2 = global::HekayatBaby.Droid.Resource.Style.TextAppearance_Compat_Notification_Line2;
+			global::Plugin.PushNotification.Resource.Style.TextAppearance_Compat_Notification_Time = global::HekayatBaby.Droid.Resource.Style.TextAppearance_Compat_Notification_Time;
+			global::Plugin.PushNotification.Resource.Style.TextAppearance_Compat_Notification_Title = global::HekayatBaby.Droid.Resource.Style.TextAppearance_Compat_Notification_Title;
+			global::Plugin.PushNotification.Resource.Style.Widget_Compat_NotificationActionContainer = global::HekayatBaby.Droid.Resource.Style.Widget_Compat_NotificationActionContainer;
+			global::Plugin.PushNotification.Resource.Style.Widget_Compat_NotificationActionText = global::HekayatBaby.Droid.Resource.Style.Widget_Compat_NotificationActionText;
+			global::Plugin.PushNotification.Resource.Styleable.ColorStateListItem = global::HekayatBaby.Droid.Resource.Styleable.ColorStateListItem;
+			global::Plugin.PushNotification.Resource.Styleable.ColorStateListItem_alpha = global::HekayatBaby.Droid.Resource.Styleable.ColorStateListItem_alpha;
+			global::Plugin.PushNotification.Resource.Styleable.ColorStateListItem_android_alpha = global::HekayatBaby.Droid.Resource.Styleable.ColorStateListItem_android_alpha;
+			global::Plugin.PushNotification.Resource.Styleable.ColorStateListItem_android_color = global::HekayatBaby.Droid.Resource.Styleable.ColorStateListItem_android_color;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamily = global::HekayatBaby.Droid.Resource.Styleable.FontFamily;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamilyFont = global::HekayatBaby.Droid.Resource.Styleable.FontFamilyFont;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamilyFont_android_font = global::HekayatBaby.Droid.Resource.Styleable.FontFamilyFont_android_font;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamilyFont_android_fontStyle = global::HekayatBaby.Droid.Resource.Styleable.FontFamilyFont_android_fontStyle;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamilyFont_android_fontVariationSettings = global::HekayatBaby.Droid.Resource.Styleable.FontFamilyFont_android_fontVariationSettings;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamilyFont_android_fontWeight = global::HekayatBaby.Droid.Resource.Styleable.FontFamilyFont_android_fontWeight;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamilyFont_android_ttcIndex = global::HekayatBaby.Droid.Resource.Styleable.FontFamilyFont_android_ttcIndex;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamilyFont_font = global::HekayatBaby.Droid.Resource.Styleable.FontFamilyFont_font;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamilyFont_fontStyle = global::HekayatBaby.Droid.Resource.Styleable.FontFamilyFont_fontStyle;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamilyFont_fontVariationSettings = global::HekayatBaby.Droid.Resource.Styleable.FontFamilyFont_fontVariationSettings;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamilyFont_fontWeight = global::HekayatBaby.Droid.Resource.Styleable.FontFamilyFont_fontWeight;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamilyFont_ttcIndex = global::HekayatBaby.Droid.Resource.Styleable.FontFamilyFont_ttcIndex;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamily_fontProviderAuthority = global::HekayatBaby.Droid.Resource.Styleable.FontFamily_fontProviderAuthority;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamily_fontProviderCerts = global::HekayatBaby.Droid.Resource.Styleable.FontFamily_fontProviderCerts;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamily_fontProviderFetchStrategy = global::HekayatBaby.Droid.Resource.Styleable.FontFamily_fontProviderFetchStrategy;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamily_fontProviderFetchTimeout = global::HekayatBaby.Droid.Resource.Styleable.FontFamily_fontProviderFetchTimeout;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamily_fontProviderPackage = global::HekayatBaby.Droid.Resource.Styleable.FontFamily_fontProviderPackage;
+			global::Plugin.PushNotification.Resource.Styleable.FontFamily_fontProviderQuery = global::HekayatBaby.Droid.Resource.Styleable.FontFamily_fontProviderQuery;
+			global::Plugin.PushNotification.Resource.Styleable.GradientColor = global::HekayatBaby.Droid.Resource.Styleable.GradientColor;
+			global::Plugin.PushNotification.Resource.Styleable.GradientColorItem = global::HekayatBaby.Droid.Resource.Styleable.GradientColorItem;
+			global::Plugin.PushNotification.Resource.Styleable.GradientColorItem_android_color = global::HekayatBaby.Droid.Resource.Styleable.GradientColorItem_android_color;
+			global::Plugin.PushNotification.Resource.Styleable.GradientColorItem_android_offset = global::HekayatBaby.Droid.Resource.Styleable.GradientColorItem_android_offset;
+			global::Plugin.PushNotification.Resource.Styleable.GradientColor_android_centerColor = global::HekayatBaby.Droid.Resource.Styleable.GradientColor_android_centerColor;
+			global::Plugin.PushNotification.Resource.Styleable.GradientColor_android_centerX = global::HekayatBaby.Droid.Resource.Styleable.GradientColor_android_centerX;
+			global::Plugin.PushNotification.Resource.Styleable.GradientColor_android_centerY = global::HekayatBaby.Droid.Resource.Styleable.GradientColor_android_centerY;
+			global::Plugin.PushNotification.Resource.Styleable.GradientColor_android_endColor = global::HekayatBaby.Droid.Resource.Styleable.GradientColor_android_endColor;
+			global::Plugin.PushNotification.Resource.Styleable.GradientColor_android_endX = global::HekayatBaby.Droid.Resource.Styleable.GradientColor_android_endX;
+			global::Plugin.PushNotification.Resource.Styleable.GradientColor_android_endY = global::HekayatBaby.Droid.Resource.Styleable.GradientColor_android_endY;
+			global::Plugin.PushNotification.Resource.Styleable.GradientColor_android_gradientRadius = global::HekayatBaby.Droid.Resource.Styleable.GradientColor_android_gradientRadius;
+			global::Plugin.PushNotification.Resource.Styleable.GradientColor_android_startColor = global::HekayatBaby.Droid.Resource.Styleable.GradientColor_android_startColor;
+			global::Plugin.PushNotification.Resource.Styleable.GradientColor_android_startX = global::HekayatBaby.Droid.Resource.Styleable.GradientColor_android_startX;
+			global::Plugin.PushNotification.Resource.Styleable.GradientColor_android_startY = global::HekayatBaby.Droid.Resource.Styleable.GradientColor_android_startY;
+			global::Plugin.PushNotification.Resource.Styleable.GradientColor_android_tileMode = global::HekayatBaby.Droid.Resource.Styleable.GradientColor_android_tileMode;
+			global::Plugin.PushNotification.Resource.Styleable.GradientColor_android_type = global::HekayatBaby.Droid.Resource.Styleable.GradientColor_android_type;
+			global::Plugin.PushNotification.Resource.Styleable.LoadingImageView = global::HekayatBaby.Droid.Resource.Styleable.LoadingImageView;
+			global::Plugin.PushNotification.Resource.Styleable.LoadingImageView_circleCrop = global::HekayatBaby.Droid.Resource.Styleable.LoadingImageView_circleCrop;
+			global::Plugin.PushNotification.Resource.Styleable.LoadingImageView_imageAspectRatio = global::HekayatBaby.Droid.Resource.Styleable.LoadingImageView_imageAspectRatio;
+			global::Plugin.PushNotification.Resource.Styleable.LoadingImageView_imageAspectRatioAdjust = global::HekayatBaby.Droid.Resource.Styleable.LoadingImageView_imageAspectRatioAdjust;
+			global::Plugin.PushNotification.Resource.Styleable.SignInButton = global::HekayatBaby.Droid.Resource.Styleable.SignInButton;
+			global::Plugin.PushNotification.Resource.Styleable.SignInButton_buttonSize = global::HekayatBaby.Droid.Resource.Styleable.SignInButton_buttonSize;
+			global::Plugin.PushNotification.Resource.Styleable.SignInButton_colorScheme = global::HekayatBaby.Droid.Resource.Styleable.SignInButton_colorScheme;
+			global::Plugin.PushNotification.Resource.Styleable.SignInButton_scopeUris = global::HekayatBaby.Droid.Resource.Styleable.SignInButton_scopeUris;
 			global::Xamarin.Essentials.Resource.Attribute.alpha = global::HekayatBaby.Droid.Resource.Attribute.alpha;
 			global::Xamarin.Essentials.Resource.Attribute.coordinatorLayoutStyle = global::HekayatBaby.Droid.Resource.Attribute.coordinatorLayoutStyle;
 			global::Xamarin.Essentials.Resource.Attribute.font = global::HekayatBaby.Droid.Resource.Attribute.font;
@@ -19188,350 +19189,362 @@ namespace HekayatBaby.Droid
 			// aapt resource value: 0x7F070065
 			public const int carts = 2131165285;
 			
-			// aapt resource value: 0x7F07007D
-			public const int common_full_open_on_phone = 2131165309;
+			// aapt resource value: 0x7F070066
+			public const int @checked = 2131165286;
 			
 			// aapt resource value: 0x7F07007E
-			public const int common_google_signin_btn_icon_dark = 2131165310;
+			public const int common_full_open_on_phone = 2131165310;
 			
 			// aapt resource value: 0x7F07007F
-			public const int common_google_signin_btn_icon_dark_focused = 2131165311;
+			public const int common_google_signin_btn_icon_dark = 2131165311;
 			
 			// aapt resource value: 0x7F070080
-			public const int common_google_signin_btn_icon_dark_normal = 2131165312;
+			public const int common_google_signin_btn_icon_dark_focused = 2131165312;
 			
 			// aapt resource value: 0x7F070081
-			public const int common_google_signin_btn_icon_dark_normal_background = 2131165313;
+			public const int common_google_signin_btn_icon_dark_normal = 2131165313;
 			
 			// aapt resource value: 0x7F070082
-			public const int common_google_signin_btn_icon_disabled = 2131165314;
+			public const int common_google_signin_btn_icon_dark_normal_background = 2131165314;
 			
 			// aapt resource value: 0x7F070083
-			public const int common_google_signin_btn_icon_light = 2131165315;
+			public const int common_google_signin_btn_icon_disabled = 2131165315;
 			
 			// aapt resource value: 0x7F070084
-			public const int common_google_signin_btn_icon_light_focused = 2131165316;
+			public const int common_google_signin_btn_icon_light = 2131165316;
 			
 			// aapt resource value: 0x7F070085
-			public const int common_google_signin_btn_icon_light_normal = 2131165317;
+			public const int common_google_signin_btn_icon_light_focused = 2131165317;
 			
 			// aapt resource value: 0x7F070086
-			public const int common_google_signin_btn_icon_light_normal_background = 2131165318;
+			public const int common_google_signin_btn_icon_light_normal = 2131165318;
 			
 			// aapt resource value: 0x7F070087
-			public const int common_google_signin_btn_text_dark = 2131165319;
+			public const int common_google_signin_btn_icon_light_normal_background = 2131165319;
 			
 			// aapt resource value: 0x7F070088
-			public const int common_google_signin_btn_text_dark_focused = 2131165320;
+			public const int common_google_signin_btn_text_dark = 2131165320;
 			
 			// aapt resource value: 0x7F070089
-			public const int common_google_signin_btn_text_dark_normal = 2131165321;
+			public const int common_google_signin_btn_text_dark_focused = 2131165321;
 			
 			// aapt resource value: 0x7F07008A
-			public const int common_google_signin_btn_text_dark_normal_background = 2131165322;
+			public const int common_google_signin_btn_text_dark_normal = 2131165322;
 			
 			// aapt resource value: 0x7F07008B
-			public const int common_google_signin_btn_text_disabled = 2131165323;
+			public const int common_google_signin_btn_text_dark_normal_background = 2131165323;
 			
 			// aapt resource value: 0x7F07008C
-			public const int common_google_signin_btn_text_light = 2131165324;
+			public const int common_google_signin_btn_text_disabled = 2131165324;
 			
 			// aapt resource value: 0x7F07008D
-			public const int common_google_signin_btn_text_light_focused = 2131165325;
+			public const int common_google_signin_btn_text_light = 2131165325;
 			
 			// aapt resource value: 0x7F07008E
-			public const int common_google_signin_btn_text_light_normal = 2131165326;
+			public const int common_google_signin_btn_text_light_focused = 2131165326;
 			
 			// aapt resource value: 0x7F07008F
-			public const int common_google_signin_btn_text_light_normal_background = 2131165327;
-			
-			// aapt resource value: 0x7F070066
-			public const int com_facebook_auth_dialog_background = 2131165286;
-			
-			// aapt resource value: 0x7F070067
-			public const int com_facebook_auth_dialog_cancel_background = 2131165287;
-			
-			// aapt resource value: 0x7F070068
-			public const int com_facebook_auth_dialog_header_background = 2131165288;
-			
-			// aapt resource value: 0x7F070069
-			public const int com_facebook_button_background = 2131165289;
-			
-			// aapt resource value: 0x7F07006A
-			public const int com_facebook_button_icon = 2131165290;
-			
-			// aapt resource value: 0x7F07006B
-			public const int com_facebook_button_like_background = 2131165291;
-			
-			// aapt resource value: 0x7F07006C
-			public const int com_facebook_button_like_icon_selected = 2131165292;
-			
-			// aapt resource value: 0x7F07006D
-			public const int com_facebook_button_send_background = 2131165293;
-			
-			// aapt resource value: 0x7F07006E
-			public const int com_facebook_button_send_icon_blue = 2131165294;
-			
-			// aapt resource value: 0x7F07006F
-			public const int com_facebook_button_send_icon_white = 2131165295;
-			
-			// aapt resource value: 0x7F070070
-			public const int com_facebook_close = 2131165296;
-			
-			// aapt resource value: 0x7F070071
-			public const int com_facebook_favicon_blue = 2131165297;
-			
-			// aapt resource value: 0x7F070072
-			public const int com_facebook_profile_picture_blank_portrait = 2131165298;
-			
-			// aapt resource value: 0x7F070073
-			public const int com_facebook_profile_picture_blank_square = 2131165299;
-			
-			// aapt resource value: 0x7F070074
-			public const int com_facebook_send_button_icon = 2131165300;
-			
-			// aapt resource value: 0x7F070075
-			public const int com_facebook_tooltip_black_background = 2131165301;
-			
-			// aapt resource value: 0x7F070076
-			public const int com_facebook_tooltip_black_bottomnub = 2131165302;
-			
-			// aapt resource value: 0x7F070077
-			public const int com_facebook_tooltip_black_topnub = 2131165303;
-			
-			// aapt resource value: 0x7F070078
-			public const int com_facebook_tooltip_black_xout = 2131165304;
-			
-			// aapt resource value: 0x7F070079
-			public const int com_facebook_tooltip_blue_background = 2131165305;
-			
-			// aapt resource value: 0x7F07007A
-			public const int com_facebook_tooltip_blue_bottomnub = 2131165306;
-			
-			// aapt resource value: 0x7F07007B
-			public const int com_facebook_tooltip_blue_topnub = 2131165307;
-			
-			// aapt resource value: 0x7F07007C
-			public const int com_facebook_tooltip_blue_xout = 2131165308;
+			public const int common_google_signin_btn_text_light_normal = 2131165327;
 			
 			// aapt resource value: 0x7F070090
-			public const int design_fab_background = 2131165328;
+			public const int common_google_signin_btn_text_light_normal_background = 2131165328;
+			
+			// aapt resource value: 0x7F070067
+			public const int com_facebook_auth_dialog_background = 2131165287;
+			
+			// aapt resource value: 0x7F070068
+			public const int com_facebook_auth_dialog_cancel_background = 2131165288;
+			
+			// aapt resource value: 0x7F070069
+			public const int com_facebook_auth_dialog_header_background = 2131165289;
+			
+			// aapt resource value: 0x7F07006A
+			public const int com_facebook_button_background = 2131165290;
+			
+			// aapt resource value: 0x7F07006B
+			public const int com_facebook_button_icon = 2131165291;
+			
+			// aapt resource value: 0x7F07006C
+			public const int com_facebook_button_like_background = 2131165292;
+			
+			// aapt resource value: 0x7F07006D
+			public const int com_facebook_button_like_icon_selected = 2131165293;
+			
+			// aapt resource value: 0x7F07006E
+			public const int com_facebook_button_send_background = 2131165294;
+			
+			// aapt resource value: 0x7F07006F
+			public const int com_facebook_button_send_icon_blue = 2131165295;
+			
+			// aapt resource value: 0x7F070070
+			public const int com_facebook_button_send_icon_white = 2131165296;
+			
+			// aapt resource value: 0x7F070071
+			public const int com_facebook_close = 2131165297;
+			
+			// aapt resource value: 0x7F070072
+			public const int com_facebook_favicon_blue = 2131165298;
+			
+			// aapt resource value: 0x7F070073
+			public const int com_facebook_profile_picture_blank_portrait = 2131165299;
+			
+			// aapt resource value: 0x7F070074
+			public const int com_facebook_profile_picture_blank_square = 2131165300;
+			
+			// aapt resource value: 0x7F070075
+			public const int com_facebook_send_button_icon = 2131165301;
+			
+			// aapt resource value: 0x7F070076
+			public const int com_facebook_tooltip_black_background = 2131165302;
+			
+			// aapt resource value: 0x7F070077
+			public const int com_facebook_tooltip_black_bottomnub = 2131165303;
+			
+			// aapt resource value: 0x7F070078
+			public const int com_facebook_tooltip_black_topnub = 2131165304;
+			
+			// aapt resource value: 0x7F070079
+			public const int com_facebook_tooltip_black_xout = 2131165305;
+			
+			// aapt resource value: 0x7F07007A
+			public const int com_facebook_tooltip_blue_background = 2131165306;
+			
+			// aapt resource value: 0x7F07007B
+			public const int com_facebook_tooltip_blue_bottomnub = 2131165307;
+			
+			// aapt resource value: 0x7F07007C
+			public const int com_facebook_tooltip_blue_topnub = 2131165308;
+			
+			// aapt resource value: 0x7F07007D
+			public const int com_facebook_tooltip_blue_xout = 2131165309;
 			
 			// aapt resource value: 0x7F070091
-			public const int design_ic_visibility = 2131165329;
+			public const int delivery = 2131165329;
 			
 			// aapt resource value: 0x7F070092
-			public const int design_ic_visibility_off = 2131165330;
+			public const int design_fab_background = 2131165330;
 			
 			// aapt resource value: 0x7F070093
-			public const int design_password_eye = 2131165331;
+			public const int design_ic_visibility = 2131165331;
 			
 			// aapt resource value: 0x7F070094
-			public const int design_snackbar_background = 2131165332;
+			public const int design_ic_visibility_off = 2131165332;
 			
 			// aapt resource value: 0x7F070095
-			public const int facebook = 2131165333;
+			public const int design_password_eye = 2131165333;
 			
 			// aapt resource value: 0x7F070096
-			public const int googleg_disabled_color_18 = 2131165334;
+			public const int design_snackbar_background = 2131165334;
 			
 			// aapt resource value: 0x7F070097
-			public const int googleg_standard_color_18 = 2131165335;
+			public const int facebook = 2131165335;
 			
 			// aapt resource value: 0x7F070098
-			public const int heart = 2131165336;
+			public const int googleg_disabled_color_18 = 2131165336;
 			
 			// aapt resource value: 0x7F070099
-			public const int ic_arrow_down_24dp = 2131165337;
+			public const int googleg_standard_color_18 = 2131165337;
 			
 			// aapt resource value: 0x7F07009A
-			public const int ic_clock_black_24dp = 2131165338;
+			public const int heart = 2131165338;
 			
 			// aapt resource value: 0x7F07009B
-			public const int ic_fb = 2131165339;
+			public const int ic_arrow_down_24dp = 2131165339;
 			
 			// aapt resource value: 0x7F07009C
-			public const int ic_keyboard_black_24dp = 2131165340;
+			public const int ic_clock_black_24dp = 2131165340;
 			
 			// aapt resource value: 0x7F07009D
-			public const int ic_mtrl_checked_circle = 2131165341;
+			public const int ic_fb = 2131165341;
 			
 			// aapt resource value: 0x7F07009E
-			public const int ic_mtrl_chip_checked_black = 2131165342;
+			public const int ic_keyboard_black_24dp = 2131165342;
 			
 			// aapt resource value: 0x7F07009F
-			public const int ic_mtrl_chip_checked_circle = 2131165343;
+			public const int ic_mtrl_checked_circle = 2131165343;
 			
 			// aapt resource value: 0x7F0700A0
-			public const int ic_mtrl_chip_close_circle = 2131165344;
+			public const int ic_mtrl_chip_checked_black = 2131165344;
 			
 			// aapt resource value: 0x7F0700A1
-			public const int linguistics = 2131165345;
+			public const int ic_mtrl_chip_checked_circle = 2131165345;
 			
 			// aapt resource value: 0x7F0700A2
-			public const int logoBaby = 2131165346;
+			public const int ic_mtrl_chip_close_circle = 2131165346;
 			
 			// aapt resource value: 0x7F0700A3
-			public const int logout = 2131165347;
+			public const int linguistics = 2131165347;
 			
 			// aapt resource value: 0x7F0700A4
-			public const int material_cursor_drawable = 2131165348;
+			public const int logoBaby = 2131165348;
 			
 			// aapt resource value: 0x7F0700A5
-			public const int material_ic_calendar_black_24dp = 2131165349;
+			public const int logout = 2131165349;
 			
 			// aapt resource value: 0x7F0700A6
-			public const int material_ic_clear_black_24dp = 2131165350;
+			public const int material_cursor_drawable = 2131165350;
 			
 			// aapt resource value: 0x7F0700A7
-			public const int material_ic_edit_black_24dp = 2131165351;
+			public const int material_ic_calendar_black_24dp = 2131165351;
 			
 			// aapt resource value: 0x7F0700A8
-			public const int material_ic_keyboard_arrow_left_black_24dp = 2131165352;
+			public const int material_ic_clear_black_24dp = 2131165352;
 			
 			// aapt resource value: 0x7F0700A9
-			public const int material_ic_keyboard_arrow_next_black_24dp = 2131165353;
+			public const int material_ic_edit_black_24dp = 2131165353;
 			
 			// aapt resource value: 0x7F0700AA
-			public const int material_ic_keyboard_arrow_previous_black_24dp = 2131165354;
+			public const int material_ic_keyboard_arrow_left_black_24dp = 2131165354;
 			
 			// aapt resource value: 0x7F0700AB
-			public const int material_ic_keyboard_arrow_right_black_24dp = 2131165355;
+			public const int material_ic_keyboard_arrow_next_black_24dp = 2131165355;
 			
 			// aapt resource value: 0x7F0700AC
-			public const int material_ic_menu_arrow_down_black_24dp = 2131165356;
+			public const int material_ic_keyboard_arrow_previous_black_24dp = 2131165356;
 			
 			// aapt resource value: 0x7F0700AD
-			public const int material_ic_menu_arrow_up_black_24dp = 2131165357;
+			public const int material_ic_keyboard_arrow_right_black_24dp = 2131165357;
 			
 			// aapt resource value: 0x7F0700AE
-			public const int messenger_bubble_large_blue = 2131165358;
+			public const int material_ic_menu_arrow_down_black_24dp = 2131165358;
 			
 			// aapt resource value: 0x7F0700AF
-			public const int messenger_bubble_large_white = 2131165359;
+			public const int material_ic_menu_arrow_up_black_24dp = 2131165359;
 			
 			// aapt resource value: 0x7F0700B0
-			public const int messenger_bubble_small_blue = 2131165360;
+			public const int messenger_bubble_large_blue = 2131165360;
 			
 			// aapt resource value: 0x7F0700B1
-			public const int messenger_bubble_small_white = 2131165361;
+			public const int messenger_bubble_large_white = 2131165361;
 			
 			// aapt resource value: 0x7F0700B2
-			public const int messenger_button_blue_bg_round = 2131165362;
+			public const int messenger_bubble_small_blue = 2131165362;
 			
 			// aapt resource value: 0x7F0700B3
-			public const int messenger_button_blue_bg_selector = 2131165363;
+			public const int messenger_bubble_small_white = 2131165363;
 			
 			// aapt resource value: 0x7F0700B4
-			public const int messenger_button_send_round_shadow = 2131165364;
+			public const int messenger_button_blue_bg_round = 2131165364;
 			
 			// aapt resource value: 0x7F0700B5
-			public const int messenger_button_white_bg_round = 2131165365;
+			public const int messenger_button_blue_bg_selector = 2131165365;
 			
 			// aapt resource value: 0x7F0700B6
-			public const int messenger_button_white_bg_selector = 2131165366;
+			public const int messenger_button_send_round_shadow = 2131165366;
 			
 			// aapt resource value: 0x7F0700B7
-			public const int mtrl_dialog_background = 2131165367;
+			public const int messenger_button_white_bg_round = 2131165367;
 			
 			// aapt resource value: 0x7F0700B8
-			public const int mtrl_dropdown_arrow = 2131165368;
+			public const int messenger_button_white_bg_selector = 2131165368;
 			
 			// aapt resource value: 0x7F0700B9
-			public const int mtrl_ic_arrow_drop_down = 2131165369;
+			public const int mtrl_dialog_background = 2131165369;
 			
 			// aapt resource value: 0x7F0700BA
-			public const int mtrl_ic_arrow_drop_up = 2131165370;
+			public const int mtrl_dropdown_arrow = 2131165370;
 			
 			// aapt resource value: 0x7F0700BB
-			public const int mtrl_ic_cancel = 2131165371;
+			public const int mtrl_ic_arrow_drop_down = 2131165371;
 			
 			// aapt resource value: 0x7F0700BC
-			public const int mtrl_ic_error = 2131165372;
+			public const int mtrl_ic_arrow_drop_up = 2131165372;
 			
 			// aapt resource value: 0x7F0700BD
-			public const int mtrl_navigation_bar_item_background = 2131165373;
+			public const int mtrl_ic_cancel = 2131165373;
 			
 			// aapt resource value: 0x7F0700BE
-			public const int mtrl_popupmenu_background = 2131165374;
+			public const int mtrl_ic_error = 2131165374;
 			
 			// aapt resource value: 0x7F0700BF
-			public const int mtrl_popupmenu_background_dark = 2131165375;
+			public const int mtrl_navigation_bar_item_background = 2131165375;
 			
 			// aapt resource value: 0x7F0700C0
-			public const int mtrl_tabs_default_indicator = 2131165376;
+			public const int mtrl_popupmenu_background = 2131165376;
 			
 			// aapt resource value: 0x7F0700C1
-			public const int mylogo = 2131165377;
+			public const int mtrl_popupmenu_background_dark = 2131165377;
 			
 			// aapt resource value: 0x7F0700C2
-			public const int navigation_empty_icon = 2131165378;
+			public const int mtrl_tabs_default_indicator = 2131165378;
 			
 			// aapt resource value: 0x7F0700C3
-			public const int newA = 2131165379;
+			public const int mylogo = 2131165379;
 			
 			// aapt resource value: 0x7F0700C4
-			public const int newArrival = 2131165380;
+			public const int navigation_empty_icon = 2131165380;
 			
 			// aapt resource value: 0x7F0700C5
-			public const int newArrival2 = 2131165381;
+			public const int newA = 2131165381;
 			
 			// aapt resource value: 0x7F0700C6
-			public const int newArrivalI = 2131165382;
+			public const int newArrival = 2131165382;
 			
 			// aapt resource value: 0x7F0700C7
-			public const int notification_action_background = 2131165383;
+			public const int newArrival2 = 2131165383;
 			
 			// aapt resource value: 0x7F0700C8
-			public const int notification_bg = 2131165384;
+			public const int newArrivalI = 2131165384;
 			
 			// aapt resource value: 0x7F0700C9
-			public const int notification_bg_low = 2131165385;
+			public const int notification_action_background = 2131165385;
 			
 			// aapt resource value: 0x7F0700CA
-			public const int notification_bg_low_normal = 2131165386;
+			public const int notification_bg = 2131165386;
 			
 			// aapt resource value: 0x7F0700CB
-			public const int notification_bg_low_pressed = 2131165387;
+			public const int notification_bg_low = 2131165387;
 			
 			// aapt resource value: 0x7F0700CC
-			public const int notification_bg_normal = 2131165388;
+			public const int notification_bg_low_normal = 2131165388;
 			
 			// aapt resource value: 0x7F0700CD
-			public const int notification_bg_normal_pressed = 2131165389;
+			public const int notification_bg_low_pressed = 2131165389;
 			
 			// aapt resource value: 0x7F0700CE
-			public const int notification_icon_background = 2131165390;
+			public const int notification_bg_normal = 2131165390;
 			
 			// aapt resource value: 0x7F0700CF
-			public const int notification_template_icon_bg = 2131165391;
+			public const int notification_bg_normal_pressed = 2131165391;
 			
 			// aapt resource value: 0x7F0700D0
-			public const int notification_template_icon_low_bg = 2131165392;
+			public const int notification_icon_background = 2131165392;
 			
 			// aapt resource value: 0x7F0700D1
-			public const int notification_tile_bg = 2131165393;
+			public const int notification_template_icon_bg = 2131165393;
 			
 			// aapt resource value: 0x7F0700D2
-			public const int notify_panel_notification_icon_bg = 2131165394;
+			public const int notification_template_icon_low_bg = 2131165394;
 			
 			// aapt resource value: 0x7F0700D3
-			public const int preference_list_divider_material = 2131165395;
+			public const int notification_tile_bg = 2131165395;
 			
 			// aapt resource value: 0x7F0700D4
-			public const int search = 2131165396;
+			public const int notify_panel_notification_icon_bg = 2131165396;
 			
 			// aapt resource value: 0x7F0700D5
-			public const int test_custom_background = 2131165397;
+			public const int preference_list_divider_material = 2131165397;
 			
 			// aapt resource value: 0x7F0700D6
-			public const int tooltip_frame_dark = 2131165398;
+			public const int search = 2131165398;
 			
 			// aapt resource value: 0x7F0700D7
-			public const int tooltip_frame_light = 2131165399;
+			public const int shoppingbag = 2131165399;
 			
 			// aapt resource value: 0x7F0700D8
-			public const int whatsapp = 2131165400;
+			public const int test_custom_background = 2131165400;
+			
+			// aapt resource value: 0x7F0700D9
+			public const int tooltip_frame_dark = 2131165401;
+			
+			// aapt resource value: 0x7F0700DA
+			public const int tooltip_frame_light = 2131165402;
+			
+			// aapt resource value: 0x7F0700DB
+			public const int userInfo = 2131165403;
+			
+			// aapt resource value: 0x7F0700DC
+			public const int whatsapp = 2131165404;
 			
 			static Drawable()
 			{
@@ -22049,277 +22062,268 @@ namespace HekayatBaby.Droid
 			public const int copy_toast_msg = 2131624013;
 			
 			// aapt resource value: 0x7F0E004E
-			public const int default_web_client_id = 2131624014;
+			public const int error_icon_content_description = 2131624014;
 			
 			// aapt resource value: 0x7F0E004F
-			public const int error_icon_content_description = 2131624015;
+			public const int expand_button_title = 2131624015;
 			
 			// aapt resource value: 0x7F0E0050
-			public const int expand_button_title = 2131624016;
+			public const int exposed_dropdown_menu_content_description = 2131624016;
 			
 			// aapt resource value: 0x7F0E0051
-			public const int exposed_dropdown_menu_content_description = 2131624017;
+			public const int fab_transformation_scrim_behavior = 2131624017;
 			
 			// aapt resource value: 0x7F0E0052
-			public const int fab_transformation_scrim_behavior = 2131624018;
+			public const int fab_transformation_sheet_behavior = 2131624018;
 			
 			// aapt resource value: 0x7F0E0053
-			public const int fab_transformation_sheet_behavior = 2131624019;
+			public const int facebook_app_id = 2131624019;
 			
 			// aapt resource value: 0x7F0E0054
-			public const int facebook_app_id = 2131624020;
+			public const int fallback_menu_item_copy_link = 2131624020;
 			
 			// aapt resource value: 0x7F0E0055
-			public const int fallback_menu_item_copy_link = 2131624021;
+			public const int fallback_menu_item_open_in_browser = 2131624021;
 			
 			// aapt resource value: 0x7F0E0056
-			public const int fallback_menu_item_open_in_browser = 2131624022;
+			public const int fallback_menu_item_share_link = 2131624022;
 			
 			// aapt resource value: 0x7F0E0057
-			public const int fallback_menu_item_share_link = 2131624023;
+			public const int fb_login_protocol_scheme = 2131624023;
 			
 			// aapt resource value: 0x7F0E0058
-			public const int fb_login_protocol_scheme = 2131624024;
+			public const int fcm_fallback_notification_channel_label = 2131624024;
 			
 			// aapt resource value: 0x7F0E0059
 			public const int gcm_defaultSenderId = 2131624025;
 			
 			// aapt resource value: 0x7F0E005A
-			public const int google_api_key = 2131624026;
+			public const int google_storage_bucket = 2131624026;
 			
 			// aapt resource value: 0x7F0E005B
-			public const int google_app_id = 2131624027;
+			public const int hide_bottom_view_on_scroll_behavior = 2131624027;
 			
 			// aapt resource value: 0x7F0E005C
-			public const int google_crash_reporting_api_key = 2131624028;
+			public const int icon_content_description = 2131624028;
 			
 			// aapt resource value: 0x7F0E005D
-			public const int google_storage_bucket = 2131624029;
+			public const int item_view_role_description = 2131624029;
 			
 			// aapt resource value: 0x7F0E005E
-			public const int hide_bottom_view_on_scroll_behavior = 2131624030;
+			public const int material_clock_display_divider = 2131624030;
 			
 			// aapt resource value: 0x7F0E005F
-			public const int icon_content_description = 2131624031;
+			public const int material_clock_toggle_content_description = 2131624031;
 			
 			// aapt resource value: 0x7F0E0060
-			public const int item_view_role_description = 2131624032;
+			public const int material_hour_selection = 2131624032;
 			
 			// aapt resource value: 0x7F0E0061
-			public const int material_clock_display_divider = 2131624033;
+			public const int material_hour_suffix = 2131624033;
 			
 			// aapt resource value: 0x7F0E0062
-			public const int material_clock_toggle_content_description = 2131624034;
+			public const int material_minute_selection = 2131624034;
 			
 			// aapt resource value: 0x7F0E0063
-			public const int material_hour_selection = 2131624035;
+			public const int material_minute_suffix = 2131624035;
 			
 			// aapt resource value: 0x7F0E0064
-			public const int material_hour_suffix = 2131624036;
+			public const int material_motion_easing_accelerated = 2131624036;
 			
 			// aapt resource value: 0x7F0E0065
-			public const int material_minute_selection = 2131624037;
+			public const int material_motion_easing_decelerated = 2131624037;
 			
 			// aapt resource value: 0x7F0E0066
-			public const int material_minute_suffix = 2131624038;
+			public const int material_motion_easing_emphasized = 2131624038;
 			
 			// aapt resource value: 0x7F0E0067
-			public const int material_motion_easing_accelerated = 2131624039;
+			public const int material_motion_easing_linear = 2131624039;
 			
 			// aapt resource value: 0x7F0E0068
-			public const int material_motion_easing_decelerated = 2131624040;
+			public const int material_motion_easing_standard = 2131624040;
 			
 			// aapt resource value: 0x7F0E0069
-			public const int material_motion_easing_emphasized = 2131624041;
+			public const int material_slider_range_end = 2131624041;
 			
 			// aapt resource value: 0x7F0E006A
-			public const int material_motion_easing_linear = 2131624042;
+			public const int material_slider_range_start = 2131624042;
 			
 			// aapt resource value: 0x7F0E006B
-			public const int material_motion_easing_standard = 2131624043;
+			public const int material_timepicker_am = 2131624043;
 			
 			// aapt resource value: 0x7F0E006C
-			public const int material_slider_range_end = 2131624044;
+			public const int material_timepicker_clock_mode_description = 2131624044;
 			
 			// aapt resource value: 0x7F0E006D
-			public const int material_slider_range_start = 2131624045;
+			public const int material_timepicker_hour = 2131624045;
 			
 			// aapt resource value: 0x7F0E006E
-			public const int material_timepicker_am = 2131624046;
+			public const int material_timepicker_minute = 2131624046;
 			
 			// aapt resource value: 0x7F0E006F
-			public const int material_timepicker_clock_mode_description = 2131624047;
+			public const int material_timepicker_pm = 2131624047;
 			
 			// aapt resource value: 0x7F0E0070
-			public const int material_timepicker_hour = 2131624048;
+			public const int material_timepicker_select_time = 2131624048;
 			
 			// aapt resource value: 0x7F0E0071
-			public const int material_timepicker_minute = 2131624049;
+			public const int material_timepicker_text_input_mode_description = 2131624049;
 			
 			// aapt resource value: 0x7F0E0072
-			public const int material_timepicker_pm = 2131624050;
+			public const int messenger_send_button_text = 2131624050;
 			
 			// aapt resource value: 0x7F0E0073
-			public const int material_timepicker_select_time = 2131624051;
+			public const int mtrl_badge_numberless_content_description = 2131624051;
 			
 			// aapt resource value: 0x7F0E0074
-			public const int material_timepicker_text_input_mode_description = 2131624052;
+			public const int mtrl_chip_close_icon_content_description = 2131624052;
 			
 			// aapt resource value: 0x7F0E0075
-			public const int messenger_send_button_text = 2131624053;
+			public const int mtrl_exceed_max_badge_number_content_description = 2131624053;
 			
 			// aapt resource value: 0x7F0E0076
-			public const int mtrl_badge_numberless_content_description = 2131624054;
+			public const int mtrl_exceed_max_badge_number_suffix = 2131624054;
 			
 			// aapt resource value: 0x7F0E0077
-			public const int mtrl_chip_close_icon_content_description = 2131624055;
+			public const int mtrl_picker_a11y_next_month = 2131624055;
 			
 			// aapt resource value: 0x7F0E0078
-			public const int mtrl_exceed_max_badge_number_content_description = 2131624056;
+			public const int mtrl_picker_a11y_prev_month = 2131624056;
 			
 			// aapt resource value: 0x7F0E0079
-			public const int mtrl_exceed_max_badge_number_suffix = 2131624057;
+			public const int mtrl_picker_announce_current_selection = 2131624057;
 			
 			// aapt resource value: 0x7F0E007A
-			public const int mtrl_picker_a11y_next_month = 2131624058;
+			public const int mtrl_picker_cancel = 2131624058;
 			
 			// aapt resource value: 0x7F0E007B
-			public const int mtrl_picker_a11y_prev_month = 2131624059;
+			public const int mtrl_picker_confirm = 2131624059;
 			
 			// aapt resource value: 0x7F0E007C
-			public const int mtrl_picker_announce_current_selection = 2131624060;
+			public const int mtrl_picker_date_header_selected = 2131624060;
 			
 			// aapt resource value: 0x7F0E007D
-			public const int mtrl_picker_cancel = 2131624061;
+			public const int mtrl_picker_date_header_title = 2131624061;
 			
 			// aapt resource value: 0x7F0E007E
-			public const int mtrl_picker_confirm = 2131624062;
+			public const int mtrl_picker_date_header_unselected = 2131624062;
 			
 			// aapt resource value: 0x7F0E007F
-			public const int mtrl_picker_date_header_selected = 2131624063;
+			public const int mtrl_picker_day_of_week_column_header = 2131624063;
 			
 			// aapt resource value: 0x7F0E0080
-			public const int mtrl_picker_date_header_title = 2131624064;
+			public const int mtrl_picker_invalid_format = 2131624064;
 			
 			// aapt resource value: 0x7F0E0081
-			public const int mtrl_picker_date_header_unselected = 2131624065;
+			public const int mtrl_picker_invalid_format_example = 2131624065;
 			
 			// aapt resource value: 0x7F0E0082
-			public const int mtrl_picker_day_of_week_column_header = 2131624066;
+			public const int mtrl_picker_invalid_format_use = 2131624066;
 			
 			// aapt resource value: 0x7F0E0083
-			public const int mtrl_picker_invalid_format = 2131624067;
+			public const int mtrl_picker_invalid_range = 2131624067;
 			
 			// aapt resource value: 0x7F0E0084
-			public const int mtrl_picker_invalid_format_example = 2131624068;
+			public const int mtrl_picker_navigate_to_year_description = 2131624068;
 			
 			// aapt resource value: 0x7F0E0085
-			public const int mtrl_picker_invalid_format_use = 2131624069;
+			public const int mtrl_picker_out_of_range = 2131624069;
 			
 			// aapt resource value: 0x7F0E0086
-			public const int mtrl_picker_invalid_range = 2131624070;
+			public const int mtrl_picker_range_header_only_end_selected = 2131624070;
 			
 			// aapt resource value: 0x7F0E0087
-			public const int mtrl_picker_navigate_to_year_description = 2131624071;
+			public const int mtrl_picker_range_header_only_start_selected = 2131624071;
 			
 			// aapt resource value: 0x7F0E0088
-			public const int mtrl_picker_out_of_range = 2131624072;
+			public const int mtrl_picker_range_header_selected = 2131624072;
 			
 			// aapt resource value: 0x7F0E0089
-			public const int mtrl_picker_range_header_only_end_selected = 2131624073;
+			public const int mtrl_picker_range_header_title = 2131624073;
 			
 			// aapt resource value: 0x7F0E008A
-			public const int mtrl_picker_range_header_only_start_selected = 2131624074;
+			public const int mtrl_picker_range_header_unselected = 2131624074;
 			
 			// aapt resource value: 0x7F0E008B
-			public const int mtrl_picker_range_header_selected = 2131624075;
+			public const int mtrl_picker_save = 2131624075;
 			
 			// aapt resource value: 0x7F0E008C
-			public const int mtrl_picker_range_header_title = 2131624076;
+			public const int mtrl_picker_text_input_date_hint = 2131624076;
 			
 			// aapt resource value: 0x7F0E008D
-			public const int mtrl_picker_range_header_unselected = 2131624077;
+			public const int mtrl_picker_text_input_date_range_end_hint = 2131624077;
 			
 			// aapt resource value: 0x7F0E008E
-			public const int mtrl_picker_save = 2131624078;
+			public const int mtrl_picker_text_input_date_range_start_hint = 2131624078;
 			
 			// aapt resource value: 0x7F0E008F
-			public const int mtrl_picker_text_input_date_hint = 2131624079;
+			public const int mtrl_picker_text_input_day_abbr = 2131624079;
 			
 			// aapt resource value: 0x7F0E0090
-			public const int mtrl_picker_text_input_date_range_end_hint = 2131624080;
+			public const int mtrl_picker_text_input_month_abbr = 2131624080;
 			
 			// aapt resource value: 0x7F0E0091
-			public const int mtrl_picker_text_input_date_range_start_hint = 2131624081;
+			public const int mtrl_picker_text_input_year_abbr = 2131624081;
 			
 			// aapt resource value: 0x7F0E0092
-			public const int mtrl_picker_text_input_day_abbr = 2131624082;
+			public const int mtrl_picker_toggle_to_calendar_input_mode = 2131624082;
 			
 			// aapt resource value: 0x7F0E0093
-			public const int mtrl_picker_text_input_month_abbr = 2131624083;
+			public const int mtrl_picker_toggle_to_day_selection = 2131624083;
 			
 			// aapt resource value: 0x7F0E0094
-			public const int mtrl_picker_text_input_year_abbr = 2131624084;
+			public const int mtrl_picker_toggle_to_text_input_mode = 2131624084;
 			
 			// aapt resource value: 0x7F0E0095
-			public const int mtrl_picker_toggle_to_calendar_input_mode = 2131624085;
+			public const int mtrl_picker_toggle_to_year_selection = 2131624085;
 			
 			// aapt resource value: 0x7F0E0096
-			public const int mtrl_picker_toggle_to_day_selection = 2131624086;
+			public const int nav_app_bar_navigate_up_description = 2131624086;
 			
 			// aapt resource value: 0x7F0E0097
-			public const int mtrl_picker_toggle_to_text_input_mode = 2131624087;
+			public const int nav_app_bar_open_drawer_description = 2131624087;
 			
 			// aapt resource value: 0x7F0E0098
-			public const int mtrl_picker_toggle_to_year_selection = 2131624088;
+			public const int not_set = 2131624088;
 			
 			// aapt resource value: 0x7F0E0099
-			public const int nav_app_bar_navigate_up_description = 2131624089;
+			public const int overflow_tab_title = 2131624089;
 			
 			// aapt resource value: 0x7F0E009A
-			public const int nav_app_bar_open_drawer_description = 2131624090;
+			public const int password_toggle_content_description = 2131624090;
 			
 			// aapt resource value: 0x7F0E009B
-			public const int not_set = 2131624091;
+			public const int path_password_eye = 2131624091;
 			
 			// aapt resource value: 0x7F0E009C
-			public const int overflow_tab_title = 2131624092;
+			public const int path_password_eye_mask_strike_through = 2131624092;
 			
 			// aapt resource value: 0x7F0E009D
-			public const int password_toggle_content_description = 2131624093;
+			public const int path_password_eye_mask_visible = 2131624093;
 			
 			// aapt resource value: 0x7F0E009E
-			public const int path_password_eye = 2131624094;
+			public const int path_password_strike_through = 2131624094;
 			
 			// aapt resource value: 0x7F0E009F
-			public const int path_password_eye_mask_strike_through = 2131624095;
+			public const int preference_copied = 2131624095;
 			
 			// aapt resource value: 0x7F0E00A0
-			public const int path_password_eye_mask_visible = 2131624096;
+			public const int project_id = 2131624096;
 			
 			// aapt resource value: 0x7F0E00A1
-			public const int path_password_strike_through = 2131624097;
+			public const int search_menu_title = 2131624097;
 			
 			// aapt resource value: 0x7F0E00A2
-			public const int preference_copied = 2131624098;
+			public const int status_bar_notification_info_overflow = 2131624098;
 			
 			// aapt resource value: 0x7F0E00A3
-			public const int project_id = 2131624099;
+			public const int summary_collapsed_preference_list = 2131624099;
 			
 			// aapt resource value: 0x7F0E00A4
-			public const int search_menu_title = 2131624100;
+			public const int v7_preference_off = 2131624100;
 			
 			// aapt resource value: 0x7F0E00A5
-			public const int status_bar_notification_info_overflow = 2131624101;
-			
-			// aapt resource value: 0x7F0E00A6
-			public const int summary_collapsed_preference_list = 2131624102;
-			
-			// aapt resource value: 0x7F0E00A7
-			public const int v7_preference_off = 2131624103;
-			
-			// aapt resource value: 0x7F0E00A8
-			public const int v7_preference_on = 2131624104;
+			public const int v7_preference_on = 2131624101;
 			
 			static String()
 			{

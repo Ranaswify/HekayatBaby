@@ -70,11 +70,29 @@ namespace HekayatBaby.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Add to cart.
+        /// </summary>
+        internal static string AddToCart {
+            get {
+                return ResourceManager.GetString("AddToCart", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Add To Carts.
         /// </summary>
         internal static string AddToCarts {
             get {
                 return ResourceManager.GetString("AddToCarts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Best Seller.
+        /// </summary>
+        internal static string BestSeller {
+            get {
+                return ResourceManager.GetString("BestSeller", resourceCulture);
             }
         }
         
@@ -115,6 +133,33 @@ namespace HekayatBaby.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Discount.
+        /// </summary>
+        internal static string Discount {
+            get {
+                return ResourceManager.GetString("Discount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Facebook Group.
+        /// </summary>
+        internal static string FacebookGroup {
+            get {
+                return ResourceManager.GetString("FacebookGroup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Facebook Page.
+        /// </summary>
+        internal static string FacebookPage {
+            get {
+                return ResourceManager.GetString("FacebookPage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Full Name.
         /// </summary>
         internal static string FullName {
@@ -142,7 +187,7 @@ namespace HekayatBaby.Resources {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Login with Facebook.
+        ///   Looks up a localized string similar to Continue with Facebook.
         /// </summary>
         internal static string LoginFB {
             get {
@@ -160,11 +205,74 @@ namespace HekayatBaby.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to My Carts.
+        /// </summary>
+        internal static string MyCarts {
+            get {
+                return ResourceManager.GetString("MyCarts", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to My Orders.
+        /// </summary>
+        internal static string MyOrders {
+            get {
+                return ResourceManager.GetString("MyOrders", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to New Arrival.
+        /// </summary>
+        internal static string NewArrival {
+            get {
+                return ResourceManager.GetString("NewArrival", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Notes.
         /// </summary>
         internal static string Notes {
             get {
                 return ResourceManager.GetString("Notes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Don&apos;t have account?.
+        /// </summary>
+        internal static string NotHaveAcc {
+            get {
+                return ResourceManager.GetString("NotHaveAcc", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Or.
+        /// </summary>
+        internal static string Or {
+            get {
+                return ResourceManager.GetString("Or", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Password.
+        /// </summary>
+        internal static string Password {
+            get {
+                return ResourceManager.GetString("Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Payment.
+        /// </summary>
+        internal static string Payment {
+            get {
+                return ResourceManager.GetString("Payment", resourceCulture);
             }
         }
         
@@ -196,6 +304,24 @@ namespace HekayatBaby.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Shipping.
+        /// </summary>
+        internal static string Shipping {
+            get {
+                return ResourceManager.GetString("Shipping", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Sign up.
+        /// </summary>
+        internal static string SignUp {
+            get {
+                return ResourceManager.GetString("SignUp", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Sort by.
         /// </summary>
         internal static string SortBy {
@@ -214,11 +340,38 @@ namespace HekayatBaby.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Subtotal.
+        /// </summary>
+        internal static string SubTotal {
+            get {
+                return ResourceManager.GetString("SubTotal", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Total.
+        /// </summary>
+        internal static string Total {
+            get {
+                return ResourceManager.GetString("Total", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Total Amount.
         /// </summary>
         internal static string TotalAmount {
             get {
                 return ResourceManager.GetString("TotalAmount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Username.
+        /// </summary>
+        internal static string Username {
+            get {
+                return ResourceManager.GetString("Username", resourceCulture);
             }
         }
     }

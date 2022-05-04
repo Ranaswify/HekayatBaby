@@ -104,6 +104,17 @@ namespace HekayatBaby.ViewModels
             }
         }
 
+        string _Title;
+        public string Title
+        {
+            get { return _Title; }
+            set
+            {
+                _Title = value;
+                OnPropertyChanged();
+            }
+        }
+
         public ICommand GetDetailsCommand { get; set; }
         public ICommand GoToCartsCommand { get; set; }
         public ICommand GoToHomeCommand { get; set; }
@@ -114,6 +125,7 @@ namespace HekayatBaby.ViewModels
         public ICommand SearchCommand { get; set; }
         public ICommand CloseSortCommand { get; set; }
         public ICommand RefreshCommand { get; set; }
+        public ICommand GoToMyOrdersCommand { get; set; }
         public NewArrivalViewModel(string v)
         {
             this.v = v;
@@ -129,8 +141,15 @@ namespace HekayatBaby.ViewModels
             SearchCommand = new Command(SearchForToy);
             CloseSortCommand = new Command(CloseSorting);
             RefreshCommand = new Command(async () => await RefreshItems());
+            GoToMyOrdersCommand = new Command(async () => await GoToMyOrders());
             getAll(v);
             GetCategores();
+            Title = v;
+        }
+
+        private async Task GoToMyOrders()
+        {
+            await Application.Current.MainPage.Navigation.PushAsync(new MyOrdersPage());
         }
 
         private async Task RefreshItems()

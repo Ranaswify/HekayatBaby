@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HekayatBaby.Views.CategoryView">
+             x:Class="HekayatBaby.Views.CategoryView"
+             xmlns:resources="clr-namespace:HekayatBaby.Resources">
   <ContentView.Content>
         <Grid IsVisible="{Binding IsSorting}" 
                     BackgroundColor="White">
@@ -18,7 +19,7 @@
                             <TapGestureRecognizer Command="{Binding CloseSortCommand}"/>
                         </Label.GestureRecognizers>
                     </Label>
-                    <Label Text="Sort By" FontAttributes="Bold" FontSize="Large" HorizontalOptions="CenterAndExpand"/>
+                    <Label Text="{x:Static resources:LanguageResource.SortBy}" FontAttributes="Bold" FontSize="Large" HorizontalOptions="CenterAndExpand"/>
                 </StackLayout>
                 <ScrollView>
                     <Frame Grid.Row="1">

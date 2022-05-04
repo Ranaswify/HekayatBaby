@@ -9,12 +9,33 @@ using System.Text;
 
 namespace HekayatBaby.Models
 {
-    public class Items
+    public class Items : INotifyPropertyChanged
     {
+        public event PropertyChangedEventHandler PropertyChanged;
+        protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
         public List<string> imgUrls { get; set; }
         public string name { get; set; }
         public string description { get; set; }
-        public double coast { get; set; }
+        //public double coast { get; set; }
+
+        double Coast;
+        public double coast
+        {
+            get
+            {
+                //_totalSellingPrice = myItem.coast;
+                return Coast;
+            }
+            set
+            {
+                Coast = value;
+                OnPropertyChanged();
+            }
+        }
+
         public string category { get; set; }
         public string imageUrl { get; set; }
     }
@@ -49,7 +70,7 @@ namespace HekayatBaby.Models
         {
             get
             {
-                _totalSellingPrice = myItem.coast;
+                //_totalSellingPrice = myItem.coast;
                 return _totalSellingPrice; 
             }
             set

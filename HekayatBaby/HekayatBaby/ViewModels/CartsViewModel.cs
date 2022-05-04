@@ -79,8 +79,9 @@ namespace HekayatBaby.ViewModels
         {
             if (obj.Count > 1)
             {
-                obj.Count--;
+                --obj.Count;
                 obj.TotalSellingPrice = obj.myItem.coast * obj.Count;
+                obj.myItem.coast = obj.TotalSellingPrice;
                 SubTotalAmount();
             }
         }
@@ -88,8 +89,10 @@ namespace HekayatBaby.ViewModels
         {
             if (obj.Count >= 1)
             {
-                obj.Count++;
+                ++obj.Count;
+                //double i= obj.myItem.coast * obj.Count;
                 obj.TotalSellingPrice = obj.myItem.coast * obj.Count;
+                obj.myItem.coast = obj.TotalSellingPrice;
                 SubTotalAmount();
             }
         }
@@ -98,6 +101,7 @@ namespace HekayatBaby.ViewModels
             TotalAmount = 0;
             foreach (var i in AllSaved)
             {
+                i.TotalSellingPrice = i.myItem.coast;
                 TotalAmount += i.TotalSellingPrice;
 
             }
@@ -146,21 +150,23 @@ namespace HekayatBaby.ViewModels
             try
             {
                 IsLoading = true;
-                AllSaved = await firebaseHelper.GetAllSavedItems();
-                var i = AllSaved.Where(a => a.userId == Preferences.Get("UserId", ""));
-                AllSaved = new ObservableCollection<SavedItems>(i);
+                if(!string.IsNullOrEmpty(Preferences.Get("UserId", "")))
+                {
+                    AllSaved = await firebaseHelper.GetAllSavedItems();
+                    var i = AllSaved.Where(a => a.userId == Preferences.Get("UserId", ""));
+                    AllSaved = new ObservableCollection<SavedItems>(i);
+                }
+
                 if (AllSaved.Count > 0)
                 {
                     IsEmpty = true;
                 }
-                //TotalAmount = AllSaved.Aggregate((a, x) => a.+x);
                 SubTotalAmount();
-
                 IsLoading = false;
             }
             catch(Exception ex)
             {
-
+                IsLoading = false;
             }
         }
     }

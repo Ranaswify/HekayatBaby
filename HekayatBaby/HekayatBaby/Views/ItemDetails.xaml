@@ -1,8 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:viewModels="clr-namespace:HekayatBaby.ViewModels" xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             xmlns:viewModels="clr-namespace:HekayatBaby.ViewModels" 
+             xmlns:ffimageloading="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms" 
+             xmlns:local="clr-namespace:HekayatBaby" xmlns:customViews="clr-namespace:HekayatBaby.Views"
              x:Class="HekayatBaby.Views.ItemDetails"
-             BackgroundColor="#f7d0e8">
+             BackgroundColor="#f7d0e8"
+             xmlns:resources="clr-namespace:HekayatBaby.Resources">
 
     <NavigationPage.TitleView>
         <Label Text="Details" FontSize="Medium" TextColor="#e6306a"/>
@@ -12,30 +16,41 @@
         <viewModels:ItemDetailsViewModel/>
     </ContentPage.BindingContext>
     
-    <ContentPage.Content>
-        <ScrollView Margin="0">
+    <Grid>
+        <ScrollView Margin="0" Grid.Row="0">
             <StackLayout>
 
                 <Grid Margin="10" ColumnSpacing="20">
                     <Grid.RowDefinitions>
-                        <RowDefinition Height="300"/>
+                        <RowDefinition Height="350"/>
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="auto"/>
                     </Grid.ColumnDefinitions>
-                    <CollectionView ItemsSource="{Binding AllOrders}">
+                    
+                    
+                    <CollectionView x:Name="collection" ItemsSource="{Binding AllOrders}">
                         <CollectionView.ItemsLayout>
                             <GridItemsLayout Orientation="Horizontal"/>
                         </CollectionView.ItemsLayout>
                         <CollectionView.ItemTemplate>
                             <DataTemplate>
                                 <Grid Padding="5" Grid.Row="0" Grid.Column="0" Margin="15">
-                                    <!--<Image Source="{Binding .}"/>-->
                                     <Frame Padding="0" Margin="10" CornerRadius="10" WidthRequest="300" BackgroundColor="White">
-                                        <ffimageloading:CachedImage
-                                                    Source="{Binding .}" HorizontalOptions="FillAndExpand"/>
-                                    </Frame>
+                                        <Image Source="{Binding .}">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer Command="{Binding BindingContext.TapImageCommand, Source={x:Reference collection}}"
+                                                                      CommandParameter="{Binding .}"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>
 
+                                        <!--<local:PinchToZoomContainer>
+                                            <local:PinchToZoomContainer.Content>
+                                                <ffimageloading:CachedImage
+                                                    Source="{Binding .}" HorizontalOptions="FillAndExpand"/>
+                                            </local:PinchToZoomContainer.Content>
+                                        </local:PinchToZoomContainer>-->
+                                    </Frame>
                                 </Grid>
                             </DataTemplate>
                         </CollectionView.ItemTemplate>
@@ -66,13 +81,32 @@
                 <StackLayout Margin="10">
                     <Label Text="{Binding Description}" FontSize="Medium" TextColor="Black" Margin="0,0,0,5"/>
                 </StackLayout>
-                <Button Text="Add to cart" BackgroundColor="#e6306a" Command="{Binding GoToPaymentCommand}" BorderWidth="3"
-                        BorderColor="#e6306a" TextColor="White" Margin="0,0,0,10" WidthRequest="200" 
-                        VerticalOptions="EndAndExpand" CornerRadius="20" HorizontalOptions="CenterAndExpand"/>
+                <Button Text="{x:Static resources:LanguageResource.AddToCart}" BackgroundColor="#e6306a" Command="{Binding GoToPaymentCommand}" BorderWidth="3"
+                        BorderColor="#e6306a" TextColor="White" Margin="10" WidthRequest="200" 
+                        VerticalOptions="EndAndExpand" />
 
             </StackLayout>
 
         </ScrollView>
-        
-    </ContentPage.Content>
+        <Grid IsVisible="{Binding IsImageVisible}" Grid.Row="0" BackgroundColor="#66666666">
+            <StackLayout VerticalOptions="CenterAndExpand" HeightRequest="400" BackgroundColor="White" Padding="10">
+                <Label Text="&#xf00d;" TextColor="#e6306a" FontSize="Large"
+                                   VerticalTextAlignment="Center" FontFamily="{StaticResource FontAwesome}">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding CloseImageCommand}"/>
+                    </Label.GestureRecognizers>
+                </Label>
+                
+                <local:PinchToZoomContainer>
+                    <local:PinchToZoomContainer.Content>
+                        <Image Source="{Binding SelectedImage}"
+                               HorizontalOptions="FillAndExpand" HeightRequest="300" Aspect="AspectFit"/>
+                    </local:PinchToZoomContainer.Content>
+                </local:PinchToZoomContainer>
+            </StackLayout>
+
+        </Grid>
+        <!--<customViews:ImagesView Grid.Row="0" BackgroundColor="#66666666"
+                                      IsVisible="{Binding IsImageVisible}"/>-->
+    </Grid>
 </ContentPage>

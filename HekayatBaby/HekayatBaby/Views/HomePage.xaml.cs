@@ -15,9 +15,9 @@ namespace HekayatBaby.Views
         public HomePage()
         {
             InitializeComponent();
-            //var navigationPage = Application.Current.MainPage as NavigationPage;
-            //navigationPage.BarBackgroundColor = Color.FromHex("#f7d0e8");
-            //navigationPage.BarTextColor = Color.FromHex("#e6306a");
+            var navigationPage = Application.Current.MainPage as NavigationPage;
+            navigationPage.BarBackgroundColor = Color.LightGray;
+            navigationPage.BarTextColor = Color.FromHex("#e6306a");
         }
     }
 }

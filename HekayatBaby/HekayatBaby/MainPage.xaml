@@ -10,37 +10,70 @@
     <MasterDetailPage.Master>
         <controls:CustomFoOverrideBackButtonInContentPage Title="Menu">
             <Grid>
-                <Grid BackgroundColor="White" Padding="15" Grid.Row="0">
+                <Grid BackgroundColor="White" Grid.Row="0">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="auto" />
                         <RowDefinition Height="*" />
                     </Grid.RowDefinitions>
-                   
-                    <StackLayout Grid.Row="1">
-                        <StackLayout Orientation="Horizontal" Margin="0,0,0,10">
+
+                    <StackLayout Grid.Row="0" HorizontalOptions="CenterAndExpand" Margin="0,10">
+                        <Image Source="userInfo" Grid.Row="0" HeightRequest="100" WidthRequest="100"/>
+                        <Label x:Name="user" HorizontalTextAlignment="Center" TextColor="Black" FontSize="Large"/>
+                    </StackLayout>
+                    <!--<Image Source="babyLogo" Grid.Row="0"/>-->
+                    <StackLayout Grid.Row="1"  Padding="15">
+                        <StackLayout Orientation="Horizontal" Margin="0,0,0,15">
                             <StackLayout.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
                             </StackLayout.GestureRecognizers>
-                            <Image Source="linguistics" HeightRequest="30" WidthRequest="30"/>
-                            <Label Text="{x:Static resources:LanguageResource.Language}" FontSize="Medium" FontAttributes="Bold"/>
+                            <!--<Image Source="linguistics" HeightRequest="30" WidthRequest="30"/>-->
+                            <Label Text="&#xf1ab;" TextColor="#e6306a" FontSize="Large"
+                                   VerticalTextAlignment="Center" FontFamily="{StaticResource FontAwesome}"/>
+                            <Label Text="{x:Static resources:LanguageResource.Language}" TextColor="Black" FontSize="Medium" FontAttributes="Bold"/>
                         </StackLayout>
 
-                        <StackLayout Orientation="Horizontal" Margin="0,0,0,10">
+                       
+                        <StackLayout Orientation="Horizontal" Margin="0,0,0,15">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Carts_Tapped"/>
+                            </StackLayout.GestureRecognizers>
+                            <Label Text="&#xf07a;" TextColor="#e6306a" FontSize="Large"
+                                   VerticalTextAlignment="Center" FontFamily="{StaticResource FontAwesome}"/>
+
+                            <Label Text="{x:Static resources:LanguageResource.MyCarts}" TextColor="Black" FontSize="Medium" FontAttributes="Bold"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" Margin="0,0,0,15">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="MyOrders_Tapped"/>
+                            </StackLayout.GestureRecognizers>
+                            <Label Text="&#xf291;" TextColor="#e6306a" FontSize="Large"
+                                   VerticalTextAlignment="Center" FontFamily="{StaticResource FontAwesome}"/>
+
+                            <Label Text="{x:Static resources:LanguageResource.MyOrders}" TextColor="Black" FontSize="Medium" FontAttributes="Bold"/>
+                        </StackLayout>
+
+                        <StackLayout Orientation="Horizontal" Margin="0,0,0,15">
                             <StackLayout.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="Logout_Tapped"/>
                             </StackLayout.GestureRecognizers>
-                            <Image Source="logout" HeightRequest="30" WidthRequest="30"/>
-                            <Label Text="{x:Static resources:LanguageResource.Logout}" FontSize="Medium" FontAttributes="Bold"/>
+                            <Label Text="&#xf2f5;" TextColor="#e6306a" FontSize="Large"
+                                   VerticalTextAlignment="Center" FontFamily="{StaticResource FontAwesome}"/>
+
+                            <Label Text="{x:Static resources:LanguageResource.Logout}" TextColor="Black" FontSize="Medium" FontAttributes="Bold"/>
                         </StackLayout>
 
-                        <Label Text="{x:Static resources:LanguageResource.ContactUs}" FontSize="Medium" Margin="0,0,0,10" FontAttributes="Bold"/>
+
+
+                        <Label Text="{x:Static resources:LanguageResource.ContactUs}"
+                               FontSize="Medium" Margin="0,0,0,10" FontAttributes="Bold" TextColor="Black"/>
 
                         <StackLayout Orientation="Horizontal">
                             <StackLayout.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="OnWhatsAppClicked"/>
                             </StackLayout.GestureRecognizers>
                             <Image Source="whatsapp" Margin="0,5,5,0" HeightRequest="30" WidthRequest="30"/>
-                            <Label Text="+201069896902" VerticalTextAlignment="Center"/>
+                            <Label Text="+201069896902" TextColor="Black" VerticalTextAlignment="Center"/>
                         </StackLayout>
 
 
@@ -49,7 +82,7 @@
                                 <TapGestureRecognizer Tapped="OnFacebookPageClicked"/>
                             </StackLayout.GestureRecognizers>
                             <Image Source="facebook" Margin="0,5,5,0" HeightRequest="30" WidthRequest="30"/>
-                            <Label Text="Facebook Page" VerticalTextAlignment="Center"/>
+                            <Label Text="{x:Static resources:LanguageResource.FacebookPage}" TextColor="Black" VerticalTextAlignment="Center"/>
                         </StackLayout>
 
                         <StackLayout Orientation="Horizontal">
@@ -57,28 +90,9 @@
                                 <TapGestureRecognizer Tapped="OnFacebookGroupClicked"/>
                             </StackLayout.GestureRecognizers>
                             <Image Source="facebook" Margin="0,5,5,0" HeightRequest="30" WidthRequest="30"/>
-                            <Label Text="Facebook Group" VerticalTextAlignment="Center"/>
+                            <Label Text="{x:Static resources:LanguageResource.FacebookGroup}" TextColor="Black" VerticalTextAlignment="Center"/>
                         </StackLayout>
                         
-                        <!--<StackLayout HorizontalOptions="CenterAndExpand">
-                            <Label Text="{x:Static resources:LanguageResource.ContactUs}" FontSize="Medium" Margin="0,0,0,10" FontAttributes="Bold"/>
-
-                            <Frame CornerRadius="10" Padding="2">
-                                <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                                    <Image Source="whatsapp" Margin="0,5,5,0" HeightRequest="30" WidthRequest="30">
-                                        <Image.GestureRecognizers>
-                                            <TapGestureRecognizer Tapped="OnWhatsAppClicked"/>
-                                        </Image.GestureRecognizers>
-                                    </Image>
-
-                                    <Image Source="facebook" Margin="0,5,5,0" HeightRequest="30" WidthRequest="30">
-                                        <Image.GestureRecognizers>
-                                            <TapGestureRecognizer Tapped="OnFacebookClicked"/>
-                                        </Image.GestureRecognizers>
-                                    </Image>
-                                </StackLayout>
-                            </Frame>
-                        </StackLayout>-->
                        
                     </StackLayout>
                 </Grid>

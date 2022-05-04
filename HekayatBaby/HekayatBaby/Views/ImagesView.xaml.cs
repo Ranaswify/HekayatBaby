@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace HekayatBaby.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class SignInWithPhoneNoPage : ContentPage
+    public partial class ImagesView : ContentView
     {
-        public SignInWithPhoneNoPage()
+        public ImagesView()
         {
             InitializeComponent();
         }

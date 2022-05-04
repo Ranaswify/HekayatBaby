@@ -1,4 +1,5 @@
 ﻿using HekayatBaby.Controls;
+using HekayatBaby.Helper;
 using HekayatBaby.Models;
 using Newtonsoft.Json;
 using Plugin.CloudFirestore;
@@ -13,6 +14,8 @@ using System.Threading.Tasks;
 using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using System.Linq;
+
 
 
 namespace HekayatBaby.ViewModels
@@ -22,6 +25,7 @@ namespace HekayatBaby.ViewModels
 
         private ObservableCollection<SavedItems> allSaved;
         private ItemsToPay itemsToPay;
+        FirebaseHelper firebaseHelper = new FirebaseHelper();
 
         string fullName;
         public string FullName
@@ -93,6 +97,38 @@ namespace HekayatBaby.ViewModels
             }
         }
 
+        string promoCodeValue;
+        public string PromoCodeValue
+        {
+            set
+            {
+                promoCodeValue = value;
+                OnPropertyChanged();
+            }
+            get => promoCodeValue;
+        }
+
+        double totalAmountValue;
+        public double TotalAmountValue
+        {
+            set
+            {
+                totalAmountValue = value;
+                OnPropertyChanged();
+            }
+            get => totalAmountValue;
+        }
+        double shipping = 50;
+        public double Shipping
+        {
+            set
+            {
+                shipping = value;
+                OnPropertyChanged();
+            }
+            get => shipping;
+        }
+
         ItemsToPay myItemsToPay;
         public ItemsToPay MyItemsToPay
         {
@@ -108,6 +144,22 @@ namespace HekayatBaby.ViewModels
         }
 
         public ICommand ConfirmPaymentCommand { get; set; }
+        public ICommand CheckPromoCommand { get; set; }
+
+        ObservableCollection<MyOrders> myAllItems;
+        public ObservableCollection<MyOrders> MyAllItems
+        {
+            set
+            {
+                myAllItems = value;
+                OnPropertyChanged();
+            }
+            get
+            {
+                return myAllItems;
+            }
+        }
+
 
         public PaymentViewModel()
         {
@@ -131,8 +183,8 @@ namespace HekayatBaby.ViewModels
                 mail.Subject = "New Order";
                 mail.Body = "You've recieved a new order" + "\n" + 
                     "User Info: " + "\n"+
-                    "Name: " + FullName + "\n" + "Address: " + Address + "\n" + "Phone number: " + PhoneNo
-                    +"\n" + "Order Info:" + "\n" + "Total Amount: " + MyItemsToPay.TotalAmount + "\n" + "Items: " + "\n" + list;
+                    "Name: " + FullName + "\n" + "Address: " + Address + "\n"+"Note: "+ Notes +"\n" + "Phone number: " + PhoneNo
+                    +"\n" + "Order Info:" + "\n" + "Total Amount: " + TotalAmountValue + "\n" + "Items: " + "\n" + list;
 
                 SmtpServer.Port = 587;
                 SmtpServer.Host = "smtp.gmail.com";
@@ -153,7 +205,41 @@ namespace HekayatBaby.ViewModels
             this.itemsToPay = itemsToPay;
             MyItemsToPay = itemsToPay;
             ConfirmPaymentCommand = new Command(async () => await ConfirmPayment());
+            CheckPromoCommand = new Command(async () => await CheckPromo());
+            TotalAmountValue = MyItemsToPay.TotalAmount + Shipping;
+            FullName = Preferences.Get("UserName", "");
+            PhoneNo = Preferences.Get("PhoneNo", "");
         }
+
+        private async Task CheckPromo()
+        {
+            try
+            {
+                var i = await firebaseHelper.GetAllPromo();
+                PromoCode promoCode = i.Where(y => y.name == PromoCode).FirstOrDefault();
+                
+                if (promoCode != null)
+                {
+                    double totalValue = MyItemsToPay.TotalAmount;
+                    PromoCodeValue = promoCode.value + " %";
+                    TotalAmountValue = totalValue - (MyItemsToPay.TotalAmount * (Convert.ToDouble(promoCode.value) / 100));
+                    TotalAmountValue += Shipping;
+                }
+                else
+                {
+                    PromoCode = "";
+                    PromoCodeValue = "";
+                    TotalAmountValue = MyItemsToPay.TotalAmount + Shipping;
+                    await Application.Current.MainPage.DisplayAlert("", "Promo code is not valid", "Ok");
+                }
+            }
+            catch
+            {
+
+            }
+           
+        }
+
         private async Task RemoveFromCart()
         {
             foreach(var i in MyItemsToPay.ItemToPay)
@@ -179,8 +265,11 @@ namespace HekayatBaby.ViewModels
                         FullName = FullName,
                         Note = Notes,
                         MyItemsToPay = itemsToPay,
-                        PaidAmount = MyItemsToPay.TotalAmount,
-                        PromoCode = PromoCode
+                        PaidAmount = TotalAmountValue,
+                        PromoCode = PromoCode,
+                        CreatedTime = DateTime.Now,
+                        UserId = Preferences.Get("UserId", ""),
+                        OrderStatus = "Processing",
                     };
                     var i = CrossCloudFirestore.Current
                                              .Instance
@@ -190,11 +279,11 @@ namespace HekayatBaby.ViewModels
                                              {
                                                  System.Diagnostics.Debug.WriteLine(t.Exception);
                                              }, TaskContinuationOptions.OnlyOnFaulted);
-                    if(i.Status== TaskStatus.WaitingForActivation)
+                    if(i.Status == TaskStatus.WaitingForActivation)
                     {
+                        await Application.Current.MainPage.DisplayAlert("", "Your Order has been sent successfully", "Ok");
                         SendEmail();
                         await RemoveFromCart();
-                        await Application.Current.MainPage.DisplayAlert("", "Your has been sent successfully", "Ok");
                         Application.Current.MainPage = new CustomNavigationPage(new MainPage());
                     }
                     IsLoading = false;
@@ -212,5 +301,10 @@ namespace HekayatBaby.ViewModels
             }
 
         }
+    }
+    public class MyOrders
+    {
+        public string status { get; set; }
+        public SavedItems myItems { get; set; }
     }
 }

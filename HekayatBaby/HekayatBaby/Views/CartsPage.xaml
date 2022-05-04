@@ -4,19 +4,19 @@
              xmlns:ff="clr-namespace:FFImageLoading.Forms;assembly=FFImageLoading.Forms"
              xmlns:viewModels="clr-namespace:HekayatBaby.ViewModels"
              x:Class="HekayatBaby.Views.CartsPage"
-             BackgroundColor="#f7d0e8" Title="My Carts">
+             BackgroundColor="#f7d0e8"
+             xmlns:resources="clr-namespace:HekayatBaby.Resources"
+             Title="My Carts">
 
     <ContentPage.BindingContext>
         <viewModels:CartsViewModel/>
     </ContentPage.BindingContext>
-    
-    <Grid>
-        <ScrollView Margin="5">
 
-            <Grid>
+    <Grid>
+        <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>
-                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
 
 
@@ -35,7 +35,7 @@
                                                    FontAttributes="Bold"
                                                    TextColor="#e6306a"/>
                                                     <Label Text="{Binding myItem.category}" 
-                                                   FontAttributes="Bold"/>
+                                                   FontAttributes="Bold" TextColor="Black"/>
                                                 </StackLayout>
                                                 <StackLayout Orientation="Horizontal" HorizontalOptions="EndAndExpand" >
                                                     <Label Text="{Binding myItem.coast}" FontSize="Medium"
@@ -84,15 +84,13 @@
                         </DataTemplate>
                     </BindableLayout.ItemTemplate>
                     <BindableLayout.EmptyView>
-                        <ContentView>
                             <StackLayout VerticalOptions="CenterAndExpand">
-                                <Image Source="carts" HeightRequest="50" WidthRequest="50"/>
+                                <Image Source="carts" HeightRequest="80" WidthRequest="80" Margin="0,10"/>
 
-                                <Label Text="Your cart is empty" FontSize="Medium"
+                                <Label Text="Your cart is empty" FontSize="Large"
                                                    HorizontalOptions="CenterAndExpand"
                                                    VerticalOptions="CenterAndExpand"/>
                             </StackLayout>
-                        </ContentView>
                     </BindableLayout.EmptyView>
                 </StackLayout>
 
@@ -169,22 +167,20 @@
                     </CollectionView.EmptyView>
                 </CollectionView>-->
 
-                <StackLayout Grid.Row="1" VerticalOptions="EndAndExpand" IsVisible="{Binding IsEmpty}">
-                    <StackLayout Orientation="Horizontal">
-                        <Label Text="Total" FontSize="Large" FontAttributes="Bold"/>
-                        <Label Text="{Binding TotalAmount}" HorizontalOptions="EndAndExpand" FontSize="Large" FontAttributes="Bold"/>
+            <StackLayout Grid.Row="1" Margin="10, 5" VerticalOptions="EndAndExpand" IsVisible="{Binding IsEmpty}">
+                    <StackLayout Orientation="Horizontal" Margin="0,5">
+                        <Label Text="{x:Static resources:LanguageResource.Total}" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
+                        <Label Text="{Binding TotalAmount}" TextColor="Black" HorizontalOptions="EndAndExpand" FontSize="Large" FontAttributes="Bold"/>
                     </StackLayout>
-                    <Button Text="Payment" HorizontalOptions="CenterAndExpand" 
+                    <Button Text="{x:Static resources:LanguageResource.Payment}" 
                             BackgroundColor="#e6306a" 
                             BorderWidth="3" TextColor="White"
-                            WidthRequest="200" CornerRadius="20" Command="{Binding GoToPaymentCommand}"/>
+                            WidthRequest="200"  Command="{Binding GoToPaymentCommand}"/>
 
                 </StackLayout>
                     
                 </Grid>
             
-        </ScrollView>
-
         <Grid IsVisible="{Binding IsLoading}"
               Grid.Row="0"      
               BackgroundColor="#66666666">

@@ -7,7 +7,8 @@
     xmlns:customViews="clr-namespace:HekayatBaby.Views" 
     xmlns:Behaviors="clr-namespace:HekayatBaby.Behaviors"
     x:Class="HekayatBaby.Views.NewArrivalPage"
-             BackgroundColor="#f7d0e8">
+             BackgroundColor="#f7d0e8"
+    xmlns:resources="clr-namespace:HekayatBaby.Resources">
 
     <controls:CustomFoOverrideBackButtonInContentPage.BindingContext>
         <viewModels:NewArrivalViewModel/>
@@ -15,7 +16,7 @@
 
     <NavigationPage.TitleView>
         <StackLayout Orientation="Horizontal">
-            <Label Text="New Arrival" HorizontalOptions="StartAndExpand" FontSize="Medium" TextColor="#e6306a"/>
+            <Label Text="{Binding Title}" HorizontalOptions="StartAndExpand" FontSize="Medium" TextColor="#e6306a"/>
             <Label Text="&#xf2f1;" HorizontalOptions="End" Margin="0,0,10,0" TextColor="#e6306a" FontSize="Medium" 
                    VerticalTextAlignment="Center" BackgroundColor="TransParent" FontFamily="{StaticResource FontAwesome}">
                 <Label.GestureRecognizers>
@@ -37,7 +38,7 @@
                 
                 <Frame Padding="0" CornerRadius="5" BackgroundColor="Transparent" HorizontalOptions="Center">
                     <StackLayout Orientation="Horizontal">
-                        <SearchBar Placeholder="Search" Text="{Binding Name}" 
+                        <SearchBar Placeholder="{x:Static resources:LanguageResource.Search}" Text="{Binding Name}" 
                                    BackgroundColor="White" PlaceholderColor="Gray" Margin="10,10,0,10">
                             <SearchBar.Behaviors>
                                 <Behaviors:EventToCommandBehavior EventName="TextChanged" Command="{Binding SearchCommand}" />
@@ -118,6 +119,8 @@
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
                         <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
                     </Grid.ColumnDefinitions>
                     <StackLayout Grid.Column="2" >
                         <Label Text="&#xf015;"  TextColor="#e6306a" FontSize="Medium"  VerticalTextAlignment="Start" BackgroundColor="TransParent" FontFamily="{StaticResource FontAwesome}">
@@ -134,7 +137,15 @@
                             </Label.GestureRecognizers>
                         </Label>
                     </StackLayout>
-                   
+
+                    <StackLayout  Grid.Column="6">
+                        <Label Text="&#xf291;"  TextColor="#e6306a" FontSize="Medium" VerticalTextAlignment="Start" BackgroundColor="TransParent" FontFamily="{StaticResource FontAwesome}">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Command="{Binding GoToMyOrdersCommand}"/>
+                            </Label.GestureRecognizers>
+                        </Label>
+                    </StackLayout>
+
                 </Grid>
             </StackLayout>
             

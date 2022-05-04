@@ -1,9 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             xmlns:viewModels="clr-namespace:HekayatBaby.ViewModels" 
+             xmlns:viewModels="clr-namespace:HekayatBaby.ViewModels" xmlns:local2="http://xamarin.com/schemas/2014/forms/design" xmlns:Behaviors="clr-namespace:HekayatBaby.Behaviors"
              x:Class="HekayatBaby.Views.PaymentPage"
-             BackgroundColor="#f7d0e8">
+             BackgroundColor="#f7d0e8"
+             xmlns:resources="clr-namespace:HekayatBaby.Resources" xmlns:controls="clr-namespace:HekayatBaby.Controls">
 
     <ContentPage.BindingContext>
         <viewModels:PaymentViewModel/>
@@ -18,8 +19,9 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="auto"/>
                     <RowDefinition Height="*"/>
+                    <RowDefinition Height="auto"/>
                 </Grid.RowDefinitions>
-                <Frame Grid.Row="0" Padding="0" BackgroundColor="Transparent" BorderColor="Black" CornerRadius="10">
+                <!--<Frame Grid.Row="0" Padding="0" BackgroundColor="Transparent" BorderColor="Black" CornerRadius="10">
                     <StackLayout Margin="10" HorizontalOptions="CenterAndExpand">
                         <Label Text="Total Amount" FontSize="Large"/>
                         <StackLayout Orientation="Horizontal">
@@ -28,38 +30,92 @@
 
                         </StackLayout>
                     </StackLayout>
-                </Frame>
+                </Frame>-->
 
-                <StackLayout Grid.Row="1" Spacing="5">
-                    <!--<Label Margin="10">
-                        <Label.FormattedText>
-                            <FormattedString>
-                                <Span Text="Full Name"/>
-                                <Span Text="*" TextColor="Red"/>
-                            </FormattedString>
-                        </Label.FormattedText>
-                    </Label>-->
-                    <Frame CornerRadius="5" Padding="1" Margin="5" BorderColor="Black" BackgroundColor="Transparent">
-                        <Entry Placeholder="Full Name" Text="{Binding FullName}" BackgroundColor="Transparent"/>
-                    </Frame>
-                    <Frame CornerRadius="5" Padding="1" BorderColor="Black" Margin="5" BackgroundColor="Transparent">
-                        <Entry BackgroundColor="Transparent" Text="{Binding PhoneNo}" Placeholder="Phone Number" Keyboard="Telephone"/>
-                    </Frame>
-                    <Frame CornerRadius="5" Padding="1" BorderColor="Black" Margin="5" BackgroundColor="Transparent">
-                        <Entry Placeholder="Address" Text="{Binding Address}" BackgroundColor="Transparent"/>
-                    </Frame>
-                    <Frame CornerRadius="5" Padding="1" BorderColor="Black" Margin="5" BackgroundColor="Transparent">
-                        <Editor Placeholder="Note" Text="{Binding Notes}" BackgroundColor="Transparent"/>
-                    </Frame>
-                    <Frame CornerRadius="5" Padding="1" BorderColor="Black" Margin="5" BackgroundColor="Transparent">
-                        <Entry Placeholder="Promo code" Text="{Binding PromoCode}" BackgroundColor="Transparent"/>
-                    </Frame>
-                    <Button Text="Submit" BackgroundColor="#f7d0e8" BorderWidth="2" BorderColor="#e6306a" TextColor="#e6306a" 
-                            Margin="10" WidthRequest="200" VerticalOptions="EndAndExpand" 
-                            CornerRadius="20" HorizontalOptions="CenterAndExpand"
-                            Command="{Binding ConfirmPaymentCommand}"/>
+                <Image Source="delivery.png" Grid.Row="0" HeightRequest="80" WidthRequest="80"
+                       HorizontalOptions="CenterAndExpand"/>
 
+                <StackLayout Grid.Row="1" Spacing="8">
+                    <Frame CornerRadius="5" Padding="1" Margin="5" BorderColor="LightGray" BackgroundColor="White">
+                        <controls:CustomEntry Placeholder="{x:Static resources:LanguageResource.FullName}" 
+                                              Text="{Binding FullName}" BackgroundColor="Transparent"/>
+                    </Frame>
+                    <Frame CornerRadius="5" Padding="1" BorderColor="LightGray" Margin="5" BackgroundColor="White">
+                        <controls:CustomEntry BackgroundColor="Transparent" Text="{Binding PhoneNo}"
+                                              Placeholder="{x:Static resources:LanguageResource.PhoneNo}" Keyboard="Telephone"/>
+                    </Frame>
+                    <Frame CornerRadius="5" Padding="1" BorderColor="LightGray" Margin="5" BackgroundColor="White">
+                        <controls:CustomEntry Placeholder="{x:Static resources:LanguageResource.Address}" 
+                                              Text="{Binding Address}" BackgroundColor="Transparent"/>
+                    </Frame>
+                    <Frame CornerRadius="5" Padding="1" BorderColor="LightGray" Margin="5" BackgroundColor="White">
+                        <Editor Placeholder="{x:Static resources:LanguageResource.Notes}" Text="{Binding Notes}" BackgroundColor="Transparent"/>
+                    </Frame>
+                    <Frame CornerRadius="5" Padding="1" BorderColor="LightGray" Margin="5" BackgroundColor="White">
+                        <controls:CustomEntry Placeholder="{x:Static resources:LanguageResource.PromoCode}" 
+                                              Text="{Binding PromoCode}" BackgroundColor="Transparent">
+                            <controls:CustomEntry.Behaviors>
+                                <Behaviors:EventToCommandBehavior EventName="Unfocused" Command="{Binding CheckPromoCommand}"/>
+
+                            </controls:CustomEntry.Behaviors>
+                        </controls:CustomEntry>
+                    </Frame>
+
+                   
                 </StackLayout>
+                
+                <StackLayout Margin="5,0,5,0" Grid.Row="2">
+                    <Label Text="{x:Static resources:LanguageResource.Total}" TextColor="Black" FontSize="Large" FontAttributes="Bold"/>
+                    <Grid BackgroundColor="White" Padding="10">
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                            <RowDefinition Height="*"/>
+                        </Grid.RowDefinitions>
+
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="auto"/>
+                        </Grid.ColumnDefinitions>
+                        <Label Text="{x:Static resources:LanguageResource.SubTotal}" Grid.Row="0" Grid.Column="0" TextColor="Black" FontSize="Large"/>
+                        <StackLayout Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+                            <Label Text="{Binding MyItemsToPay.TotalAmount}" TextColor="Black" FontSize="Large" Grid.Row="0" Grid.Column="1"/>
+                            <Label Text="LE" TextColor="Black" Grid.Row="0" Grid.Column="1"/>
+
+                        </StackLayout>
+
+                        <Label Text="{x:Static resources:LanguageResource.Discount}" Grid.Row="1" Grid.Column="0" TextColor="Black" FontSize="Large"/>
+                        <Label Text="{Binding PromoCodeValue}" TextColor="Black" FontSize="Large" Grid.Row="1" Grid.Column="1"/>
+
+                        <!--<Label Text="Total after discount" Grid.Row="3" Grid.Column="0" TextColor="Black" FontSize="Large"/>
+                        <Label Text="{Binding TotalAmountValue}" TextColor="Black" FontSize="Large" Grid.Row="3" Grid.Column="1"/>-->
+
+
+                        <Label Text="{x:Static resources:LanguageResource.Shipping}" Grid.Row="2" Grid.Column="0" TextColor="Black" FontSize="Large"/>
+                        <StackLayout Orientation="Horizontal" Grid.Row="2" Grid.Column="1">
+                            <Label Text="50" TextColor="Black" FontSize="Large" Grid.Row="2" Grid.Column="1"/>
+                            <Label Text="LE" TextColor="Black" Grid.Row="2" Grid.Column="1"/>
+                        </StackLayout>
+
+
+                        <Label Text="{x:Static resources:LanguageResource.Total}" Grid.Row="3" Grid.Column="0" TextColor="Black" FontSize="Large"/>
+                        <StackLayout Orientation="Horizontal" Grid.Row="3" Grid.Column="1">
+                            <Label Text="{Binding TotalAmountValue}" TextColor="Black" FontSize="Large" Grid.Row="3" Grid.Column="1"/>
+                            <Label Text="LE" TextColor="Black"  Grid.Row="3" Grid.Column="1"/>
+
+                        </StackLayout>
+
+
+                    </Grid>
+
+                    <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="1"
+                            Text="{x:Static resources:LanguageResource.Submit}" BackgroundColor="#e6306a"  BorderColor="#e6306a" TextColor="White" 
+                            WidthRequest="200" VerticalOptions="EndAndExpand" 
+                            
+                            Command="{Binding ConfirmPaymentCommand}"/>
+                </StackLayout>
+               
             </Grid>
            
         </ScrollView>

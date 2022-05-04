@@ -37,49 +37,40 @@ namespace HekayatBaby.ViewModels
 
         async Task LoginFacebookAsync()
         {
+            IsLoading = true;
             try
             {
                 if (_facebookService.IsLoggedIn)
                 {
                     _facebookService.Logout();
                 }
-
-                EventHandler<FBEventArgs<string>> userDataDelegate = null;
-
-                userDataDelegate = async (object sender, FBEventArgs<string> e) =>
+                var loginData = await CrossFacebookClient.Current.LoginAsync(new string[] { "email" });
+                if (loginData.Status == FacebookActionStatus.Completed)
                 {
-                    if (e == null) return;
-
-                    switch (e.Status)
+                    var jsonData = await CrossFacebookClient.Current.RequestUserDataAsync(new string[] { "id", "email", "first_name", "last_name", "picture" }, new string[] { "email" });
+                    if (jsonData.Status == FacebookActionStatus.Completed)
                     {
-                        case FacebookActionStatus.Completed:
-                            var facebookProfile = await Task.Run(() => JsonConvert.DeserializeObject<FacebookProfile>(e.Data));
-                            var socialLoginData = new NetworkAuthData
-                            {
-                                Email = facebookProfile.Email,
-                                Name = $"{facebookProfile.FirstName} {facebookProfile.LastName}",
-                                UserId = facebookProfile.UserId
-                            };
-                            Preferences.Set("UserId", socialLoginData.UserId);
-                            Preferences.Set("UserName", socialLoginData.Name);
-                            await App.Current.MainPage.Navigation.PushModalAsync(new MainPage());
-                            break;
-                        case FacebookActionStatus.Canceled:
-                            break;
+                        // Debug.WriteLine(jsonData.Data.ToString());
+                        var facebookProfile = await Task.Run(() => JsonConvert.DeserializeObject<FacebookProfile>(jsonData.Data));
+
+                        Preferences.Set("UserId", facebookProfile.UserId);
+                        Preferences.Set("UserName", facebookProfile.FirstName+" "+facebookProfile.LastName);
+                        await App.Current.MainPage.Navigation.PushAsync(new MainPage());
+
+                        IsLoading = false;
                     }
+                }
+                else
+                {
+                    //Debug.WriteLine(loginData.Message);
+                    IsLoading = false;
+                }
 
-                    _facebookService.OnUserData -= userDataDelegate;
-                };
-
-                _facebookService.OnUserData += userDataDelegate;
-
-                string[] fbRequestFields = { "email", "first_name", "gender", "last_name" };
-                string[] fbPermisions = { "email" };
-                await _facebookService.RequestUserDataAsync(fbRequestFields, fbPermisions);
             }
             catch (Exception ex)
             {
                 // Debug.WriteLine(ex.ToString());
+                IsLoading = false;
             }
         }
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
