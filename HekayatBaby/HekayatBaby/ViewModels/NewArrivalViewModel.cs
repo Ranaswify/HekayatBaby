@@ -32,6 +32,7 @@ namespace HekayatBaby.ViewModels
             }
         }
 
+
         ObservableCollection<Items> allToys;
         public ObservableCollection<Items> AllToys
         {
@@ -187,16 +188,21 @@ namespace HekayatBaby.ViewModels
 
         private void FilterHighToLow()
         {
-            var i = AllOrders.OrderByDescending(x => x.coast).ToList();
+            var i = AllToys.OrderByDescending(x => x.coast).ToList();
             AllOrders = new ObservableCollection<Items>(i);
             IsSorting = false;
         }
 
         private void FilterLowToHigh()
         {
-            var i = AllOrders.OrderBy(x => x.coast).ToList();
-            AllOrders = new ObservableCollection<Items>(i);
-            IsSorting = false;
+            try
+            {
+                var i = AllToys.OrderBy(x => x.coast).ToList();
+                AllOrders = new ObservableCollection<Items>(i);
+                IsSorting = false;
+            }
+            catch { }
+           
         }
 
         public NewArrivalViewModel()
@@ -210,12 +216,19 @@ namespace HekayatBaby.ViewModels
 
         private async Task SelectFilter()
         {
-            if (SelectedFilter != null)
+            try
             {
-                List<Items> i = AllOrders.Where(a => a.category == SelectedFilter).ToList();
-                AllOrders = new ObservableCollection<Items>(i);
-                IsSorting = false;
-                SelectedFilter = null;
+                if (SelectedFilter != null)
+                {
+                    List<Items> i = AllToys.Where(a => a.category == SelectedFilter).ToList();
+                    AllOrders = new ObservableCollection<Items>(i);
+                    IsSorting = false;
+                    SelectedFilter = null;
+                }
+            }
+            catch(Exception ex)
+            {
+
             }
         }
         private void GetCategores()

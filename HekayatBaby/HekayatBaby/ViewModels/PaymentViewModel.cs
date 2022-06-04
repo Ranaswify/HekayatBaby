@@ -15,8 +15,12 @@ using System.Windows.Input;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using System.Linq;
-
-
+using System.Net.Http;
+using System.Net;
+using System.Security.Cryptography.X509Certificates;
+using System.Net.Security;
+using MimeKit;
+using MailKit.Net.Smtp;
 
 namespace HekayatBaby.ViewModels
 {
@@ -165,13 +169,12 @@ namespace HekayatBaby.ViewModels
         {
 
         }
-
-        void SendEmail()
+        async Task SendEmail()
         {
             try
             {
                 MailMessage mail = new MailMessage();
-                SmtpClient SmtpServer = new SmtpClient("smtp.gmail.com");
+                System.Net.Mail.SmtpClient SmtpServer = new System.Net.Mail.SmtpClient("smtp.gmail.com");
                 List<ItemsToSend> itemsToSends = new List<ItemsToSend>();
                 for(int i = 0; i < MyItemsToPay.ItemToPay.Count; i++)
                 {
@@ -181,18 +184,22 @@ namespace HekayatBaby.ViewModels
                 mail.From = new MailAddress("AboutTheKids7@gmail.com");
                 mail.To.Add("AboutTheKids7@gmail.com");
                 mail.Subject = "New Order";
-                mail.Body = "You've recieved a new order" + "\n" + 
-                    "User Info: " + "\n"+
-                    "Name: " + FullName + "\n" + "Address: " + Address + "\n"+"Note: "+ Notes +"\n" + "Phone number: " + PhoneNo
-                    +"\n" + "Order Info:" + "\n" + "Total Amount: " + TotalAmountValue + "\n" + "Items: " + "\n" + list;
-
+                mail.Body = "You've recieved a new order" + "\n" +
+                    "User Info: " + "\n" +
+                    "Name: " + FullName + "\n" + "Address: " + Address + "\n" + "Note: " + Notes + "\n" + "Phone number: " + PhoneNo
+                    + "\n" + "Order Info:" + "\n" + "Total Amount: " + TotalAmountValue + "\n" + "Items: " + "\n" + list;
+                //mail.BodyEncoding = System.Text.Encoding.UTF8;
                 SmtpServer.Port = 587;
                 SmtpServer.Host = "smtp.gmail.com";
                 SmtpServer.EnableSsl = true;
                 SmtpServer.UseDefaultCredentials = false;
-                SmtpServer.Credentials = new System.Net.NetworkCredential("AboutTheKids7@gmail.com", "AboutTheKids22");
+                SmtpServer.Credentials = new System.Net.NetworkCredential("AboutTheKids7@gmail.com", "jupkycqfronejjax");
+
+                ServicePointManager.ServerCertificateValidationCallback = delegate (object senders, X509Certificate certificate, X509Chain chain, SslPolicyErrors ssl)
+                { return true; };
 
                 SmtpServer.Send(mail);
+
             }
             catch (Exception ex)
             {
@@ -282,7 +289,7 @@ namespace HekayatBaby.ViewModels
                     if(i.Status == TaskStatus.WaitingForActivation)
                     {
                         await Application.Current.MainPage.DisplayAlert("", "Your Order has been sent successfully", "Ok");
-                        SendEmail();
+                        await SendEmail();
                         await RemoveFromCart();
                         Application.Current.MainPage = new CustomNavigationPage(new MainPage());
                     }

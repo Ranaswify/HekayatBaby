@@ -44,16 +44,17 @@ namespace HekayatBaby.ViewModels
                 {
                     _facebookService.Logout();
                 }
-                var loginData = await CrossFacebookClient.Current.LoginAsync(new string[] { "email" });
+                var loginData = await CrossFacebookClient.Current.LoginAsync(new string[] { "email", "public_profile" });
                 if (loginData.Status == FacebookActionStatus.Completed)
                 {
-                    var jsonData = await CrossFacebookClient.Current.RequestUserDataAsync(new string[] { "id", "email", "first_name", "last_name", "picture" }, new string[] { "email" });
+                    var jsonData = await CrossFacebookClient.Current.RequestUserDataAsync(new string[] { "id", "email", "first_name", "last_name" }, new string[] { "email" });
                     if (jsonData.Status == FacebookActionStatus.Completed)
                     {
                         // Debug.WriteLine(jsonData.Data.ToString());
                         var facebookProfile = await Task.Run(() => JsonConvert.DeserializeObject<FacebookProfile>(jsonData.Data));
-
+                        
                         Preferences.Set("UserId", facebookProfile.UserId);
+                        //Preferences.Set("UserId", "US" + phoneNo + name);
                         Preferences.Set("UserName", facebookProfile.FirstName+" "+facebookProfile.LastName);
                         await App.Current.MainPage.Navigation.PushAsync(new MainPage());
 
