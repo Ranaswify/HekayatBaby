@@ -159,8 +159,10 @@ namespace HekayatBaby.ViewModels
                                       {
                                           System.Diagnostics.Debug.WriteLine(t.Exception);
                                       }, TaskContinuationOptions.OnlyOnFaulted);
-                
-               await Application.Current.MainPage.Navigation.PushAsync(new CartsPage());
+                if (i.Status == TaskStatus.WaitingForActivation)
+                {
+                    await Application.Current.MainPage.Navigation.PushAsync(new CartsPage());
+                }
 
             }
             catch (Exception ex)

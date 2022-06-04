@@ -138,6 +138,10 @@ namespace HekayatBaby.ViewModels
                          .Collection("Carts")
                          .Document(i.documentID)
                          .DeleteAsync();
+                if (AllSaved.Count == 0)
+                {
+                    IsEmpty = false;
+                }
                 IsLoading = false;
             }
             catch(Exception ex)
