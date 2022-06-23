@@ -9,7 +9,7 @@
              xmlns:resources="clr-namespace:HekayatBaby.Resources">
 
     <NavigationPage.TitleView>
-        <Label Text="Details" FontSize="Medium" TextColor="#e6306a"/>
+        <Label Text="{x:Static resources:LanguageResource.Details}" FontSize="Medium" TextColor="#e6306a"/>
     </NavigationPage.TitleView>
     
     <ContentPage.BindingContext>

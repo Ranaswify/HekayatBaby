@@ -167,9 +167,9 @@ namespace HekayatBaby.ViewModels
             }
             catch (Exception ex)
             {
-
+                System.Diagnostics.Debug.WriteLine($"======================GET:  {ex.Message} =====================");
             }
-           
+
 
         }
 

@@ -53,7 +53,7 @@ namespace HekayatBaby.ViewModels
                         // Debug.WriteLine(jsonData.Data.ToString());
                         var facebookProfile = await Task.Run(() => JsonConvert.DeserializeObject<FacebookProfile>(jsonData.Data));
 
-                        Preferences.Set("UserId", facebookProfile.UserId);
+                        Preferences.Set("UserId", facebookProfile.Id);
                         Preferences.Set("UserName", facebookProfile.FirstName+" "+facebookProfile.LastName);
                         await App.Current.MainPage.Navigation.PushAsync(new MainPage());
 

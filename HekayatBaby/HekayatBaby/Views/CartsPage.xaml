@@ -6,7 +6,7 @@
              x:Class="HekayatBaby.Views.CartsPage"
              BackgroundColor="#f7d0e8"
              xmlns:resources="clr-namespace:HekayatBaby.Resources"
-             Title="My Carts">
+             Title="{x:Static resources:LanguageResource.MyCarts}">
 
     <ContentPage.BindingContext>
         <viewModels:CartsViewModel/>

@@ -16,13 +16,13 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
     <TargetFrameworkVersion>v11.0</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
     <NuGetPackageImportStamp>
     </NuGetPackageImportStamp>
+    <JavaMaximumHeapSize>2G</JavaMaximumHeapSize>
   </PropertyGroup>
   <PropertyGroup>
     <AndroidErrorOnCustomJavaObject>false</AndroidErrorOnCustomJavaObject>
@@ -64,6 +64,7 @@
     <EmbedAssembliesIntoApk>true</EmbedAssembliesIntoApk>
     <AndroidEnableSGenConcurrent>false</AndroidEnableSGenConcurrent>
     <AndroidLinkTool>r8</AndroidLinkTool>
+    <AndroidSupportedAbis>armeabi-v7a;arm64-v8a;x86;x86_64</AndroidSupportedAbis>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
@@ -178,7 +179,7 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\HekayatBaby\HekayatBaby.csproj">
-      <Project>{80C27F22-635A-40DB-A5A1-855159AFBA2A}</Project>
+      <Project>{438D4332-D29F-4B8D-BEA5-4F3A6ADF05CD}</Project>
       <Name>HekayatBaby</Name>
     </ProjectReference>
   </ItemGroup>

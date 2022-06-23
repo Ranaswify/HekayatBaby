@@ -23,6 +23,7 @@ namespace HekayatBaby.Models
     {
         public string Email { get; set; }
         public string UserId { get; set; }
+        public string Id { get; set; }
         public Picture Picture { get; set; }
 
         [JsonProperty("last_name")]

@@ -5,7 +5,7 @@
              BackgroundColor="#f7d0e8"
              xmlns:resources="clr-namespace:HekayatBaby.Resources"
              xmlns:viewModels="clr-namespace:HekayatBaby.ViewModels"
-             Title="My Orders">
+             Title="{x:Static resources:LanguageResource.MyOrders}">
     
     <ContentPage.BindingContext>
         <viewModels:MyOrdersViewModel/>
