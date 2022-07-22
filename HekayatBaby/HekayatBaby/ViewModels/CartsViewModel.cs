@@ -161,12 +161,18 @@ namespace HekayatBaby.ViewModels
                     AllSaved = new ObservableCollection<SavedItems>(i);
                 }
 
-                if (AllSaved.Count > 0)
+                if (AllSaved.Count == 0)
+                {
+                    IsEmpty = false;
+                }
+                else
                 {
                     IsEmpty = true;
+
                 }
                 SubTotalAmount();
                 IsLoading = false;
+                return;
             }
             catch(Exception ex)
             {

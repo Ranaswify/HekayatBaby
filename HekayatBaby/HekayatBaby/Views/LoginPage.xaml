@@ -43,9 +43,9 @@
 
                             </Frame>
 
-                            <Button x:Name="LoginBtn" Text="{x:Static resources:LanguageResource.Login}" TextColor="White" Margin="5" BackgroundColor="#e6306a" WidthRequest="150" Command="{Binding OnLoginCommand}" />
 
                         </StackLayout>
+                        <Button x:Name="LoginBtn" Text="{x:Static resources:LanguageResource.Login}" TextColor="White" Margin="5,10" BackgroundColor="#e6306a" WidthRequest="150" Command="{Binding OnLoginCommand}" />
 
                         <Label Text="{x:Static resources:LanguageResource.Or}" TextColor="Black" HorizontalOptions="CenterAndExpand"/>
 

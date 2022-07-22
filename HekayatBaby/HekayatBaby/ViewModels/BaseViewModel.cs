@@ -44,7 +44,8 @@ namespace HekayatBaby.ViewModels
                 {
                     _facebookService.Logout();
                 }
-                var loginData = await CrossFacebookClient.Current.LoginAsync(new string[] { "email" });
+                FacebookResponse<bool> loginData = await CrossFacebookClient.Current.LoginAsync(new string[] { "email", "public_profile" });
+                //var loginData = await CrossFacebookClient.Current.LoginAsync(new string[] { "email" });
                 if (loginData.Status == FacebookActionStatus.Completed)
                 {
                     var jsonData = await CrossFacebookClient.Current.RequestUserDataAsync(new string[] { "id", "email", "first_name", "last_name" }, new string[] { "email" });
@@ -53,7 +54,7 @@ namespace HekayatBaby.ViewModels
                         // Debug.WriteLine(jsonData.Data.ToString());
                         var facebookProfile = await Task.Run(() => JsonConvert.DeserializeObject<FacebookProfile>(jsonData.Data));
 
-                        Preferences.Set("UserId", facebookProfile.Id);
+                        Preferences.Set("UserId", "US" + facebookProfile.FirstName + facebookProfile.Id);
                         Preferences.Set("UserName", facebookProfile.FirstName+" "+facebookProfile.LastName);
                         await App.Current.MainPage.Navigation.PushAsync(new MainPage());
 

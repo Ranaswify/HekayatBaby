@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <resources>
+    <string name="facebook_app_name">About The Kids</string>
   <string name="facebook_app_id">387563219564257</string>
   <string name="fb_login_protocol_scheme">fb387563219564257</string>
 </resources>

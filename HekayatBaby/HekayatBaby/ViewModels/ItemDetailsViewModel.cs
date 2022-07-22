@@ -1,4 +1,5 @@
-﻿using HekayatBaby.Helper;
+﻿using Google.Cloud.Firestore;
+using HekayatBaby.Helper;
 using HekayatBaby.Models;
 using HekayatBaby.Views;
 using Plugin.CloudFirestore;
@@ -144,29 +145,49 @@ namespace HekayatBaby.ViewModels
 
         private async Task GoToPayment()
         {
+            IsLoading = true;
             try
             {
-                SavedItems savedItems = new SavedItems()
+                SavedItems savedItems;
+                if (string.IsNullOrEmpty(Preferences.Get("UserId", "")))
                 {
-                    myItem = Order,
-                    userId = Preferences.Get("UserId", "")
-                };
-                var i = CrossCloudFirestore.Current
-                                      .Instance
-                                      .Collection("Carts")
-                                      .AddAsync(savedItems)
-                                      .ContinueWith(t =>
-                                      {
-                                          System.Diagnostics.Debug.WriteLine(t.Exception);
-                                      }, TaskContinuationOptions.OnlyOnFaulted);
-                if (i.Status == TaskStatus.WaitingForActivation)
-                {
-                    await Application.Current.MainPage.Navigation.PushAsync(new CartsPage());
+                    savedItems = new SavedItems()
+                    {
+                        myItem = Order,
+                        userId = "US" + Preferences.Get("PhoneNo", "") + Preferences.Get("UserName", "")
+                    };
                 }
+                else
+                {
+                    savedItems = new SavedItems()
+                    {
+                        myItem = Order,
+                        userId = Preferences.Get("UserId", "")
+                    };
+                }
+                //FirestoreDb db = await FirestoreDb.CreateAsync("aboutthekids-788ac");
+
+                //// Create a document with a random ID in the "users" collection.
+                //CollectionReference collection = db.Collection("Carts");
+                //DocumentReference document = await collection.
+                //    AddAsync(savedItems);
+
+                _ = CrossCloudFirestore.Current
+                                     .Instance
+                                     .Collection("Carts")
+                                     .AddAsync(savedItems)
+                                     .ContinueWith(t =>
+                                     {
+                                         System.Diagnostics.Debug.WriteLine(t.Exception);
+                                     }, TaskContinuationOptions.OnlyOnFaulted);
+
+                await Application.Current.MainPage.Navigation.PushAsync(new CartsPage());
+
 
             }
             catch (Exception ex)
             {
+                await Application.Current.MainPage.DisplayAlert("", ex.Message, "Ok");
                 System.Diagnostics.Debug.WriteLine($"======================GET:  {ex.Message} =====================");
             }
 

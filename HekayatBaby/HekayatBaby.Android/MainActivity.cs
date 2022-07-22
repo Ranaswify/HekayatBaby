@@ -32,7 +32,6 @@ namespace HekayatBaby.Droid
             CachedImageRenderer.Init(enableFastRenderer: true);
             FacebookClientManager.Initialize(this);
             PushNotificationManager.ProcessIntent(this, Intent);
-
             LoadApplication(new App());
         }
         protected override void OnActivityResult(int requestCode, Result resultCode, Intent intent)

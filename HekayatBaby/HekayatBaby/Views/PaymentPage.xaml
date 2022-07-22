@@ -38,22 +38,23 @@
                 <StackLayout Grid.Row="1" Spacing="8">
                     <Frame CornerRadius="5" Padding="1" Margin="5" BorderColor="LightGray" BackgroundColor="White">
                         <controls:CustomEntry Placeholder="{x:Static resources:LanguageResource.FullName}" 
-                                              Text="{Binding FullName}" BackgroundColor="Transparent"/>
+                                              Text="{Binding FullName}" TextColor="Black"
+                                              BackgroundColor="Transparent"/>
                     </Frame>
                     <Frame CornerRadius="5" Padding="1" BorderColor="LightGray" Margin="5" BackgroundColor="White">
-                        <controls:CustomEntry BackgroundColor="Transparent" Text="{Binding PhoneNo}"
+                        <controls:CustomEntry BackgroundColor="Transparent" Text="{Binding PhoneNo}" TextColor="Black"
                                               Placeholder="{x:Static resources:LanguageResource.PhoneNo}" Keyboard="Telephone"/>
                     </Frame>
                     <Frame CornerRadius="5" Padding="1" BorderColor="LightGray" Margin="5" BackgroundColor="White">
                         <controls:CustomEntry Placeholder="{x:Static resources:LanguageResource.Address}" 
-                                              Text="{Binding Address}" BackgroundColor="Transparent"/>
+                                              Text="{Binding Address}" BackgroundColor="Transparent" TextColor="Black"/>
                     </Frame>
                     <Frame CornerRadius="5" Padding="1" BorderColor="LightGray" Margin="5" BackgroundColor="White">
-                        <Editor Placeholder="{x:Static resources:LanguageResource.Notes}" Text="{Binding Notes}" BackgroundColor="Transparent"/>
+                        <Editor Placeholder="{x:Static resources:LanguageResource.Notes}" TextColor="Black" Text="{Binding Notes}" BackgroundColor="Transparent"/>
                     </Frame>
                     <Frame CornerRadius="5" Padding="1" BorderColor="LightGray" Margin="5" BackgroundColor="White">
                         <controls:CustomEntry Placeholder="{x:Static resources:LanguageResource.PromoCode}" 
-                                              Text="{Binding PromoCode}" BackgroundColor="Transparent">
+                                              Text="{Binding PromoCode}" TextColor="Black" BackgroundColor="Transparent">
                             <controls:CustomEntry.Behaviors>
                                 <Behaviors:EventToCommandBehavior EventName="Unfocused" Command="{Binding CheckPromoCommand}"/>
 

@@ -136,7 +136,7 @@
       <Version>13.0.1</Version>
     </PackageReference>
     <PackageReference Include="Plugin.FacebookClient">
-      <Version>3.0.7-beta</Version>
+      <Version>4.0.1</Version>
     </PackageReference>
     <PackageReference Include="Plugin.Multilingual">
       <Version>1.1.6-beta</Version>
@@ -168,7 +168,7 @@
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <ItemGroup>
     <ProjectReference Include="..\HekayatBaby\HekayatBaby.csproj">
-      <Project>{80C27F22-635A-40DB-A5A1-855159AFBA2A}</Project>
+      <Project>{438D4332-D29F-4B8D-BEA5-4F3A6ADF05CD}</Project>
       <Name>HekayatBaby</Name>
     </ProjectReference>
   </ItemGroup>

@@ -81,8 +81,10 @@
                                                      IsVisible="{Binding IsDelivered}" BackgroundColor="White" Padding="5">
                                             <Label Grid.Column="0" Text="Did this order delivered to you?"
                                                    TextColor="Black" FontSize="Medium" FontAttributes="Bold" VerticalTextAlignment="Center"/>
-                                            <Button Grid.Column="1" Text="Yes" WidthRequest="50" Command="{Binding BindingContext.CheckedCommand, Source={x:Reference orders}}" CommandParameter="{Binding .}"/>
-                                            <Button Grid.Column="2" Text="No" WidthRequest="50"  Command="{Binding BindingContext.NotCheckedCommand, Source={x:Reference orders}}"/>
+                                            <Button Grid.Column="1" Text="Yes" WidthRequest="50"
+                                                    Command="{Binding BindingContext.CheckedCommand, Source={x:Reference orders}}" CommandParameter="{Binding .}"/>
+                                            <Button Grid.Column="2" Text="No" WidthRequest="50"
+                                                    Command="{Binding BindingContext.NotCheckedCommand, Source={x:Reference orders}}" CommandParameter="{Binding .}"/>
                                         </Grid>
                                     </Grid>
                                 </Grid>

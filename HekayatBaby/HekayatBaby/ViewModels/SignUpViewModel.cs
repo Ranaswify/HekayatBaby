@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Input;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 
 namespace HekayatBaby.ViewModels
@@ -53,6 +54,7 @@ namespace HekayatBaby.ViewModels
                    var r = await firebaseHelper.AddPerson(username, phoneNo, password);
                     if (r != null)
                     {
+                        Preferences.Set("UserName", username);
                         await Application.Current.MainPage.Navigation.PushAsync(new MainPage());
                         IsLoading = false;
                     }

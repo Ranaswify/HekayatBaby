@@ -29,6 +29,7 @@ namespace HekayatBaby.Droid
  .SetProjectId("aboutthekids-788ac").Build();
             FirebaseApp.InitializeApp(this, options);
 
+
             //Set the default notification channel for your app when running Android Oreo
             if (Build.VERSION.SdkInt >= Android.OS.BuildVersionCodes.O)
             {

@@ -72,8 +72,10 @@ namespace HekayatBaby.ViewModels
         public MyOrdersViewModel()
         {
             CancelOrderCommand = new Command<PaymentInfo>(async (i) => { await CancelOrder(i); });
+
+
             CheckedCommand = new Command<PaymentInfo>(async (i) => { await CheckedOrder(i); });
-            NotCheckedCommand = new Command(NotCheckedOrder);
+            NotCheckedCommand = new Command<PaymentInfo>(async(j) => { await NotCheckedOrder(j); });
             CloseGridCommand = new Command(CloseGrid);
 
             getAll();
@@ -85,9 +87,18 @@ namespace HekayatBaby.ViewModels
             IsNotChecked = false;
         }
 
-        private void NotCheckedOrder()
+        private async Task NotCheckedOrder(PaymentInfo j)
         {
             IsNotChecked = true;
+            try
+            {
+                j.IsChecked = false;
+                j.IsDelivered = false;
+                j.OrderStatus = "";
+                await firebaseHelper.UpdatePerson(j, j.documentID);
+
+            }
+            catch { }
         }
 
         private async Task CheckedOrder(PaymentInfo i)
@@ -99,7 +110,7 @@ namespace HekayatBaby.ViewModels
                 IsChecked = false;
                 i.IsChecked = true;
                 await firebaseHelper.UpdatePerson(i, i.documentID);
-                i.IsDelivered = false;
+                //i.IsDelivered = false;
             }
             catch(Exception e)
             {
